@@ -1,0 +1,14 @@
+* C:\Users\bpierre\Dropbox (Personal)\electronics\LED Matrix\LED Matrix.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 5/17/2018 1:59:56 PM
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+D1  Net-_D1-Pad1_ GND LED		
+D3  VCC GND LED		
+D2  Net-_D1-Pad1_ VCC LED		
+D4  VCC VCC LED		
+
+.end

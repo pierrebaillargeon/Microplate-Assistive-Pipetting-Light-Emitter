@@ -1,0 +1,6516 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:LED Matrix-cache
+EELAYER 25 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LED D1
+U 1 1 5AFDC125
+P 2100 1850
+F 0 "D1" H 2100 1950 50  0000 C CNN
+F 1 "LED" H 2100 1750 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2100 1850 50  0001 C CNN
+F 3 "" H 2100 1850 50  0001 C CNN
+	1    2100 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D2
+U 1 1 5AFDC22E
+P 2525 1850
+F 0 "D2" H 2525 1950 50  0000 C CNN
+F 1 "LED" H 2525 1750 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2525 1850 50  0001 C CNN
+F 3 "" H 2525 1850 50  0001 C CNN
+	1    2525 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D3
+U 1 1 5AFDE3C4
+P 2875 1850
+F 0 "D3" H 2875 1950 50  0000 C CNN
+F 1 "LED" H 2875 1750 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2875 1850 50  0001 C CNN
+F 3 "" H 2875 1850 50  0001 C CNN
+	1    2875 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D4
+U 1 1 5AFDE44A
+P 3200 1850
+F 0 "D4" H 3200 1950 50  0000 C CNN
+F 1 "LED" H 3200 1750 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3200 1850 50  0001 C CNN
+F 3 "" H 3200 1850 50  0001 C CNN
+	1    3200 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D5
+U 1 1 5AFDE48C
+P 3550 1850
+F 0 "D5" H 3550 1950 50  0000 C CNN
+F 1 "LED" H 3550 1750 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3550 1850 50  0001 C CNN
+F 3 "" H 3550 1850 50  0001 C CNN
+	1    3550 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D6
+U 1 1 5AFDE4C9
+P 3850 1850
+F 0 "D6" H 3850 1950 50  0000 C CNN
+F 1 "LED" H 3850 1750 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3850 1850 50  0001 C CNN
+F 3 "" H 3850 1850 50  0001 C CNN
+	1    3850 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D7
+U 1 1 5AFDE517
+P 4125 1850
+F 0 "D7" H 4125 1950 50  0000 C CNN
+F 1 "LED" H 4125 1750 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4125 1850 50  0001 C CNN
+F 3 "" H 4125 1850 50  0001 C CNN
+	1    4125 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D8
+U 1 1 5AFDE55A
+P 4425 1850
+F 0 "D8" H 4425 1950 50  0000 C CNN
+F 1 "LED" H 4425 1750 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4425 1850 50  0001 C CNN
+F 3 "" H 4425 1850 50  0001 C CNN
+	1    4425 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D9
+U 1 1 5AFDE5B2
+P 4725 1850
+F 0 "D9" H 4725 1950 50  0000 C CNN
+F 1 "LED" H 4725 1750 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4725 1850 50  0001 C CNN
+F 3 "" H 4725 1850 50  0001 C CNN
+	1    4725 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D10
+U 1 1 5AFDE5F9
+P 5025 1850
+F 0 "D10" H 5025 1950 50  0000 C CNN
+F 1 "LED" H 5025 1750 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5025 1850 50  0001 C CNN
+F 3 "" H 5025 1850 50  0001 C CNN
+	1    5025 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D11
+U 1 1 5AFDE653
+P 5300 1850
+F 0 "D11" H 5300 1950 50  0000 C CNN
+F 1 "LED" H 5300 1750 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5300 1850 50  0001 C CNN
+F 3 "" H 5300 1850 50  0001 C CNN
+	1    5300 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D12
+U 1 1 5AFDE6BA
+P 5575 1850
+F 0 "D12" H 5575 1950 50  0000 C CNN
+F 1 "LED" H 5575 1750 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5575 1850 50  0001 C CNN
+F 3 "" H 5575 1850 50  0001 C CNN
+	1    5575 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D25
+U 1 1 5AFDEEAC
+P 2100 2325
+F 0 "D25" H 2100 2425 50  0000 C CNN
+F 1 "LED" H 2100 2225 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2100 2325 50  0001 C CNN
+F 3 "" H 2100 2325 50  0001 C CNN
+	1    2100 2325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D26
+U 1 1 5AFDEEB2
+P 2525 2325
+F 0 "D26" H 2525 2425 50  0000 C CNN
+F 1 "LED" H 2525 2225 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2525 2325 50  0001 C CNN
+F 3 "" H 2525 2325 50  0001 C CNN
+	1    2525 2325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D27
+U 1 1 5AFDEEBF
+P 2875 2325
+F 0 "D27" H 2875 2425 50  0000 C CNN
+F 1 "LED" H 2875 2225 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2875 2325 50  0001 C CNN
+F 3 "" H 2875 2325 50  0001 C CNN
+	1    2875 2325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D28
+U 1 1 5AFDEEC5
+P 3200 2325
+F 0 "D28" H 3200 2425 50  0000 C CNN
+F 1 "LED" H 3200 2225 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3200 2325 50  0001 C CNN
+F 3 "" H 3200 2325 50  0001 C CNN
+	1    3200 2325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D29
+U 1 1 5AFDEECB
+P 3550 2325
+F 0 "D29" H 3550 2425 50  0000 C CNN
+F 1 "LED" H 3550 2225 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3550 2325 50  0001 C CNN
+F 3 "" H 3550 2325 50  0001 C CNN
+	1    3550 2325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D30
+U 1 1 5AFDEED1
+P 3850 2325
+F 0 "D30" H 3850 2425 50  0000 C CNN
+F 1 "LED" H 3850 2225 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3850 2325 50  0001 C CNN
+F 3 "" H 3850 2325 50  0001 C CNN
+	1    3850 2325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D31
+U 1 1 5AFDEED7
+P 4125 2325
+F 0 "D31" H 4125 2425 50  0000 C CNN
+F 1 "LED" H 4125 2225 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4125 2325 50  0001 C CNN
+F 3 "" H 4125 2325 50  0001 C CNN
+	1    4125 2325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D32
+U 1 1 5AFDEEDD
+P 4425 2325
+F 0 "D32" H 4425 2425 50  0000 C CNN
+F 1 "LED" H 4425 2225 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4425 2325 50  0001 C CNN
+F 3 "" H 4425 2325 50  0001 C CNN
+	1    4425 2325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D33
+U 1 1 5AFDEEE3
+P 4725 2325
+F 0 "D33" H 4725 2425 50  0000 C CNN
+F 1 "LED" H 4725 2225 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4725 2325 50  0001 C CNN
+F 3 "" H 4725 2325 50  0001 C CNN
+	1    4725 2325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D34
+U 1 1 5AFDEEE9
+P 5025 2325
+F 0 "D34" H 5025 2425 50  0000 C CNN
+F 1 "LED" H 5025 2225 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5025 2325 50  0001 C CNN
+F 3 "" H 5025 2325 50  0001 C CNN
+	1    5025 2325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D35
+U 1 1 5AFDEEEF
+P 5300 2325
+F 0 "D35" H 5300 2425 50  0000 C CNN
+F 1 "LED" H 5300 2225 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5300 2325 50  0001 C CNN
+F 3 "" H 5300 2325 50  0001 C CNN
+	1    5300 2325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D36
+U 1 1 5AFDEEF5
+P 5575 2325
+F 0 "D36" H 5575 2425 50  0000 C CNN
+F 1 "LED" H 5575 2225 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5575 2325 50  0001 C CNN
+F 3 "" H 5575 2325 50  0001 C CNN
+	1    5575 2325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D49
+U 1 1 5AFDFDE0
+P 2100 2875
+F 0 "D49" H 2100 2975 50  0000 C CNN
+F 1 "LED" H 2100 2775 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2100 2875 50  0001 C CNN
+F 3 "" H 2100 2875 50  0001 C CNN
+	1    2100 2875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D50
+U 1 1 5AFDFDE6
+P 2525 2875
+F 0 "D50" H 2525 2975 50  0000 C CNN
+F 1 "LED" H 2525 2775 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2525 2875 50  0001 C CNN
+F 3 "" H 2525 2875 50  0001 C CNN
+	1    2525 2875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D51
+U 1 1 5AFDFDEC
+P 2875 2875
+F 0 "D51" H 2875 2975 50  0000 C CNN
+F 1 "LED" H 2875 2775 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2875 2875 50  0001 C CNN
+F 3 "" H 2875 2875 50  0001 C CNN
+	1    2875 2875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D52
+U 1 1 5AFDFDF2
+P 3200 2875
+F 0 "D52" H 3200 2975 50  0000 C CNN
+F 1 "LED" H 3200 2775 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3200 2875 50  0001 C CNN
+F 3 "" H 3200 2875 50  0001 C CNN
+	1    3200 2875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D53
+U 1 1 5AFDFDF8
+P 3550 2875
+F 0 "D53" H 3550 2975 50  0000 C CNN
+F 1 "LED" H 3550 2775 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3550 2875 50  0001 C CNN
+F 3 "" H 3550 2875 50  0001 C CNN
+	1    3550 2875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D54
+U 1 1 5AFDFDFE
+P 3850 2875
+F 0 "D54" H 3850 2975 50  0000 C CNN
+F 1 "LED" H 3850 2775 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3850 2875 50  0001 C CNN
+F 3 "" H 3850 2875 50  0001 C CNN
+	1    3850 2875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D55
+U 1 1 5AFDFE04
+P 4125 2875
+F 0 "D55" H 4125 2975 50  0000 C CNN
+F 1 "LED" H 4125 2775 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4125 2875 50  0001 C CNN
+F 3 "" H 4125 2875 50  0001 C CNN
+	1    4125 2875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D56
+U 1 1 5AFDFE0A
+P 4425 2875
+F 0 "D56" H 4425 2975 50  0000 C CNN
+F 1 "LED" H 4425 2775 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4425 2875 50  0001 C CNN
+F 3 "" H 4425 2875 50  0001 C CNN
+	1    4425 2875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D57
+U 1 1 5AFDFE10
+P 4725 2875
+F 0 "D57" H 4725 2975 50  0000 C CNN
+F 1 "LED" H 4725 2775 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4725 2875 50  0001 C CNN
+F 3 "" H 4725 2875 50  0001 C CNN
+	1    4725 2875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D58
+U 1 1 5AFDFE16
+P 5025 2875
+F 0 "D58" H 5025 2975 50  0000 C CNN
+F 1 "LED" H 5025 2775 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5025 2875 50  0001 C CNN
+F 3 "" H 5025 2875 50  0001 C CNN
+	1    5025 2875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D59
+U 1 1 5AFDFE1C
+P 5300 2875
+F 0 "D59" H 5300 2975 50  0000 C CNN
+F 1 "LED" H 5300 2775 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5300 2875 50  0001 C CNN
+F 3 "" H 5300 2875 50  0001 C CNN
+	1    5300 2875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D60
+U 1 1 5AFDFE22
+P 5575 2875
+F 0 "D60" H 5575 2975 50  0000 C CNN
+F 1 "LED" H 5575 2775 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5575 2875 50  0001 C CNN
+F 3 "" H 5575 2875 50  0001 C CNN
+	1    5575 2875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D73
+U 1 1 5AFDFE28
+P 2100 3350
+F 0 "D73" H 2100 3450 50  0000 C CNN
+F 1 "LED" H 2100 3250 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2100 3350 50  0001 C CNN
+F 3 "" H 2100 3350 50  0001 C CNN
+	1    2100 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D74
+U 1 1 5AFDFE2E
+P 2525 3350
+F 0 "D74" H 2525 3450 50  0000 C CNN
+F 1 "LED" H 2525 3250 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2525 3350 50  0001 C CNN
+F 3 "" H 2525 3350 50  0001 C CNN
+	1    2525 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D75
+U 1 1 5AFDFE34
+P 2875 3350
+F 0 "D75" H 2875 3450 50  0000 C CNN
+F 1 "LED" H 2875 3250 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2875 3350 50  0001 C CNN
+F 3 "" H 2875 3350 50  0001 C CNN
+	1    2875 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D76
+U 1 1 5AFDFE3A
+P 3200 3350
+F 0 "D76" H 3200 3450 50  0000 C CNN
+F 1 "LED" H 3200 3250 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3200 3350 50  0001 C CNN
+F 3 "" H 3200 3350 50  0001 C CNN
+	1    3200 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D77
+U 1 1 5AFDFE40
+P 3550 3350
+F 0 "D77" H 3550 3450 50  0000 C CNN
+F 1 "LED" H 3550 3250 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3550 3350 50  0001 C CNN
+F 3 "" H 3550 3350 50  0001 C CNN
+	1    3550 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D78
+U 1 1 5AFDFE46
+P 3850 3350
+F 0 "D78" H 3850 3450 50  0000 C CNN
+F 1 "LED" H 3850 3250 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3850 3350 50  0001 C CNN
+F 3 "" H 3850 3350 50  0001 C CNN
+	1    3850 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D79
+U 1 1 5AFDFE4C
+P 4125 3350
+F 0 "D79" H 4125 3450 50  0000 C CNN
+F 1 "LED" H 4125 3250 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4125 3350 50  0001 C CNN
+F 3 "" H 4125 3350 50  0001 C CNN
+	1    4125 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D80
+U 1 1 5AFDFE52
+P 4425 3350
+F 0 "D80" H 4425 3450 50  0000 C CNN
+F 1 "LED" H 4425 3250 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4425 3350 50  0001 C CNN
+F 3 "" H 4425 3350 50  0001 C CNN
+	1    4425 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D81
+U 1 1 5AFDFE58
+P 4725 3350
+F 0 "D81" H 4725 3450 50  0000 C CNN
+F 1 "LED" H 4725 3250 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4725 3350 50  0001 C CNN
+F 3 "" H 4725 3350 50  0001 C CNN
+	1    4725 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D82
+U 1 1 5AFDFE5E
+P 5025 3350
+F 0 "D82" H 5025 3450 50  0000 C CNN
+F 1 "LED" H 5025 3250 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5025 3350 50  0001 C CNN
+F 3 "" H 5025 3350 50  0001 C CNN
+	1    5025 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D83
+U 1 1 5AFDFE64
+P 5300 3350
+F 0 "D83" H 5300 3450 50  0000 C CNN
+F 1 "LED" H 5300 3250 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5300 3350 50  0001 C CNN
+F 3 "" H 5300 3350 50  0001 C CNN
+	1    5300 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D84
+U 1 1 5AFDFE6A
+P 5575 3350
+F 0 "D84" H 5575 3450 50  0000 C CNN
+F 1 "LED" H 5575 3250 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5575 3350 50  0001 C CNN
+F 3 "" H 5575 3350 50  0001 C CNN
+	1    5575 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D97
+U 1 1 5AFE1511
+P 2075 4000
+F 0 "D97" H 2075 4100 50  0000 C CNN
+F 1 "LED" H 2075 3900 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2075 4000 50  0001 C CNN
+F 3 "" H 2075 4000 50  0001 C CNN
+	1    2075 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D98
+U 1 1 5AFE1517
+P 2500 4000
+F 0 "D98" H 2500 4100 50  0000 C CNN
+F 1 "LED" H 2500 3900 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2500 4000 50  0001 C CNN
+F 3 "" H 2500 4000 50  0001 C CNN
+	1    2500 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D99
+U 1 1 5AFE151D
+P 2850 4000
+F 0 "D99" H 2850 4100 50  0000 C CNN
+F 1 "LED" H 2850 3900 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2850 4000 50  0001 C CNN
+F 3 "" H 2850 4000 50  0001 C CNN
+	1    2850 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D100
+U 1 1 5AFE1523
+P 3175 4000
+F 0 "D100" H 3175 4100 50  0000 C CNN
+F 1 "LED" H 3175 3900 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3175 4000 50  0001 C CNN
+F 3 "" H 3175 4000 50  0001 C CNN
+	1    3175 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D101
+U 1 1 5AFE1529
+P 3525 4000
+F 0 "D101" H 3525 4100 50  0000 C CNN
+F 1 "LED" H 3525 3900 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3525 4000 50  0001 C CNN
+F 3 "" H 3525 4000 50  0001 C CNN
+	1    3525 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D102
+U 1 1 5AFE152F
+P 3825 4000
+F 0 "D102" H 3825 4100 50  0000 C CNN
+F 1 "LED" H 3825 3900 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3825 4000 50  0001 C CNN
+F 3 "" H 3825 4000 50  0001 C CNN
+	1    3825 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D103
+U 1 1 5AFE1535
+P 4100 4000
+F 0 "D103" H 4100 4100 50  0000 C CNN
+F 1 "LED" H 4100 3900 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4100 4000 50  0001 C CNN
+F 3 "" H 4100 4000 50  0001 C CNN
+	1    4100 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D104
+U 1 1 5AFE153B
+P 4400 4000
+F 0 "D104" H 4400 4100 50  0000 C CNN
+F 1 "LED" H 4400 3900 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4400 4000 50  0001 C CNN
+F 3 "" H 4400 4000 50  0001 C CNN
+	1    4400 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D105
+U 1 1 5AFE1541
+P 4700 4000
+F 0 "D105" H 4700 4100 50  0000 C CNN
+F 1 "LED" H 4700 3900 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4700 4000 50  0001 C CNN
+F 3 "" H 4700 4000 50  0001 C CNN
+	1    4700 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D106
+U 1 1 5AFE1547
+P 5000 4000
+F 0 "D106" H 5000 4100 50  0000 C CNN
+F 1 "LED" H 5000 3900 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5000 4000 50  0001 C CNN
+F 3 "" H 5000 4000 50  0001 C CNN
+	1    5000 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D107
+U 1 1 5AFE154D
+P 5275 4000
+F 0 "D107" H 5275 4100 50  0000 C CNN
+F 1 "LED" H 5275 3900 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5275 4000 50  0001 C CNN
+F 3 "" H 5275 4000 50  0001 C CNN
+	1    5275 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D108
+U 1 1 5AFE1553
+P 5550 4000
+F 0 "D108" H 5550 4100 50  0000 C CNN
+F 1 "LED" H 5550 3900 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5550 4000 50  0001 C CNN
+F 3 "" H 5550 4000 50  0001 C CNN
+	1    5550 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D121
+U 1 1 5AFE1559
+P 2075 4475
+F 0 "D121" H 2075 4575 50  0000 C CNN
+F 1 "LED" H 2075 4375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2075 4475 50  0001 C CNN
+F 3 "" H 2075 4475 50  0001 C CNN
+	1    2075 4475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D122
+U 1 1 5AFE155F
+P 2500 4475
+F 0 "D122" H 2500 4575 50  0000 C CNN
+F 1 "LED" H 2500 4375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2500 4475 50  0001 C CNN
+F 3 "" H 2500 4475 50  0001 C CNN
+	1    2500 4475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D123
+U 1 1 5AFE1565
+P 2850 4475
+F 0 "D123" H 2850 4575 50  0000 C CNN
+F 1 "LED" H 2850 4375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2850 4475 50  0001 C CNN
+F 3 "" H 2850 4475 50  0001 C CNN
+	1    2850 4475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D124
+U 1 1 5AFE156B
+P 3175 4475
+F 0 "D124" H 3175 4575 50  0000 C CNN
+F 1 "LED" H 3175 4375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3175 4475 50  0001 C CNN
+F 3 "" H 3175 4475 50  0001 C CNN
+	1    3175 4475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D125
+U 1 1 5AFE1571
+P 3525 4475
+F 0 "D125" H 3525 4575 50  0000 C CNN
+F 1 "LED" H 3525 4375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3525 4475 50  0001 C CNN
+F 3 "" H 3525 4475 50  0001 C CNN
+	1    3525 4475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D126
+U 1 1 5AFE1577
+P 3825 4475
+F 0 "D126" H 3825 4575 50  0000 C CNN
+F 1 "LED" H 3825 4375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3825 4475 50  0001 C CNN
+F 3 "" H 3825 4475 50  0001 C CNN
+	1    3825 4475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D127
+U 1 1 5AFE157D
+P 4100 4475
+F 0 "D127" H 4100 4575 50  0000 C CNN
+F 1 "LED" H 4100 4375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4100 4475 50  0001 C CNN
+F 3 "" H 4100 4475 50  0001 C CNN
+	1    4100 4475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D128
+U 1 1 5AFE1583
+P 4400 4475
+F 0 "D128" H 4400 4575 50  0000 C CNN
+F 1 "LED" H 4400 4375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4400 4475 50  0001 C CNN
+F 3 "" H 4400 4475 50  0001 C CNN
+	1    4400 4475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D129
+U 1 1 5AFE1589
+P 4700 4475
+F 0 "D129" H 4700 4575 50  0000 C CNN
+F 1 "LED" H 4700 4375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4700 4475 50  0001 C CNN
+F 3 "" H 4700 4475 50  0001 C CNN
+	1    4700 4475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D130
+U 1 1 5AFE158F
+P 5000 4475
+F 0 "D130" H 5000 4575 50  0000 C CNN
+F 1 "LED" H 5000 4375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5000 4475 50  0001 C CNN
+F 3 "" H 5000 4475 50  0001 C CNN
+	1    5000 4475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D131
+U 1 1 5AFE1595
+P 5275 4475
+F 0 "D131" H 5275 4575 50  0000 C CNN
+F 1 "LED" H 5275 4375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5275 4475 50  0001 C CNN
+F 3 "" H 5275 4475 50  0001 C CNN
+	1    5275 4475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D132
+U 1 1 5AFE159B
+P 5550 4475
+F 0 "D132" H 5550 4575 50  0000 C CNN
+F 1 "LED" H 5550 4375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5550 4475 50  0001 C CNN
+F 3 "" H 5550 4475 50  0001 C CNN
+	1    5550 4475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D145
+U 1 1 5AFE15F1
+P 2075 5025
+F 0 "D145" H 2075 5125 50  0000 C CNN
+F 1 "LED" H 2075 4925 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2075 5025 50  0001 C CNN
+F 3 "" H 2075 5025 50  0001 C CNN
+	1    2075 5025
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D146
+U 1 1 5AFE15F7
+P 2500 5025
+F 0 "D146" H 2500 5125 50  0000 C CNN
+F 1 "LED" H 2500 4925 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2500 5025 50  0001 C CNN
+F 3 "" H 2500 5025 50  0001 C CNN
+	1    2500 5025
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D147
+U 1 1 5AFE15FD
+P 2850 5025
+F 0 "D147" H 2850 5125 50  0000 C CNN
+F 1 "LED" H 2850 4925 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2850 5025 50  0001 C CNN
+F 3 "" H 2850 5025 50  0001 C CNN
+	1    2850 5025
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D148
+U 1 1 5AFE1603
+P 3175 5025
+F 0 "D148" H 3175 5125 50  0000 C CNN
+F 1 "LED" H 3175 4925 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3175 5025 50  0001 C CNN
+F 3 "" H 3175 5025 50  0001 C CNN
+	1    3175 5025
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D149
+U 1 1 5AFE1609
+P 3525 5025
+F 0 "D149" H 3525 5125 50  0000 C CNN
+F 1 "LED" H 3525 4925 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3525 5025 50  0001 C CNN
+F 3 "" H 3525 5025 50  0001 C CNN
+	1    3525 5025
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D150
+U 1 1 5AFE160F
+P 3825 5025
+F 0 "D150" H 3825 5125 50  0000 C CNN
+F 1 "LED" H 3825 4925 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3825 5025 50  0001 C CNN
+F 3 "" H 3825 5025 50  0001 C CNN
+	1    3825 5025
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D151
+U 1 1 5AFE1615
+P 4100 5025
+F 0 "D151" H 4100 5125 50  0000 C CNN
+F 1 "LED" H 4100 4925 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4100 5025 50  0001 C CNN
+F 3 "" H 4100 5025 50  0001 C CNN
+	1    4100 5025
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D152
+U 1 1 5AFE161B
+P 4400 5025
+F 0 "D152" H 4400 5125 50  0000 C CNN
+F 1 "LED" H 4400 4925 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4400 5025 50  0001 C CNN
+F 3 "" H 4400 5025 50  0001 C CNN
+	1    4400 5025
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D153
+U 1 1 5AFE1621
+P 4700 5025
+F 0 "D153" H 4700 5125 50  0000 C CNN
+F 1 "LED" H 4700 4925 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4700 5025 50  0001 C CNN
+F 3 "" H 4700 5025 50  0001 C CNN
+	1    4700 5025
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D154
+U 1 1 5AFE1627
+P 5000 5025
+F 0 "D154" H 5000 5125 50  0000 C CNN
+F 1 "LED" H 5000 4925 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5000 5025 50  0001 C CNN
+F 3 "" H 5000 5025 50  0001 C CNN
+	1    5000 5025
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D155
+U 1 1 5AFE162D
+P 5275 5025
+F 0 "D155" H 5275 5125 50  0000 C CNN
+F 1 "LED" H 5275 4925 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5275 5025 50  0001 C CNN
+F 3 "" H 5275 5025 50  0001 C CNN
+	1    5275 5025
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D156
+U 1 1 5AFE1633
+P 5550 5025
+F 0 "D156" H 5550 5125 50  0000 C CNN
+F 1 "LED" H 5550 4925 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5550 5025 50  0001 C CNN
+F 3 "" H 5550 5025 50  0001 C CNN
+	1    5550 5025
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D169
+U 1 1 5AFE1639
+P 2075 5500
+F 0 "D169" H 2075 5600 50  0000 C CNN
+F 1 "LED" H 2075 5400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2075 5500 50  0001 C CNN
+F 3 "" H 2075 5500 50  0001 C CNN
+	1    2075 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D170
+U 1 1 5AFE163F
+P 2500 5500
+F 0 "D170" H 2500 5600 50  0000 C CNN
+F 1 "LED" H 2500 5400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2500 5500 50  0001 C CNN
+F 3 "" H 2500 5500 50  0001 C CNN
+	1    2500 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D171
+U 1 1 5AFE1645
+P 2850 5500
+F 0 "D171" H 2850 5600 50  0000 C CNN
+F 1 "LED" H 2850 5400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2850 5500 50  0001 C CNN
+F 3 "" H 2850 5500 50  0001 C CNN
+	1    2850 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D172
+U 1 1 5AFE164B
+P 3175 5500
+F 0 "D172" H 3175 5600 50  0000 C CNN
+F 1 "LED" H 3175 5400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3175 5500 50  0001 C CNN
+F 3 "" H 3175 5500 50  0001 C CNN
+	1    3175 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D173
+U 1 1 5AFE1651
+P 3525 5500
+F 0 "D173" H 3525 5600 50  0000 C CNN
+F 1 "LED" H 3525 5400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3525 5500 50  0001 C CNN
+F 3 "" H 3525 5500 50  0001 C CNN
+	1    3525 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D174
+U 1 1 5AFE1657
+P 3825 5500
+F 0 "D174" H 3825 5600 50  0000 C CNN
+F 1 "LED" H 3825 5400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3825 5500 50  0001 C CNN
+F 3 "" H 3825 5500 50  0001 C CNN
+	1    3825 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D175
+U 1 1 5AFE165D
+P 4100 5500
+F 0 "D175" H 4100 5600 50  0000 C CNN
+F 1 "LED" H 4100 5400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4100 5500 50  0001 C CNN
+F 3 "" H 4100 5500 50  0001 C CNN
+	1    4100 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D176
+U 1 1 5AFE1663
+P 4400 5500
+F 0 "D176" H 4400 5600 50  0000 C CNN
+F 1 "LED" H 4400 5400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4400 5500 50  0001 C CNN
+F 3 "" H 4400 5500 50  0001 C CNN
+	1    4400 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D177
+U 1 1 5AFE1669
+P 4700 5500
+F 0 "D177" H 4700 5600 50  0000 C CNN
+F 1 "LED" H 4700 5400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4700 5500 50  0001 C CNN
+F 3 "" H 4700 5500 50  0001 C CNN
+	1    4700 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D178
+U 1 1 5AFE166F
+P 5000 5500
+F 0 "D178" H 5000 5600 50  0000 C CNN
+F 1 "LED" H 5000 5400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5000 5500 50  0001 C CNN
+F 3 "" H 5000 5500 50  0001 C CNN
+	1    5000 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D179
+U 1 1 5AFE1675
+P 5275 5500
+F 0 "D179" H 5275 5600 50  0000 C CNN
+F 1 "LED" H 5275 5400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5275 5500 50  0001 C CNN
+F 3 "" H 5275 5500 50  0001 C CNN
+	1    5275 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D180
+U 1 1 5AFE167B
+P 5550 5500
+F 0 "D180" H 5550 5600 50  0000 C CNN
+F 1 "LED" H 5550 5400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5550 5500 50  0001 C CNN
+F 3 "" H 5550 5500 50  0001 C CNN
+	1    5550 5500
+	0    -1   -1   0   
+$EndComp
+Text Notes 12375 10925 0    60   ~ 0
+384 well LED light guide\n
+Text Notes 15575 11050 0    60   ~ 0
+v1
+Text Notes 13300 11075 0    60   ~ 0
+5/18/2018
+Text Notes 12250 10675 0    60   ~ 0
+1
+Text Notes 12350 10675 0    60   ~ 0
+1
+Text Notes 12025 10375 0    60   ~ 0
+Design by: Pierre Baillargeon
+$Comp
+L LED D13
+U 1 1 5B107145
+P 6225 1850
+F 0 "D13" H 6225 1950 50  0000 C CNN
+F 1 "LED" H 6225 1750 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6225 1850 50  0001 C CNN
+F 3 "" H 6225 1850 50  0001 C CNN
+	1    6225 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D14
+U 1 1 5B10714B
+P 6650 1850
+F 0 "D14" H 6650 1950 50  0000 C CNN
+F 1 "LED" H 6650 1750 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6650 1850 50  0001 C CNN
+F 3 "" H 6650 1850 50  0001 C CNN
+	1    6650 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D15
+U 1 1 5B107151
+P 7000 1850
+F 0 "D15" H 7000 1950 50  0000 C CNN
+F 1 "LED" H 7000 1750 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7000 1850 50  0001 C CNN
+F 3 "" H 7000 1850 50  0001 C CNN
+	1    7000 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D16
+U 1 1 5B107157
+P 7325 1850
+F 0 "D16" H 7325 1950 50  0000 C CNN
+F 1 "LED" H 7325 1750 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7325 1850 50  0001 C CNN
+F 3 "" H 7325 1850 50  0001 C CNN
+	1    7325 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D17
+U 1 1 5B10715D
+P 7675 1850
+F 0 "D17" H 7675 1950 50  0000 C CNN
+F 1 "LED" H 7675 1750 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7675 1850 50  0001 C CNN
+F 3 "" H 7675 1850 50  0001 C CNN
+	1    7675 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D18
+U 1 1 5B107163
+P 7975 1850
+F 0 "D18" H 7975 1950 50  0000 C CNN
+F 1 "LED" H 7975 1750 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7975 1850 50  0001 C CNN
+F 3 "" H 7975 1850 50  0001 C CNN
+	1    7975 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D19
+U 1 1 5B107169
+P 8250 1850
+F 0 "D19" H 8250 1950 50  0000 C CNN
+F 1 "LED" H 8250 1750 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8250 1850 50  0001 C CNN
+F 3 "" H 8250 1850 50  0001 C CNN
+	1    8250 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D20
+U 1 1 5B10716F
+P 8550 1850
+F 0 "D20" H 8550 1950 50  0000 C CNN
+F 1 "LED" H 8550 1750 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8550 1850 50  0001 C CNN
+F 3 "" H 8550 1850 50  0001 C CNN
+	1    8550 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D21
+U 1 1 5B107175
+P 8850 1850
+F 0 "D21" H 8850 1950 50  0000 C CNN
+F 1 "LED" H 8850 1750 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8850 1850 50  0001 C CNN
+F 3 "" H 8850 1850 50  0001 C CNN
+	1    8850 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D22
+U 1 1 5B10717B
+P 9150 1850
+F 0 "D22" H 9150 1950 50  0000 C CNN
+F 1 "LED" H 9150 1750 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9150 1850 50  0001 C CNN
+F 3 "" H 9150 1850 50  0001 C CNN
+	1    9150 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D23
+U 1 1 5B107181
+P 9425 1850
+F 0 "D23" H 9425 1950 50  0000 C CNN
+F 1 "LED" H 9425 1750 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9425 1850 50  0001 C CNN
+F 3 "" H 9425 1850 50  0001 C CNN
+	1    9425 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D24
+U 1 1 5B107187
+P 9700 1850
+F 0 "D24" H 9700 1950 50  0000 C CNN
+F 1 "LED" H 9700 1750 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9700 1850 50  0001 C CNN
+F 3 "" H 9700 1850 50  0001 C CNN
+	1    9700 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D37
+U 1 1 5B10718D
+P 6225 2325
+F 0 "D37" H 6225 2425 50  0000 C CNN
+F 1 "LED" H 6225 2225 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6225 2325 50  0001 C CNN
+F 3 "" H 6225 2325 50  0001 C CNN
+	1    6225 2325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D38
+U 1 1 5B107193
+P 6650 2325
+F 0 "D38" H 6650 2425 50  0000 C CNN
+F 1 "LED" H 6650 2225 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6650 2325 50  0001 C CNN
+F 3 "" H 6650 2325 50  0001 C CNN
+	1    6650 2325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D39
+U 1 1 5B107199
+P 7000 2325
+F 0 "D39" H 7000 2425 50  0000 C CNN
+F 1 "LED" H 7000 2225 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7000 2325 50  0001 C CNN
+F 3 "" H 7000 2325 50  0001 C CNN
+	1    7000 2325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D40
+U 1 1 5B10719F
+P 7325 2325
+F 0 "D40" H 7325 2425 50  0000 C CNN
+F 1 "LED" H 7325 2225 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7325 2325 50  0001 C CNN
+F 3 "" H 7325 2325 50  0001 C CNN
+	1    7325 2325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D41
+U 1 1 5B1071A5
+P 7675 2325
+F 0 "D41" H 7675 2425 50  0000 C CNN
+F 1 "LED" H 7675 2225 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7675 2325 50  0001 C CNN
+F 3 "" H 7675 2325 50  0001 C CNN
+	1    7675 2325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D42
+U 1 1 5B1071AB
+P 7975 2325
+F 0 "D42" H 7975 2425 50  0000 C CNN
+F 1 "LED" H 7975 2225 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7975 2325 50  0001 C CNN
+F 3 "" H 7975 2325 50  0001 C CNN
+	1    7975 2325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D43
+U 1 1 5B1071B1
+P 8250 2325
+F 0 "D43" H 8250 2425 50  0000 C CNN
+F 1 "LED" H 8250 2225 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8250 2325 50  0001 C CNN
+F 3 "" H 8250 2325 50  0001 C CNN
+	1    8250 2325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D44
+U 1 1 5B1071B7
+P 8550 2325
+F 0 "D44" H 8550 2425 50  0000 C CNN
+F 1 "LED" H 8550 2225 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8550 2325 50  0001 C CNN
+F 3 "" H 8550 2325 50  0001 C CNN
+	1    8550 2325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D45
+U 1 1 5B1071BD
+P 8850 2325
+F 0 "D45" H 8850 2425 50  0000 C CNN
+F 1 "LED" H 8850 2225 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8850 2325 50  0001 C CNN
+F 3 "" H 8850 2325 50  0001 C CNN
+	1    8850 2325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D46
+U 1 1 5B1071C3
+P 9150 2325
+F 0 "D46" H 9150 2425 50  0000 C CNN
+F 1 "LED" H 9150 2225 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9150 2325 50  0001 C CNN
+F 3 "" H 9150 2325 50  0001 C CNN
+	1    9150 2325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D47
+U 1 1 5B1071C9
+P 9425 2325
+F 0 "D47" H 9425 2425 50  0000 C CNN
+F 1 "LED" H 9425 2225 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9425 2325 50  0001 C CNN
+F 3 "" H 9425 2325 50  0001 C CNN
+	1    9425 2325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D48
+U 1 1 5B1071CF
+P 9700 2325
+F 0 "D48" H 9700 2425 50  0000 C CNN
+F 1 "LED" H 9700 2225 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9700 2325 50  0001 C CNN
+F 3 "" H 9700 2325 50  0001 C CNN
+	1    9700 2325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D61
+U 1 1 5B1071D5
+P 6225 2875
+F 0 "D61" H 6225 2975 50  0000 C CNN
+F 1 "LED" H 6225 2775 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6225 2875 50  0001 C CNN
+F 3 "" H 6225 2875 50  0001 C CNN
+	1    6225 2875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D62
+U 1 1 5B1071DB
+P 6650 2875
+F 0 "D62" H 6650 2975 50  0000 C CNN
+F 1 "LED" H 6650 2775 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6650 2875 50  0001 C CNN
+F 3 "" H 6650 2875 50  0001 C CNN
+	1    6650 2875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D63
+U 1 1 5B1071E1
+P 7000 2875
+F 0 "D63" H 7000 2975 50  0000 C CNN
+F 1 "LED" H 7000 2775 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7000 2875 50  0001 C CNN
+F 3 "" H 7000 2875 50  0001 C CNN
+	1    7000 2875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D64
+U 1 1 5B1071E7
+P 7325 2875
+F 0 "D64" H 7325 2975 50  0000 C CNN
+F 1 "LED" H 7325 2775 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7325 2875 50  0001 C CNN
+F 3 "" H 7325 2875 50  0001 C CNN
+	1    7325 2875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D65
+U 1 1 5B1071ED
+P 7675 2875
+F 0 "D65" H 7675 2975 50  0000 C CNN
+F 1 "LED" H 7675 2775 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7675 2875 50  0001 C CNN
+F 3 "" H 7675 2875 50  0001 C CNN
+	1    7675 2875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D66
+U 1 1 5B1071F3
+P 7975 2875
+F 0 "D66" H 7975 2975 50  0000 C CNN
+F 1 "LED" H 7975 2775 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7975 2875 50  0001 C CNN
+F 3 "" H 7975 2875 50  0001 C CNN
+	1    7975 2875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D67
+U 1 1 5B1071F9
+P 8250 2875
+F 0 "D67" H 8250 2975 50  0000 C CNN
+F 1 "LED" H 8250 2775 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8250 2875 50  0001 C CNN
+F 3 "" H 8250 2875 50  0001 C CNN
+	1    8250 2875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D68
+U 1 1 5B1071FF
+P 8550 2875
+F 0 "D68" H 8550 2975 50  0000 C CNN
+F 1 "LED" H 8550 2775 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8550 2875 50  0001 C CNN
+F 3 "" H 8550 2875 50  0001 C CNN
+	1    8550 2875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D69
+U 1 1 5B107205
+P 8850 2875
+F 0 "D69" H 8850 2975 50  0000 C CNN
+F 1 "LED" H 8850 2775 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8850 2875 50  0001 C CNN
+F 3 "" H 8850 2875 50  0001 C CNN
+	1    8850 2875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D70
+U 1 1 5B10720B
+P 9150 2875
+F 0 "D70" H 9150 2975 50  0000 C CNN
+F 1 "LED" H 9150 2775 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9150 2875 50  0001 C CNN
+F 3 "" H 9150 2875 50  0001 C CNN
+	1    9150 2875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D71
+U 1 1 5B107211
+P 9425 2875
+F 0 "D71" H 9425 2975 50  0000 C CNN
+F 1 "LED" H 9425 2775 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9425 2875 50  0001 C CNN
+F 3 "" H 9425 2875 50  0001 C CNN
+	1    9425 2875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D72
+U 1 1 5B107217
+P 9700 2875
+F 0 "D72" H 9700 2975 50  0000 C CNN
+F 1 "LED" H 9700 2775 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9700 2875 50  0001 C CNN
+F 3 "" H 9700 2875 50  0001 C CNN
+	1    9700 2875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D85
+U 1 1 5B10721D
+P 6225 3350
+F 0 "D85" H 6225 3450 50  0000 C CNN
+F 1 "LED" H 6225 3250 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6225 3350 50  0001 C CNN
+F 3 "" H 6225 3350 50  0001 C CNN
+	1    6225 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D86
+U 1 1 5B107223
+P 6650 3350
+F 0 "D86" H 6650 3450 50  0000 C CNN
+F 1 "LED" H 6650 3250 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6650 3350 50  0001 C CNN
+F 3 "" H 6650 3350 50  0001 C CNN
+	1    6650 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D87
+U 1 1 5B107229
+P 7000 3350
+F 0 "D87" H 7000 3450 50  0000 C CNN
+F 1 "LED" H 7000 3250 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7000 3350 50  0001 C CNN
+F 3 "" H 7000 3350 50  0001 C CNN
+	1    7000 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D88
+U 1 1 5B10722F
+P 7325 3350
+F 0 "D88" H 7325 3450 50  0000 C CNN
+F 1 "LED" H 7325 3250 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7325 3350 50  0001 C CNN
+F 3 "" H 7325 3350 50  0001 C CNN
+	1    7325 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D89
+U 1 1 5B107235
+P 7675 3350
+F 0 "D89" H 7675 3450 50  0000 C CNN
+F 1 "LED" H 7675 3250 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7675 3350 50  0001 C CNN
+F 3 "" H 7675 3350 50  0001 C CNN
+	1    7675 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D90
+U 1 1 5B10723B
+P 7975 3350
+F 0 "D90" H 7975 3450 50  0000 C CNN
+F 1 "LED" H 7975 3250 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7975 3350 50  0001 C CNN
+F 3 "" H 7975 3350 50  0001 C CNN
+	1    7975 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D91
+U 1 1 5B107241
+P 8250 3350
+F 0 "D91" H 8250 3450 50  0000 C CNN
+F 1 "LED" H 8250 3250 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8250 3350 50  0001 C CNN
+F 3 "" H 8250 3350 50  0001 C CNN
+	1    8250 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D92
+U 1 1 5B107247
+P 8550 3350
+F 0 "D92" H 8550 3450 50  0000 C CNN
+F 1 "LED" H 8550 3250 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8550 3350 50  0001 C CNN
+F 3 "" H 8550 3350 50  0001 C CNN
+	1    8550 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D93
+U 1 1 5B10724D
+P 8850 3350
+F 0 "D93" H 8850 3450 50  0000 C CNN
+F 1 "LED" H 8850 3250 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8850 3350 50  0001 C CNN
+F 3 "" H 8850 3350 50  0001 C CNN
+	1    8850 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D94
+U 1 1 5B107253
+P 9150 3350
+F 0 "D94" H 9150 3450 50  0000 C CNN
+F 1 "LED" H 9150 3250 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9150 3350 50  0001 C CNN
+F 3 "" H 9150 3350 50  0001 C CNN
+	1    9150 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D95
+U 1 1 5B107259
+P 9425 3350
+F 0 "D95" H 9425 3450 50  0000 C CNN
+F 1 "LED" H 9425 3250 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9425 3350 50  0001 C CNN
+F 3 "" H 9425 3350 50  0001 C CNN
+	1    9425 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D96
+U 1 1 5B10725F
+P 9700 3350
+F 0 "D96" H 9700 3450 50  0000 C CNN
+F 1 "LED" H 9700 3250 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9700 3350 50  0001 C CNN
+F 3 "" H 9700 3350 50  0001 C CNN
+	1    9700 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D109
+U 1 1 5B107265
+P 6200 4000
+F 0 "D109" H 6200 4100 50  0000 C CNN
+F 1 "LED" H 6200 3900 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6200 4000 50  0001 C CNN
+F 3 "" H 6200 4000 50  0001 C CNN
+	1    6200 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D110
+U 1 1 5B10726B
+P 6625 4000
+F 0 "D110" H 6625 4100 50  0000 C CNN
+F 1 "LED" H 6625 3900 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6625 4000 50  0001 C CNN
+F 3 "" H 6625 4000 50  0001 C CNN
+	1    6625 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D111
+U 1 1 5B107271
+P 6975 4000
+F 0 "D111" H 6975 4100 50  0000 C CNN
+F 1 "LED" H 6975 3900 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6975 4000 50  0001 C CNN
+F 3 "" H 6975 4000 50  0001 C CNN
+	1    6975 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D112
+U 1 1 5B107277
+P 7300 4000
+F 0 "D112" H 7300 4100 50  0000 C CNN
+F 1 "LED" H 7300 3900 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7300 4000 50  0001 C CNN
+F 3 "" H 7300 4000 50  0001 C CNN
+	1    7300 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D113
+U 1 1 5B10727D
+P 7650 4000
+F 0 "D113" H 7650 4100 50  0000 C CNN
+F 1 "LED" H 7650 3900 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7650 4000 50  0001 C CNN
+F 3 "" H 7650 4000 50  0001 C CNN
+	1    7650 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D114
+U 1 1 5B107283
+P 7950 4000
+F 0 "D114" H 7950 4100 50  0000 C CNN
+F 1 "LED" H 7950 3900 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7950 4000 50  0001 C CNN
+F 3 "" H 7950 4000 50  0001 C CNN
+	1    7950 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D115
+U 1 1 5B107289
+P 8225 4000
+F 0 "D115" H 8225 4100 50  0000 C CNN
+F 1 "LED" H 8225 3900 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8225 4000 50  0001 C CNN
+F 3 "" H 8225 4000 50  0001 C CNN
+	1    8225 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D116
+U 1 1 5B10728F
+P 8525 4000
+F 0 "D116" H 8525 4100 50  0000 C CNN
+F 1 "LED" H 8525 3900 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8525 4000 50  0001 C CNN
+F 3 "" H 8525 4000 50  0001 C CNN
+	1    8525 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D117
+U 1 1 5B107295
+P 8825 4000
+F 0 "D117" H 8825 4100 50  0000 C CNN
+F 1 "LED" H 8825 3900 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8825 4000 50  0001 C CNN
+F 3 "" H 8825 4000 50  0001 C CNN
+	1    8825 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D118
+U 1 1 5B10729B
+P 9125 4000
+F 0 "D118" H 9125 4100 50  0000 C CNN
+F 1 "LED" H 9125 3900 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9125 4000 50  0001 C CNN
+F 3 "" H 9125 4000 50  0001 C CNN
+	1    9125 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D119
+U 1 1 5B1072A1
+P 9400 4000
+F 0 "D119" H 9400 4100 50  0000 C CNN
+F 1 "LED" H 9400 3900 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9400 4000 50  0001 C CNN
+F 3 "" H 9400 4000 50  0001 C CNN
+	1    9400 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D120
+U 1 1 5B1072A7
+P 9675 4000
+F 0 "D120" H 9675 4100 50  0000 C CNN
+F 1 "LED" H 9675 3900 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9675 4000 50  0001 C CNN
+F 3 "" H 9675 4000 50  0001 C CNN
+	1    9675 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D133
+U 1 1 5B1072AD
+P 6200 4475
+F 0 "D133" H 6200 4575 50  0000 C CNN
+F 1 "LED" H 6200 4375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6200 4475 50  0001 C CNN
+F 3 "" H 6200 4475 50  0001 C CNN
+	1    6200 4475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D134
+U 1 1 5B1072B3
+P 6625 4475
+F 0 "D134" H 6625 4575 50  0000 C CNN
+F 1 "LED" H 6625 4375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6625 4475 50  0001 C CNN
+F 3 "" H 6625 4475 50  0001 C CNN
+	1    6625 4475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D135
+U 1 1 5B1072B9
+P 6975 4475
+F 0 "D135" H 6975 4575 50  0000 C CNN
+F 1 "LED" H 6975 4375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6975 4475 50  0001 C CNN
+F 3 "" H 6975 4475 50  0001 C CNN
+	1    6975 4475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D136
+U 1 1 5B1072BF
+P 7300 4475
+F 0 "D136" H 7300 4575 50  0000 C CNN
+F 1 "LED" H 7300 4375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7300 4475 50  0001 C CNN
+F 3 "" H 7300 4475 50  0001 C CNN
+	1    7300 4475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D137
+U 1 1 5B1072C5
+P 7650 4475
+F 0 "D137" H 7650 4575 50  0000 C CNN
+F 1 "LED" H 7650 4375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7650 4475 50  0001 C CNN
+F 3 "" H 7650 4475 50  0001 C CNN
+	1    7650 4475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D138
+U 1 1 5B1072CB
+P 7950 4475
+F 0 "D138" H 7950 4575 50  0000 C CNN
+F 1 "LED" H 7950 4375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7950 4475 50  0001 C CNN
+F 3 "" H 7950 4475 50  0001 C CNN
+	1    7950 4475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D139
+U 1 1 5B1072D1
+P 8225 4475
+F 0 "D139" H 8225 4575 50  0000 C CNN
+F 1 "LED" H 8225 4375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8225 4475 50  0001 C CNN
+F 3 "" H 8225 4475 50  0001 C CNN
+	1    8225 4475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D140
+U 1 1 5B1072D7
+P 8525 4475
+F 0 "D140" H 8525 4575 50  0000 C CNN
+F 1 "LED" H 8525 4375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8525 4475 50  0001 C CNN
+F 3 "" H 8525 4475 50  0001 C CNN
+	1    8525 4475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D141
+U 1 1 5B1072DD
+P 8825 4475
+F 0 "D141" H 8825 4575 50  0000 C CNN
+F 1 "LED" H 8825 4375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8825 4475 50  0001 C CNN
+F 3 "" H 8825 4475 50  0001 C CNN
+	1    8825 4475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D142
+U 1 1 5B1072E3
+P 9125 4475
+F 0 "D142" H 9125 4575 50  0000 C CNN
+F 1 "LED" H 9125 4375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9125 4475 50  0001 C CNN
+F 3 "" H 9125 4475 50  0001 C CNN
+	1    9125 4475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D143
+U 1 1 5B1072E9
+P 9400 4475
+F 0 "D143" H 9400 4575 50  0000 C CNN
+F 1 "LED" H 9400 4375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9400 4475 50  0001 C CNN
+F 3 "" H 9400 4475 50  0001 C CNN
+	1    9400 4475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D144
+U 1 1 5B1072EF
+P 9675 4475
+F 0 "D144" H 9675 4575 50  0000 C CNN
+F 1 "LED" H 9675 4375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9675 4475 50  0001 C CNN
+F 3 "" H 9675 4475 50  0001 C CNN
+	1    9675 4475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D157
+U 1 1 5B1072F5
+P 6200 5025
+F 0 "D157" H 6200 5125 50  0000 C CNN
+F 1 "LED" H 6200 4925 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6200 5025 50  0001 C CNN
+F 3 "" H 6200 5025 50  0001 C CNN
+	1    6200 5025
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D158
+U 1 1 5B1072FB
+P 6625 5025
+F 0 "D158" H 6625 5125 50  0000 C CNN
+F 1 "LED" H 6625 4925 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6625 5025 50  0001 C CNN
+F 3 "" H 6625 5025 50  0001 C CNN
+	1    6625 5025
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D159
+U 1 1 5B107301
+P 6975 5025
+F 0 "D159" H 6975 5125 50  0000 C CNN
+F 1 "LED" H 6975 4925 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6975 5025 50  0001 C CNN
+F 3 "" H 6975 5025 50  0001 C CNN
+	1    6975 5025
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D160
+U 1 1 5B107307
+P 7300 5025
+F 0 "D160" H 7300 5125 50  0000 C CNN
+F 1 "LED" H 7300 4925 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7300 5025 50  0001 C CNN
+F 3 "" H 7300 5025 50  0001 C CNN
+	1    7300 5025
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D161
+U 1 1 5B10730D
+P 7650 5025
+F 0 "D161" H 7650 5125 50  0000 C CNN
+F 1 "LED" H 7650 4925 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7650 5025 50  0001 C CNN
+F 3 "" H 7650 5025 50  0001 C CNN
+	1    7650 5025
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D162
+U 1 1 5B107313
+P 7950 5025
+F 0 "D162" H 7950 5125 50  0000 C CNN
+F 1 "LED" H 7950 4925 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7950 5025 50  0001 C CNN
+F 3 "" H 7950 5025 50  0001 C CNN
+	1    7950 5025
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D163
+U 1 1 5B107319
+P 8225 5025
+F 0 "D163" H 8225 5125 50  0000 C CNN
+F 1 "LED" H 8225 4925 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8225 5025 50  0001 C CNN
+F 3 "" H 8225 5025 50  0001 C CNN
+	1    8225 5025
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D164
+U 1 1 5B10731F
+P 8525 5025
+F 0 "D164" H 8525 5125 50  0000 C CNN
+F 1 "LED" H 8525 4925 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8525 5025 50  0001 C CNN
+F 3 "" H 8525 5025 50  0001 C CNN
+	1    8525 5025
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D165
+U 1 1 5B107325
+P 8825 5025
+F 0 "D165" H 8825 5125 50  0000 C CNN
+F 1 "LED" H 8825 4925 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8825 5025 50  0001 C CNN
+F 3 "" H 8825 5025 50  0001 C CNN
+	1    8825 5025
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D166
+U 1 1 5B10732B
+P 9125 5025
+F 0 "D166" H 9125 5125 50  0000 C CNN
+F 1 "LED" H 9125 4925 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9125 5025 50  0001 C CNN
+F 3 "" H 9125 5025 50  0001 C CNN
+	1    9125 5025
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D167
+U 1 1 5B107331
+P 9400 5025
+F 0 "D167" H 9400 5125 50  0000 C CNN
+F 1 "LED" H 9400 4925 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9400 5025 50  0001 C CNN
+F 3 "" H 9400 5025 50  0001 C CNN
+	1    9400 5025
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D168
+U 1 1 5B107337
+P 9675 5025
+F 0 "D168" H 9675 5125 50  0000 C CNN
+F 1 "LED" H 9675 4925 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9675 5025 50  0001 C CNN
+F 3 "" H 9675 5025 50  0001 C CNN
+	1    9675 5025
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D181
+U 1 1 5B10733D
+P 6200 5500
+F 0 "D181" H 6200 5600 50  0000 C CNN
+F 1 "LED" H 6200 5400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6200 5500 50  0001 C CNN
+F 3 "" H 6200 5500 50  0001 C CNN
+	1    6200 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D182
+U 1 1 5B107343
+P 6625 5500
+F 0 "D182" H 6625 5600 50  0000 C CNN
+F 1 "LED" H 6625 5400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6625 5500 50  0001 C CNN
+F 3 "" H 6625 5500 50  0001 C CNN
+	1    6625 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D183
+U 1 1 5B107349
+P 6975 5500
+F 0 "D183" H 6975 5600 50  0000 C CNN
+F 1 "LED" H 6975 5400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6975 5500 50  0001 C CNN
+F 3 "" H 6975 5500 50  0001 C CNN
+	1    6975 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D184
+U 1 1 5B10734F
+P 7300 5500
+F 0 "D184" H 7300 5600 50  0000 C CNN
+F 1 "LED" H 7300 5400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7300 5500 50  0001 C CNN
+F 3 "" H 7300 5500 50  0001 C CNN
+	1    7300 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D185
+U 1 1 5B107355
+P 7650 5500
+F 0 "D185" H 7650 5600 50  0000 C CNN
+F 1 "LED" H 7650 5400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7650 5500 50  0001 C CNN
+F 3 "" H 7650 5500 50  0001 C CNN
+	1    7650 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D186
+U 1 1 5B10735B
+P 7950 5500
+F 0 "D186" H 7950 5600 50  0000 C CNN
+F 1 "LED" H 7950 5400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7950 5500 50  0001 C CNN
+F 3 "" H 7950 5500 50  0001 C CNN
+	1    7950 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D187
+U 1 1 5B107361
+P 8225 5500
+F 0 "D187" H 8225 5600 50  0000 C CNN
+F 1 "LED" H 8225 5400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8225 5500 50  0001 C CNN
+F 3 "" H 8225 5500 50  0001 C CNN
+	1    8225 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D188
+U 1 1 5B107367
+P 8525 5500
+F 0 "D188" H 8525 5600 50  0000 C CNN
+F 1 "LED" H 8525 5400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8525 5500 50  0001 C CNN
+F 3 "" H 8525 5500 50  0001 C CNN
+	1    8525 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D189
+U 1 1 5B10736D
+P 8825 5500
+F 0 "D189" H 8825 5600 50  0000 C CNN
+F 1 "LED" H 8825 5400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8825 5500 50  0001 C CNN
+F 3 "" H 8825 5500 50  0001 C CNN
+	1    8825 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D190
+U 1 1 5B107373
+P 9125 5500
+F 0 "D190" H 9125 5600 50  0000 C CNN
+F 1 "LED" H 9125 5400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9125 5500 50  0001 C CNN
+F 3 "" H 9125 5500 50  0001 C CNN
+	1    9125 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D191
+U 1 1 5B107379
+P 9400 5500
+F 0 "D191" H 9400 5600 50  0000 C CNN
+F 1 "LED" H 9400 5400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9400 5500 50  0001 C CNN
+F 3 "" H 9400 5500 50  0001 C CNN
+	1    9400 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D192
+U 1 1 5B10737F
+P 9675 5500
+F 0 "D192" H 9675 5600 50  0000 C CNN
+F 1 "LED" H 9675 5400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9675 5500 50  0001 C CNN
+F 3 "" H 9675 5500 50  0001 C CNN
+	1    9675 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D193
+U 1 1 5B10C49F
+P 2100 6475
+F 0 "D193" H 2100 6575 50  0000 C CNN
+F 1 "LED" H 2100 6375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2100 6475 50  0001 C CNN
+F 3 "" H 2100 6475 50  0001 C CNN
+	1    2100 6475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D194
+U 1 1 5B10C4A5
+P 2525 6475
+F 0 "D194" H 2525 6575 50  0000 C CNN
+F 1 "LED" H 2525 6375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2525 6475 50  0001 C CNN
+F 3 "" H 2525 6475 50  0001 C CNN
+	1    2525 6475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D195
+U 1 1 5B10C4AB
+P 2875 6475
+F 0 "D195" H 2875 6575 50  0000 C CNN
+F 1 "LED" H 2875 6375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2875 6475 50  0001 C CNN
+F 3 "" H 2875 6475 50  0001 C CNN
+	1    2875 6475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D196
+U 1 1 5B10C4B1
+P 3200 6475
+F 0 "D196" H 3200 6575 50  0000 C CNN
+F 1 "LED" H 3200 6375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3200 6475 50  0001 C CNN
+F 3 "" H 3200 6475 50  0001 C CNN
+	1    3200 6475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D197
+U 1 1 5B10C4B7
+P 3550 6475
+F 0 "D197" H 3550 6575 50  0000 C CNN
+F 1 "LED" H 3550 6375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3550 6475 50  0001 C CNN
+F 3 "" H 3550 6475 50  0001 C CNN
+	1    3550 6475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D198
+U 1 1 5B10C4BD
+P 3850 6475
+F 0 "D198" H 3850 6575 50  0000 C CNN
+F 1 "LED" H 3850 6375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3850 6475 50  0001 C CNN
+F 3 "" H 3850 6475 50  0001 C CNN
+	1    3850 6475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D199
+U 1 1 5B10C4C3
+P 4125 6475
+F 0 "D199" H 4125 6575 50  0000 C CNN
+F 1 "LED" H 4125 6375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4125 6475 50  0001 C CNN
+F 3 "" H 4125 6475 50  0001 C CNN
+	1    4125 6475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D200
+U 1 1 5B10C4C9
+P 4425 6475
+F 0 "D200" H 4425 6575 50  0000 C CNN
+F 1 "LED" H 4425 6375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4425 6475 50  0001 C CNN
+F 3 "" H 4425 6475 50  0001 C CNN
+	1    4425 6475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D201
+U 1 1 5B10C4CF
+P 4725 6475
+F 0 "D201" H 4725 6575 50  0000 C CNN
+F 1 "LED" H 4725 6375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4725 6475 50  0001 C CNN
+F 3 "" H 4725 6475 50  0001 C CNN
+	1    4725 6475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D202
+U 1 1 5B10C4D5
+P 5025 6475
+F 0 "D202" H 5025 6575 50  0000 C CNN
+F 1 "LED" H 5025 6375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5025 6475 50  0001 C CNN
+F 3 "" H 5025 6475 50  0001 C CNN
+	1    5025 6475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D203
+U 1 1 5B10C4DB
+P 5300 6475
+F 0 "D203" H 5300 6575 50  0000 C CNN
+F 1 "LED" H 5300 6375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5300 6475 50  0001 C CNN
+F 3 "" H 5300 6475 50  0001 C CNN
+	1    5300 6475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D204
+U 1 1 5B10C4E1
+P 5575 6475
+F 0 "D204" H 5575 6575 50  0000 C CNN
+F 1 "LED" H 5575 6375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5575 6475 50  0001 C CNN
+F 3 "" H 5575 6475 50  0001 C CNN
+	1    5575 6475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D217
+U 1 1 5B10C4E7
+P 2100 6950
+F 0 "D217" H 2100 7050 50  0000 C CNN
+F 1 "LED" H 2100 6850 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2100 6950 50  0001 C CNN
+F 3 "" H 2100 6950 50  0001 C CNN
+	1    2100 6950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D218
+U 1 1 5B10C4ED
+P 2525 6950
+F 0 "D218" H 2525 7050 50  0000 C CNN
+F 1 "LED" H 2525 6850 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2525 6950 50  0001 C CNN
+F 3 "" H 2525 6950 50  0001 C CNN
+	1    2525 6950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D219
+U 1 1 5B10C4F3
+P 2875 6950
+F 0 "D219" H 2875 7050 50  0000 C CNN
+F 1 "LED" H 2875 6850 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2875 6950 50  0001 C CNN
+F 3 "" H 2875 6950 50  0001 C CNN
+	1    2875 6950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D220
+U 1 1 5B10C4F9
+P 3200 6950
+F 0 "D220" H 3200 7050 50  0000 C CNN
+F 1 "LED" H 3200 6850 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3200 6950 50  0001 C CNN
+F 3 "" H 3200 6950 50  0001 C CNN
+	1    3200 6950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D221
+U 1 1 5B10C4FF
+P 3550 6950
+F 0 "D221" H 3550 7050 50  0000 C CNN
+F 1 "LED" H 3550 6850 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3550 6950 50  0001 C CNN
+F 3 "" H 3550 6950 50  0001 C CNN
+	1    3550 6950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D222
+U 1 1 5B10C505
+P 3850 6950
+F 0 "D222" H 3850 7050 50  0000 C CNN
+F 1 "LED" H 3850 6850 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3850 6950 50  0001 C CNN
+F 3 "" H 3850 6950 50  0001 C CNN
+	1    3850 6950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D223
+U 1 1 5B10C50B
+P 4125 6950
+F 0 "D223" H 4125 7050 50  0000 C CNN
+F 1 "LED" H 4125 6850 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4125 6950 50  0001 C CNN
+F 3 "" H 4125 6950 50  0001 C CNN
+	1    4125 6950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D224
+U 1 1 5B10C511
+P 4425 6950
+F 0 "D224" H 4425 7050 50  0000 C CNN
+F 1 "LED" H 4425 6850 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4425 6950 50  0001 C CNN
+F 3 "" H 4425 6950 50  0001 C CNN
+	1    4425 6950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D225
+U 1 1 5B10C517
+P 4725 6950
+F 0 "D225" H 4725 7050 50  0000 C CNN
+F 1 "LED" H 4725 6850 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4725 6950 50  0001 C CNN
+F 3 "" H 4725 6950 50  0001 C CNN
+	1    4725 6950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D226
+U 1 1 5B10C51D
+P 5025 6950
+F 0 "D226" H 5025 7050 50  0000 C CNN
+F 1 "LED" H 5025 6850 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5025 6950 50  0001 C CNN
+F 3 "" H 5025 6950 50  0001 C CNN
+	1    5025 6950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D227
+U 1 1 5B10C523
+P 5300 6950
+F 0 "D227" H 5300 7050 50  0000 C CNN
+F 1 "LED" H 5300 6850 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5300 6950 50  0001 C CNN
+F 3 "" H 5300 6950 50  0001 C CNN
+	1    5300 6950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D228
+U 1 1 5B10C529
+P 5575 6950
+F 0 "D228" H 5575 7050 50  0000 C CNN
+F 1 "LED" H 5575 6850 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5575 6950 50  0001 C CNN
+F 3 "" H 5575 6950 50  0001 C CNN
+	1    5575 6950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D241
+U 1 1 5B10C52F
+P 2100 7500
+F 0 "D241" H 2100 7600 50  0000 C CNN
+F 1 "LED" H 2100 7400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2100 7500 50  0001 C CNN
+F 3 "" H 2100 7500 50  0001 C CNN
+	1    2100 7500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D242
+U 1 1 5B10C535
+P 2525 7500
+F 0 "D242" H 2525 7600 50  0000 C CNN
+F 1 "LED" H 2525 7400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2525 7500 50  0001 C CNN
+F 3 "" H 2525 7500 50  0001 C CNN
+	1    2525 7500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D243
+U 1 1 5B10C53B
+P 2875 7500
+F 0 "D243" H 2875 7600 50  0000 C CNN
+F 1 "LED" H 2875 7400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2875 7500 50  0001 C CNN
+F 3 "" H 2875 7500 50  0001 C CNN
+	1    2875 7500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D244
+U 1 1 5B10C541
+P 3200 7500
+F 0 "D244" H 3200 7600 50  0000 C CNN
+F 1 "LED" H 3200 7400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3200 7500 50  0001 C CNN
+F 3 "" H 3200 7500 50  0001 C CNN
+	1    3200 7500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D245
+U 1 1 5B10C547
+P 3550 7500
+F 0 "D245" H 3550 7600 50  0000 C CNN
+F 1 "LED" H 3550 7400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3550 7500 50  0001 C CNN
+F 3 "" H 3550 7500 50  0001 C CNN
+	1    3550 7500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D246
+U 1 1 5B10C54D
+P 3850 7500
+F 0 "D246" H 3850 7600 50  0000 C CNN
+F 1 "LED" H 3850 7400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3850 7500 50  0001 C CNN
+F 3 "" H 3850 7500 50  0001 C CNN
+	1    3850 7500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D247
+U 1 1 5B10C553
+P 4125 7500
+F 0 "D247" H 4125 7600 50  0000 C CNN
+F 1 "LED" H 4125 7400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4125 7500 50  0001 C CNN
+F 3 "" H 4125 7500 50  0001 C CNN
+	1    4125 7500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D248
+U 1 1 5B10C559
+P 4425 7500
+F 0 "D248" H 4425 7600 50  0000 C CNN
+F 1 "LED" H 4425 7400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4425 7500 50  0001 C CNN
+F 3 "" H 4425 7500 50  0001 C CNN
+	1    4425 7500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D249
+U 1 1 5B10C55F
+P 4725 7500
+F 0 "D249" H 4725 7600 50  0000 C CNN
+F 1 "LED" H 4725 7400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4725 7500 50  0001 C CNN
+F 3 "" H 4725 7500 50  0001 C CNN
+	1    4725 7500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D250
+U 1 1 5B10C565
+P 5025 7500
+F 0 "D250" H 5025 7600 50  0000 C CNN
+F 1 "LED" H 5025 7400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5025 7500 50  0001 C CNN
+F 3 "" H 5025 7500 50  0001 C CNN
+	1    5025 7500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D251
+U 1 1 5B10C56B
+P 5300 7500
+F 0 "D251" H 5300 7600 50  0000 C CNN
+F 1 "LED" H 5300 7400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5300 7500 50  0001 C CNN
+F 3 "" H 5300 7500 50  0001 C CNN
+	1    5300 7500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D252
+U 1 1 5B10C571
+P 5575 7500
+F 0 "D252" H 5575 7600 50  0000 C CNN
+F 1 "LED" H 5575 7400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5575 7500 50  0001 C CNN
+F 3 "" H 5575 7500 50  0001 C CNN
+	1    5575 7500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D265
+U 1 1 5B10C577
+P 2100 7975
+F 0 "D265" H 2100 8075 50  0000 C CNN
+F 1 "LED" H 2100 7875 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2100 7975 50  0001 C CNN
+F 3 "" H 2100 7975 50  0001 C CNN
+	1    2100 7975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D266
+U 1 1 5B10C57D
+P 2525 7975
+F 0 "D266" H 2525 8075 50  0000 C CNN
+F 1 "LED" H 2525 7875 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2525 7975 50  0001 C CNN
+F 3 "" H 2525 7975 50  0001 C CNN
+	1    2525 7975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D267
+U 1 1 5B10C583
+P 2875 7975
+F 0 "D267" H 2875 8075 50  0000 C CNN
+F 1 "LED" H 2875 7875 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2875 7975 50  0001 C CNN
+F 3 "" H 2875 7975 50  0001 C CNN
+	1    2875 7975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D268
+U 1 1 5B10C589
+P 3200 7975
+F 0 "D268" H 3200 8075 50  0000 C CNN
+F 1 "LED" H 3200 7875 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3200 7975 50  0001 C CNN
+F 3 "" H 3200 7975 50  0001 C CNN
+	1    3200 7975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D269
+U 1 1 5B10C58F
+P 3550 7975
+F 0 "D269" H 3550 8075 50  0000 C CNN
+F 1 "LED" H 3550 7875 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3550 7975 50  0001 C CNN
+F 3 "" H 3550 7975 50  0001 C CNN
+	1    3550 7975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D270
+U 1 1 5B10C595
+P 3850 7975
+F 0 "D270" H 3850 8075 50  0000 C CNN
+F 1 "LED" H 3850 7875 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3850 7975 50  0001 C CNN
+F 3 "" H 3850 7975 50  0001 C CNN
+	1    3850 7975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D271
+U 1 1 5B10C59B
+P 4125 7975
+F 0 "D271" H 4125 8075 50  0000 C CNN
+F 1 "LED" H 4125 7875 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4125 7975 50  0001 C CNN
+F 3 "" H 4125 7975 50  0001 C CNN
+	1    4125 7975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D272
+U 1 1 5B10C5A1
+P 4425 7975
+F 0 "D272" H 4425 8075 50  0000 C CNN
+F 1 "LED" H 4425 7875 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4425 7975 50  0001 C CNN
+F 3 "" H 4425 7975 50  0001 C CNN
+	1    4425 7975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D273
+U 1 1 5B10C5A7
+P 4725 7975
+F 0 "D273" H 4725 8075 50  0000 C CNN
+F 1 "LED" H 4725 7875 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4725 7975 50  0001 C CNN
+F 3 "" H 4725 7975 50  0001 C CNN
+	1    4725 7975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D274
+U 1 1 5B10C5AD
+P 5025 7975
+F 0 "D274" H 5025 8075 50  0000 C CNN
+F 1 "LED" H 5025 7875 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5025 7975 50  0001 C CNN
+F 3 "" H 5025 7975 50  0001 C CNN
+	1    5025 7975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D275
+U 1 1 5B10C5B3
+P 5300 7975
+F 0 "D275" H 5300 8075 50  0000 C CNN
+F 1 "LED" H 5300 7875 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5300 7975 50  0001 C CNN
+F 3 "" H 5300 7975 50  0001 C CNN
+	1    5300 7975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D276
+U 1 1 5B10C5B9
+P 5575 7975
+F 0 "D276" H 5575 8075 50  0000 C CNN
+F 1 "LED" H 5575 7875 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5575 7975 50  0001 C CNN
+F 3 "" H 5575 7975 50  0001 C CNN
+	1    5575 7975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D289
+U 1 1 5B10C5BF
+P 2075 8625
+F 0 "D289" H 2075 8725 50  0000 C CNN
+F 1 "LED" H 2075 8525 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2075 8625 50  0001 C CNN
+F 3 "" H 2075 8625 50  0001 C CNN
+	1    2075 8625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D290
+U 1 1 5B10C5C5
+P 2500 8625
+F 0 "D290" H 2500 8725 50  0000 C CNN
+F 1 "LED" H 2500 8525 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2500 8625 50  0001 C CNN
+F 3 "" H 2500 8625 50  0001 C CNN
+	1    2500 8625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D291
+U 1 1 5B10C5CB
+P 2850 8625
+F 0 "D291" H 2850 8725 50  0000 C CNN
+F 1 "LED" H 2850 8525 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2850 8625 50  0001 C CNN
+F 3 "" H 2850 8625 50  0001 C CNN
+	1    2850 8625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D292
+U 1 1 5B10C5D1
+P 3175 8625
+F 0 "D292" H 3175 8725 50  0000 C CNN
+F 1 "LED" H 3175 8525 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3175 8625 50  0001 C CNN
+F 3 "" H 3175 8625 50  0001 C CNN
+	1    3175 8625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D293
+U 1 1 5B10C5D7
+P 3525 8625
+F 0 "D293" H 3525 8725 50  0000 C CNN
+F 1 "LED" H 3525 8525 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3525 8625 50  0001 C CNN
+F 3 "" H 3525 8625 50  0001 C CNN
+	1    3525 8625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D294
+U 1 1 5B10C5DD
+P 3825 8625
+F 0 "D294" H 3825 8725 50  0000 C CNN
+F 1 "LED" H 3825 8525 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3825 8625 50  0001 C CNN
+F 3 "" H 3825 8625 50  0001 C CNN
+	1    3825 8625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D295
+U 1 1 5B10C5E3
+P 4100 8625
+F 0 "D295" H 4100 8725 50  0000 C CNN
+F 1 "LED" H 4100 8525 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4100 8625 50  0001 C CNN
+F 3 "" H 4100 8625 50  0001 C CNN
+	1    4100 8625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D296
+U 1 1 5B10C5E9
+P 4400 8625
+F 0 "D296" H 4400 8725 50  0000 C CNN
+F 1 "LED" H 4400 8525 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4400 8625 50  0001 C CNN
+F 3 "" H 4400 8625 50  0001 C CNN
+	1    4400 8625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D297
+U 1 1 5B10C5EF
+P 4700 8625
+F 0 "D297" H 4700 8725 50  0000 C CNN
+F 1 "LED" H 4700 8525 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4700 8625 50  0001 C CNN
+F 3 "" H 4700 8625 50  0001 C CNN
+	1    4700 8625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D298
+U 1 1 5B10C5F5
+P 5000 8625
+F 0 "D298" H 5000 8725 50  0000 C CNN
+F 1 "LED" H 5000 8525 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5000 8625 50  0001 C CNN
+F 3 "" H 5000 8625 50  0001 C CNN
+	1    5000 8625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D299
+U 1 1 5B10C5FB
+P 5275 8625
+F 0 "D299" H 5275 8725 50  0000 C CNN
+F 1 "LED" H 5275 8525 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5275 8625 50  0001 C CNN
+F 3 "" H 5275 8625 50  0001 C CNN
+	1    5275 8625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D300
+U 1 1 5B10C601
+P 5550 8625
+F 0 "D300" H 5550 8725 50  0000 C CNN
+F 1 "LED" H 5550 8525 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5550 8625 50  0001 C CNN
+F 3 "" H 5550 8625 50  0001 C CNN
+	1    5550 8625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D313
+U 1 1 5B10C607
+P 2075 9100
+F 0 "D313" H 2075 9200 50  0000 C CNN
+F 1 "LED" H 2075 9000 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2075 9100 50  0001 C CNN
+F 3 "" H 2075 9100 50  0001 C CNN
+	1    2075 9100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D314
+U 1 1 5B10C60D
+P 2500 9100
+F 0 "D314" H 2500 9200 50  0000 C CNN
+F 1 "LED" H 2500 9000 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2500 9100 50  0001 C CNN
+F 3 "" H 2500 9100 50  0001 C CNN
+	1    2500 9100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D315
+U 1 1 5B10C613
+P 2850 9100
+F 0 "D315" H 2850 9200 50  0000 C CNN
+F 1 "LED" H 2850 9000 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2850 9100 50  0001 C CNN
+F 3 "" H 2850 9100 50  0001 C CNN
+	1    2850 9100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D316
+U 1 1 5B10C619
+P 3175 9100
+F 0 "D316" H 3175 9200 50  0000 C CNN
+F 1 "LED" H 3175 9000 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3175 9100 50  0001 C CNN
+F 3 "" H 3175 9100 50  0001 C CNN
+	1    3175 9100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D317
+U 1 1 5B10C61F
+P 3525 9100
+F 0 "D317" H 3525 9200 50  0000 C CNN
+F 1 "LED" H 3525 9000 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3525 9100 50  0001 C CNN
+F 3 "" H 3525 9100 50  0001 C CNN
+	1    3525 9100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D318
+U 1 1 5B10C625
+P 3825 9100
+F 0 "D318" H 3825 9200 50  0000 C CNN
+F 1 "LED" H 3825 9000 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3825 9100 50  0001 C CNN
+F 3 "" H 3825 9100 50  0001 C CNN
+	1    3825 9100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D319
+U 1 1 5B10C62B
+P 4100 9100
+F 0 "D319" H 4100 9200 50  0000 C CNN
+F 1 "LED" H 4100 9000 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4100 9100 50  0001 C CNN
+F 3 "" H 4100 9100 50  0001 C CNN
+	1    4100 9100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D320
+U 1 1 5B10C631
+P 4400 9100
+F 0 "D320" H 4400 9200 50  0000 C CNN
+F 1 "LED" H 4400 9000 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4400 9100 50  0001 C CNN
+F 3 "" H 4400 9100 50  0001 C CNN
+	1    4400 9100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D321
+U 1 1 5B10C637
+P 4700 9100
+F 0 "D321" H 4700 9200 50  0000 C CNN
+F 1 "LED" H 4700 9000 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4700 9100 50  0001 C CNN
+F 3 "" H 4700 9100 50  0001 C CNN
+	1    4700 9100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D322
+U 1 1 5B10C63D
+P 5000 9100
+F 0 "D322" H 5000 9200 50  0000 C CNN
+F 1 "LED" H 5000 9000 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5000 9100 50  0001 C CNN
+F 3 "" H 5000 9100 50  0001 C CNN
+	1    5000 9100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D323
+U 1 1 5B10C643
+P 5275 9100
+F 0 "D323" H 5275 9200 50  0000 C CNN
+F 1 "LED" H 5275 9000 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5275 9100 50  0001 C CNN
+F 3 "" H 5275 9100 50  0001 C CNN
+	1    5275 9100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D324
+U 1 1 5B10C649
+P 5550 9100
+F 0 "D324" H 5550 9200 50  0000 C CNN
+F 1 "LED" H 5550 9000 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5550 9100 50  0001 C CNN
+F 3 "" H 5550 9100 50  0001 C CNN
+	1    5550 9100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D337
+U 1 1 5B10C64F
+P 2075 9650
+F 0 "D337" H 2075 9750 50  0000 C CNN
+F 1 "LED" H 2075 9550 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2075 9650 50  0001 C CNN
+F 3 "" H 2075 9650 50  0001 C CNN
+	1    2075 9650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D338
+U 1 1 5B10C655
+P 2500 9650
+F 0 "D338" H 2500 9750 50  0000 C CNN
+F 1 "LED" H 2500 9550 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2500 9650 50  0001 C CNN
+F 3 "" H 2500 9650 50  0001 C CNN
+	1    2500 9650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D339
+U 1 1 5B10C65B
+P 2850 9650
+F 0 "D339" H 2850 9750 50  0000 C CNN
+F 1 "LED" H 2850 9550 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2850 9650 50  0001 C CNN
+F 3 "" H 2850 9650 50  0001 C CNN
+	1    2850 9650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D340
+U 1 1 5B10C661
+P 3175 9650
+F 0 "D340" H 3175 9750 50  0000 C CNN
+F 1 "LED" H 3175 9550 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3175 9650 50  0001 C CNN
+F 3 "" H 3175 9650 50  0001 C CNN
+	1    3175 9650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D341
+U 1 1 5B10C667
+P 3525 9650
+F 0 "D341" H 3525 9750 50  0000 C CNN
+F 1 "LED" H 3525 9550 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3525 9650 50  0001 C CNN
+F 3 "" H 3525 9650 50  0001 C CNN
+	1    3525 9650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D342
+U 1 1 5B10C66D
+P 3825 9650
+F 0 "D342" H 3825 9750 50  0000 C CNN
+F 1 "LED" H 3825 9550 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3825 9650 50  0001 C CNN
+F 3 "" H 3825 9650 50  0001 C CNN
+	1    3825 9650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D343
+U 1 1 5B10C673
+P 4100 9650
+F 0 "D343" H 4100 9750 50  0000 C CNN
+F 1 "LED" H 4100 9550 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4100 9650 50  0001 C CNN
+F 3 "" H 4100 9650 50  0001 C CNN
+	1    4100 9650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D344
+U 1 1 5B10C679
+P 4400 9650
+F 0 "D344" H 4400 9750 50  0000 C CNN
+F 1 "LED" H 4400 9550 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4400 9650 50  0001 C CNN
+F 3 "" H 4400 9650 50  0001 C CNN
+	1    4400 9650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D345
+U 1 1 5B10C67F
+P 4700 9650
+F 0 "D345" H 4700 9750 50  0000 C CNN
+F 1 "LED" H 4700 9550 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4700 9650 50  0001 C CNN
+F 3 "" H 4700 9650 50  0001 C CNN
+	1    4700 9650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D346
+U 1 1 5B10C685
+P 5000 9650
+F 0 "D346" H 5000 9750 50  0000 C CNN
+F 1 "LED" H 5000 9550 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5000 9650 50  0001 C CNN
+F 3 "" H 5000 9650 50  0001 C CNN
+	1    5000 9650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D347
+U 1 1 5B10C68B
+P 5275 9650
+F 0 "D347" H 5275 9750 50  0000 C CNN
+F 1 "LED" H 5275 9550 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5275 9650 50  0001 C CNN
+F 3 "" H 5275 9650 50  0001 C CNN
+	1    5275 9650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D348
+U 1 1 5B10C691
+P 5550 9650
+F 0 "D348" H 5550 9750 50  0000 C CNN
+F 1 "LED" H 5550 9550 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5550 9650 50  0001 C CNN
+F 3 "" H 5550 9650 50  0001 C CNN
+	1    5550 9650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D361
+U 1 1 5B10C697
+P 2075 10125
+F 0 "D361" H 2075 10225 50  0000 C CNN
+F 1 "LED" H 2075 10025 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2075 10125 50  0001 C CNN
+F 3 "" H 2075 10125 50  0001 C CNN
+	1    2075 10125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D362
+U 1 1 5B10C69D
+P 2500 10125
+F 0 "D362" H 2500 10225 50  0000 C CNN
+F 1 "LED" H 2500 10025 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2500 10125 50  0001 C CNN
+F 3 "" H 2500 10125 50  0001 C CNN
+	1    2500 10125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D363
+U 1 1 5B10C6A3
+P 2850 10125
+F 0 "D363" H 2850 10225 50  0000 C CNN
+F 1 "LED" H 2850 10025 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 2850 10125 50  0001 C CNN
+F 3 "" H 2850 10125 50  0001 C CNN
+	1    2850 10125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D364
+U 1 1 5B10C6A9
+P 3175 10125
+F 0 "D364" H 3175 10225 50  0000 C CNN
+F 1 "LED" H 3175 10025 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3175 10125 50  0001 C CNN
+F 3 "" H 3175 10125 50  0001 C CNN
+	1    3175 10125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D365
+U 1 1 5B10C6AF
+P 3525 10125
+F 0 "D365" H 3525 10225 50  0000 C CNN
+F 1 "LED" H 3525 10025 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3525 10125 50  0001 C CNN
+F 3 "" H 3525 10125 50  0001 C CNN
+	1    3525 10125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D366
+U 1 1 5B10C6B5
+P 3825 10125
+F 0 "D366" H 3825 10225 50  0000 C CNN
+F 1 "LED" H 3825 10025 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 3825 10125 50  0001 C CNN
+F 3 "" H 3825 10125 50  0001 C CNN
+	1    3825 10125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D367
+U 1 1 5B10C6BB
+P 4100 10125
+F 0 "D367" H 4100 10225 50  0000 C CNN
+F 1 "LED" H 4100 10025 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4100 10125 50  0001 C CNN
+F 3 "" H 4100 10125 50  0001 C CNN
+	1    4100 10125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D368
+U 1 1 5B10C6C1
+P 4400 10125
+F 0 "D368" H 4400 10225 50  0000 C CNN
+F 1 "LED" H 4400 10025 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4400 10125 50  0001 C CNN
+F 3 "" H 4400 10125 50  0001 C CNN
+	1    4400 10125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D369
+U 1 1 5B10C6C7
+P 4700 10125
+F 0 "D369" H 4700 10225 50  0000 C CNN
+F 1 "LED" H 4700 10025 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 4700 10125 50  0001 C CNN
+F 3 "" H 4700 10125 50  0001 C CNN
+	1    4700 10125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D370
+U 1 1 5B10C6CD
+P 5000 10125
+F 0 "D370" H 5000 10225 50  0000 C CNN
+F 1 "LED" H 5000 10025 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5000 10125 50  0001 C CNN
+F 3 "" H 5000 10125 50  0001 C CNN
+	1    5000 10125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D371
+U 1 1 5B10C6D3
+P 5275 10125
+F 0 "D371" H 5275 10225 50  0000 C CNN
+F 1 "LED" H 5275 10025 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5275 10125 50  0001 C CNN
+F 3 "" H 5275 10125 50  0001 C CNN
+	1    5275 10125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D372
+U 1 1 5B10C6D9
+P 5550 10125
+F 0 "D372" H 5550 10225 50  0000 C CNN
+F 1 "LED" H 5550 10025 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 5550 10125 50  0001 C CNN
+F 3 "" H 5550 10125 50  0001 C CNN
+	1    5550 10125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D205
+U 1 1 5B115CCA
+P 6175 6475
+F 0 "D205" H 6175 6575 50  0000 C CNN
+F 1 "LED" H 6175 6375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6175 6475 50  0001 C CNN
+F 3 "" H 6175 6475 50  0001 C CNN
+	1    6175 6475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D206
+U 1 1 5B115CD0
+P 6600 6475
+F 0 "D206" H 6600 6575 50  0000 C CNN
+F 1 "LED" H 6600 6375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6600 6475 50  0001 C CNN
+F 3 "" H 6600 6475 50  0001 C CNN
+	1    6600 6475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D207
+U 1 1 5B115CD6
+P 6950 6475
+F 0 "D207" H 6950 6575 50  0000 C CNN
+F 1 "LED" H 6950 6375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6950 6475 50  0001 C CNN
+F 3 "" H 6950 6475 50  0001 C CNN
+	1    6950 6475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D208
+U 1 1 5B115CDC
+P 7275 6475
+F 0 "D208" H 7275 6575 50  0000 C CNN
+F 1 "LED" H 7275 6375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7275 6475 50  0001 C CNN
+F 3 "" H 7275 6475 50  0001 C CNN
+	1    7275 6475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D209
+U 1 1 5B115CE2
+P 7625 6475
+F 0 "D209" H 7625 6575 50  0000 C CNN
+F 1 "LED" H 7625 6375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7625 6475 50  0001 C CNN
+F 3 "" H 7625 6475 50  0001 C CNN
+	1    7625 6475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D210
+U 1 1 5B115CE8
+P 7925 6475
+F 0 "D210" H 7925 6575 50  0000 C CNN
+F 1 "LED" H 7925 6375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7925 6475 50  0001 C CNN
+F 3 "" H 7925 6475 50  0001 C CNN
+	1    7925 6475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D211
+U 1 1 5B115CEE
+P 8200 6475
+F 0 "D211" H 8200 6575 50  0000 C CNN
+F 1 "LED" H 8200 6375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8200 6475 50  0001 C CNN
+F 3 "" H 8200 6475 50  0001 C CNN
+	1    8200 6475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D212
+U 1 1 5B115CF4
+P 8500 6475
+F 0 "D212" H 8500 6575 50  0000 C CNN
+F 1 "LED" H 8500 6375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8500 6475 50  0001 C CNN
+F 3 "" H 8500 6475 50  0001 C CNN
+	1    8500 6475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D213
+U 1 1 5B115CFA
+P 8800 6475
+F 0 "D213" H 8800 6575 50  0000 C CNN
+F 1 "LED" H 8800 6375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8800 6475 50  0001 C CNN
+F 3 "" H 8800 6475 50  0001 C CNN
+	1    8800 6475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D214
+U 1 1 5B115D00
+P 9100 6475
+F 0 "D214" H 9100 6575 50  0000 C CNN
+F 1 "LED" H 9100 6375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9100 6475 50  0001 C CNN
+F 3 "" H 9100 6475 50  0001 C CNN
+	1    9100 6475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D215
+U 1 1 5B115D06
+P 9375 6475
+F 0 "D215" H 9375 6575 50  0000 C CNN
+F 1 "LED" H 9375 6375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9375 6475 50  0001 C CNN
+F 3 "" H 9375 6475 50  0001 C CNN
+	1    9375 6475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D216
+U 1 1 5B115D0C
+P 9650 6475
+F 0 "D216" H 9650 6575 50  0000 C CNN
+F 1 "LED" H 9650 6375 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9650 6475 50  0001 C CNN
+F 3 "" H 9650 6475 50  0001 C CNN
+	1    9650 6475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D229
+U 1 1 5B115D12
+P 6175 6950
+F 0 "D229" H 6175 7050 50  0000 C CNN
+F 1 "LED" H 6175 6850 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6175 6950 50  0001 C CNN
+F 3 "" H 6175 6950 50  0001 C CNN
+	1    6175 6950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D230
+U 1 1 5B115D18
+P 6600 6950
+F 0 "D230" H 6600 7050 50  0000 C CNN
+F 1 "LED" H 6600 6850 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6600 6950 50  0001 C CNN
+F 3 "" H 6600 6950 50  0001 C CNN
+	1    6600 6950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D231
+U 1 1 5B115D1E
+P 6950 6950
+F 0 "D231" H 6950 7050 50  0000 C CNN
+F 1 "LED" H 6950 6850 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6950 6950 50  0001 C CNN
+F 3 "" H 6950 6950 50  0001 C CNN
+	1    6950 6950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D232
+U 1 1 5B115D24
+P 7275 6950
+F 0 "D232" H 7275 7050 50  0000 C CNN
+F 1 "LED" H 7275 6850 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7275 6950 50  0001 C CNN
+F 3 "" H 7275 6950 50  0001 C CNN
+	1    7275 6950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D233
+U 1 1 5B115D2A
+P 7625 6950
+F 0 "D233" H 7625 7050 50  0000 C CNN
+F 1 "LED" H 7625 6850 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7625 6950 50  0001 C CNN
+F 3 "" H 7625 6950 50  0001 C CNN
+	1    7625 6950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D234
+U 1 1 5B115D30
+P 7925 6950
+F 0 "D234" H 7925 7050 50  0000 C CNN
+F 1 "LED" H 7925 6850 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7925 6950 50  0001 C CNN
+F 3 "" H 7925 6950 50  0001 C CNN
+	1    7925 6950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D235
+U 1 1 5B115D36
+P 8200 6950
+F 0 "D235" H 8200 7050 50  0000 C CNN
+F 1 "LED" H 8200 6850 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8200 6950 50  0001 C CNN
+F 3 "" H 8200 6950 50  0001 C CNN
+	1    8200 6950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D236
+U 1 1 5B115D3C
+P 8500 6950
+F 0 "D236" H 8500 7050 50  0000 C CNN
+F 1 "LED" H 8500 6850 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8500 6950 50  0001 C CNN
+F 3 "" H 8500 6950 50  0001 C CNN
+	1    8500 6950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D237
+U 1 1 5B115D42
+P 8800 6950
+F 0 "D237" H 8800 7050 50  0000 C CNN
+F 1 "LED" H 8800 6850 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8800 6950 50  0001 C CNN
+F 3 "" H 8800 6950 50  0001 C CNN
+	1    8800 6950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D238
+U 1 1 5B115D48
+P 9100 6950
+F 0 "D238" H 9100 7050 50  0000 C CNN
+F 1 "LED" H 9100 6850 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9100 6950 50  0001 C CNN
+F 3 "" H 9100 6950 50  0001 C CNN
+	1    9100 6950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D239
+U 1 1 5B115D4E
+P 9375 6950
+F 0 "D239" H 9375 7050 50  0000 C CNN
+F 1 "LED" H 9375 6850 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9375 6950 50  0001 C CNN
+F 3 "" H 9375 6950 50  0001 C CNN
+	1    9375 6950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D240
+U 1 1 5B115D54
+P 9650 6950
+F 0 "D240" H 9650 7050 50  0000 C CNN
+F 1 "LED" H 9650 6850 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9650 6950 50  0001 C CNN
+F 3 "" H 9650 6950 50  0001 C CNN
+	1    9650 6950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D253
+U 1 1 5B115D5A
+P 6175 7500
+F 0 "D253" H 6175 7600 50  0000 C CNN
+F 1 "LED" H 6175 7400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6175 7500 50  0001 C CNN
+F 3 "" H 6175 7500 50  0001 C CNN
+	1    6175 7500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D254
+U 1 1 5B115D60
+P 6600 7500
+F 0 "D254" H 6600 7600 50  0000 C CNN
+F 1 "LED" H 6600 7400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6600 7500 50  0001 C CNN
+F 3 "" H 6600 7500 50  0001 C CNN
+	1    6600 7500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D255
+U 1 1 5B115D66
+P 6950 7500
+F 0 "D255" H 6950 7600 50  0000 C CNN
+F 1 "LED" H 6950 7400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6950 7500 50  0001 C CNN
+F 3 "" H 6950 7500 50  0001 C CNN
+	1    6950 7500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D256
+U 1 1 5B115D6C
+P 7275 7500
+F 0 "D256" H 7275 7600 50  0000 C CNN
+F 1 "LED" H 7275 7400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7275 7500 50  0001 C CNN
+F 3 "" H 7275 7500 50  0001 C CNN
+	1    7275 7500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D257
+U 1 1 5B115D72
+P 7625 7500
+F 0 "D257" H 7625 7600 50  0000 C CNN
+F 1 "LED" H 7625 7400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7625 7500 50  0001 C CNN
+F 3 "" H 7625 7500 50  0001 C CNN
+	1    7625 7500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D258
+U 1 1 5B115D78
+P 7925 7500
+F 0 "D258" H 7925 7600 50  0000 C CNN
+F 1 "LED" H 7925 7400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7925 7500 50  0001 C CNN
+F 3 "" H 7925 7500 50  0001 C CNN
+	1    7925 7500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D259
+U 1 1 5B115D7E
+P 8200 7500
+F 0 "D259" H 8200 7600 50  0000 C CNN
+F 1 "LED" H 8200 7400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8200 7500 50  0001 C CNN
+F 3 "" H 8200 7500 50  0001 C CNN
+	1    8200 7500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D260
+U 1 1 5B115D84
+P 8500 7500
+F 0 "D260" H 8500 7600 50  0000 C CNN
+F 1 "LED" H 8500 7400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8500 7500 50  0001 C CNN
+F 3 "" H 8500 7500 50  0001 C CNN
+	1    8500 7500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D261
+U 1 1 5B115D8A
+P 8800 7500
+F 0 "D261" H 8800 7600 50  0000 C CNN
+F 1 "LED" H 8800 7400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8800 7500 50  0001 C CNN
+F 3 "" H 8800 7500 50  0001 C CNN
+	1    8800 7500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D262
+U 1 1 5B115D90
+P 9100 7500
+F 0 "D262" H 9100 7600 50  0000 C CNN
+F 1 "LED" H 9100 7400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9100 7500 50  0001 C CNN
+F 3 "" H 9100 7500 50  0001 C CNN
+	1    9100 7500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D263
+U 1 1 5B115D96
+P 9375 7500
+F 0 "D263" H 9375 7600 50  0000 C CNN
+F 1 "LED" H 9375 7400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9375 7500 50  0001 C CNN
+F 3 "" H 9375 7500 50  0001 C CNN
+	1    9375 7500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D264
+U 1 1 5B115D9C
+P 9650 7500
+F 0 "D264" H 9650 7600 50  0000 C CNN
+F 1 "LED" H 9650 7400 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9650 7500 50  0001 C CNN
+F 3 "" H 9650 7500 50  0001 C CNN
+	1    9650 7500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D277
+U 1 1 5B115DA2
+P 6175 7975
+F 0 "D277" H 6175 8075 50  0000 C CNN
+F 1 "LED" H 6175 7875 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6175 7975 50  0001 C CNN
+F 3 "" H 6175 7975 50  0001 C CNN
+	1    6175 7975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D278
+U 1 1 5B115DA8
+P 6600 7975
+F 0 "D278" H 6600 8075 50  0000 C CNN
+F 1 "LED" H 6600 7875 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6600 7975 50  0001 C CNN
+F 3 "" H 6600 7975 50  0001 C CNN
+	1    6600 7975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D279
+U 1 1 5B115DAE
+P 6950 7975
+F 0 "D279" H 6950 8075 50  0000 C CNN
+F 1 "LED" H 6950 7875 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6950 7975 50  0001 C CNN
+F 3 "" H 6950 7975 50  0001 C CNN
+	1    6950 7975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D280
+U 1 1 5B115DB4
+P 7275 7975
+F 0 "D280" H 7275 8075 50  0000 C CNN
+F 1 "LED" H 7275 7875 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7275 7975 50  0001 C CNN
+F 3 "" H 7275 7975 50  0001 C CNN
+	1    7275 7975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D281
+U 1 1 5B115DBA
+P 7625 7975
+F 0 "D281" H 7625 8075 50  0000 C CNN
+F 1 "LED" H 7625 7875 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7625 7975 50  0001 C CNN
+F 3 "" H 7625 7975 50  0001 C CNN
+	1    7625 7975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D282
+U 1 1 5B115DC0
+P 7925 7975
+F 0 "D282" H 7925 8075 50  0000 C CNN
+F 1 "LED" H 7925 7875 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7925 7975 50  0001 C CNN
+F 3 "" H 7925 7975 50  0001 C CNN
+	1    7925 7975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D283
+U 1 1 5B115DC6
+P 8200 7975
+F 0 "D283" H 8200 8075 50  0000 C CNN
+F 1 "LED" H 8200 7875 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8200 7975 50  0001 C CNN
+F 3 "" H 8200 7975 50  0001 C CNN
+	1    8200 7975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D284
+U 1 1 5B115DCC
+P 8500 7975
+F 0 "D284" H 8500 8075 50  0000 C CNN
+F 1 "LED" H 8500 7875 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8500 7975 50  0001 C CNN
+F 3 "" H 8500 7975 50  0001 C CNN
+	1    8500 7975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D285
+U 1 1 5B115DD2
+P 8800 7975
+F 0 "D285" H 8800 8075 50  0000 C CNN
+F 1 "LED" H 8800 7875 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8800 7975 50  0001 C CNN
+F 3 "" H 8800 7975 50  0001 C CNN
+	1    8800 7975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D286
+U 1 1 5B115DD8
+P 9100 7975
+F 0 "D286" H 9100 8075 50  0000 C CNN
+F 1 "LED" H 9100 7875 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9100 7975 50  0001 C CNN
+F 3 "" H 9100 7975 50  0001 C CNN
+	1    9100 7975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D287
+U 1 1 5B115DDE
+P 9375 7975
+F 0 "D287" H 9375 8075 50  0000 C CNN
+F 1 "LED" H 9375 7875 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9375 7975 50  0001 C CNN
+F 3 "" H 9375 7975 50  0001 C CNN
+	1    9375 7975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D288
+U 1 1 5B115DE4
+P 9650 7975
+F 0 "D288" H 9650 8075 50  0000 C CNN
+F 1 "LED" H 9650 7875 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9650 7975 50  0001 C CNN
+F 3 "" H 9650 7975 50  0001 C CNN
+	1    9650 7975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D301
+U 1 1 5B115DEA
+P 6150 8625
+F 0 "D301" H 6150 8725 50  0000 C CNN
+F 1 "LED" H 6150 8525 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6150 8625 50  0001 C CNN
+F 3 "" H 6150 8625 50  0001 C CNN
+	1    6150 8625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D302
+U 1 1 5B115DF0
+P 6575 8625
+F 0 "D302" H 6575 8725 50  0000 C CNN
+F 1 "LED" H 6575 8525 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6575 8625 50  0001 C CNN
+F 3 "" H 6575 8625 50  0001 C CNN
+	1    6575 8625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D303
+U 1 1 5B115DF6
+P 6925 8625
+F 0 "D303" H 6925 8725 50  0000 C CNN
+F 1 "LED" H 6925 8525 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6925 8625 50  0001 C CNN
+F 3 "" H 6925 8625 50  0001 C CNN
+	1    6925 8625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D304
+U 1 1 5B115DFC
+P 7250 8625
+F 0 "D304" H 7250 8725 50  0000 C CNN
+F 1 "LED" H 7250 8525 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7250 8625 50  0001 C CNN
+F 3 "" H 7250 8625 50  0001 C CNN
+	1    7250 8625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D305
+U 1 1 5B115E02
+P 7600 8625
+F 0 "D305" H 7600 8725 50  0000 C CNN
+F 1 "LED" H 7600 8525 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7600 8625 50  0001 C CNN
+F 3 "" H 7600 8625 50  0001 C CNN
+	1    7600 8625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D306
+U 1 1 5B115E08
+P 7900 8625
+F 0 "D306" H 7900 8725 50  0000 C CNN
+F 1 "LED" H 7900 8525 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7900 8625 50  0001 C CNN
+F 3 "" H 7900 8625 50  0001 C CNN
+	1    7900 8625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D307
+U 1 1 5B115E0E
+P 8175 8625
+F 0 "D307" H 8175 8725 50  0000 C CNN
+F 1 "LED" H 8175 8525 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8175 8625 50  0001 C CNN
+F 3 "" H 8175 8625 50  0001 C CNN
+	1    8175 8625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D308
+U 1 1 5B115E14
+P 8475 8625
+F 0 "D308" H 8475 8725 50  0000 C CNN
+F 1 "LED" H 8475 8525 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8475 8625 50  0001 C CNN
+F 3 "" H 8475 8625 50  0001 C CNN
+	1    8475 8625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D309
+U 1 1 5B115E1A
+P 8775 8625
+F 0 "D309" H 8775 8725 50  0000 C CNN
+F 1 "LED" H 8775 8525 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8775 8625 50  0001 C CNN
+F 3 "" H 8775 8625 50  0001 C CNN
+	1    8775 8625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D310
+U 1 1 5B115E20
+P 9075 8625
+F 0 "D310" H 9075 8725 50  0000 C CNN
+F 1 "LED" H 9075 8525 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9075 8625 50  0001 C CNN
+F 3 "" H 9075 8625 50  0001 C CNN
+	1    9075 8625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D311
+U 1 1 5B115E26
+P 9350 8625
+F 0 "D311" H 9350 8725 50  0000 C CNN
+F 1 "LED" H 9350 8525 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9350 8625 50  0001 C CNN
+F 3 "" H 9350 8625 50  0001 C CNN
+	1    9350 8625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D312
+U 1 1 5B115E2C
+P 9625 8625
+F 0 "D312" H 9625 8725 50  0000 C CNN
+F 1 "LED" H 9625 8525 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9625 8625 50  0001 C CNN
+F 3 "" H 9625 8625 50  0001 C CNN
+	1    9625 8625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D325
+U 1 1 5B115E32
+P 6150 9100
+F 0 "D325" H 6150 9200 50  0000 C CNN
+F 1 "LED" H 6150 9000 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6150 9100 50  0001 C CNN
+F 3 "" H 6150 9100 50  0001 C CNN
+	1    6150 9100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D326
+U 1 1 5B115E38
+P 6575 9100
+F 0 "D326" H 6575 9200 50  0000 C CNN
+F 1 "LED" H 6575 9000 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6575 9100 50  0001 C CNN
+F 3 "" H 6575 9100 50  0001 C CNN
+	1    6575 9100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D327
+U 1 1 5B115E3E
+P 6925 9100
+F 0 "D327" H 6925 9200 50  0000 C CNN
+F 1 "LED" H 6925 9000 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6925 9100 50  0001 C CNN
+F 3 "" H 6925 9100 50  0001 C CNN
+	1    6925 9100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D328
+U 1 1 5B115E44
+P 7250 9100
+F 0 "D328" H 7250 9200 50  0000 C CNN
+F 1 "LED" H 7250 9000 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7250 9100 50  0001 C CNN
+F 3 "" H 7250 9100 50  0001 C CNN
+	1    7250 9100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D329
+U 1 1 5B115E4A
+P 7600 9100
+F 0 "D329" H 7600 9200 50  0000 C CNN
+F 1 "LED" H 7600 9000 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7600 9100 50  0001 C CNN
+F 3 "" H 7600 9100 50  0001 C CNN
+	1    7600 9100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D330
+U 1 1 5B115E50
+P 7900 9100
+F 0 "D330" H 7900 9200 50  0000 C CNN
+F 1 "LED" H 7900 9000 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7900 9100 50  0001 C CNN
+F 3 "" H 7900 9100 50  0001 C CNN
+	1    7900 9100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D331
+U 1 1 5B115E56
+P 8175 9100
+F 0 "D331" H 8175 9200 50  0000 C CNN
+F 1 "LED" H 8175 9000 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8175 9100 50  0001 C CNN
+F 3 "" H 8175 9100 50  0001 C CNN
+	1    8175 9100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D332
+U 1 1 5B115E5C
+P 8475 9100
+F 0 "D332" H 8475 9200 50  0000 C CNN
+F 1 "LED" H 8475 9000 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8475 9100 50  0001 C CNN
+F 3 "" H 8475 9100 50  0001 C CNN
+	1    8475 9100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D333
+U 1 1 5B115E62
+P 8775 9100
+F 0 "D333" H 8775 9200 50  0000 C CNN
+F 1 "LED" H 8775 9000 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8775 9100 50  0001 C CNN
+F 3 "" H 8775 9100 50  0001 C CNN
+	1    8775 9100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D334
+U 1 1 5B115E68
+P 9075 9100
+F 0 "D334" H 9075 9200 50  0000 C CNN
+F 1 "LED" H 9075 9000 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9075 9100 50  0001 C CNN
+F 3 "" H 9075 9100 50  0001 C CNN
+	1    9075 9100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D335
+U 1 1 5B115E6E
+P 9350 9100
+F 0 "D335" H 9350 9200 50  0000 C CNN
+F 1 "LED" H 9350 9000 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9350 9100 50  0001 C CNN
+F 3 "" H 9350 9100 50  0001 C CNN
+	1    9350 9100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D336
+U 1 1 5B115E74
+P 9625 9100
+F 0 "D336" H 9625 9200 50  0000 C CNN
+F 1 "LED" H 9625 9000 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9625 9100 50  0001 C CNN
+F 3 "" H 9625 9100 50  0001 C CNN
+	1    9625 9100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D349
+U 1 1 5B115E7A
+P 6150 9650
+F 0 "D349" H 6150 9750 50  0000 C CNN
+F 1 "LED" H 6150 9550 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6150 9650 50  0001 C CNN
+F 3 "" H 6150 9650 50  0001 C CNN
+	1    6150 9650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D350
+U 1 1 5B115E80
+P 6575 9650
+F 0 "D350" H 6575 9750 50  0000 C CNN
+F 1 "LED" H 6575 9550 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6575 9650 50  0001 C CNN
+F 3 "" H 6575 9650 50  0001 C CNN
+	1    6575 9650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D351
+U 1 1 5B115E86
+P 6925 9650
+F 0 "D351" H 6925 9750 50  0000 C CNN
+F 1 "LED" H 6925 9550 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6925 9650 50  0001 C CNN
+F 3 "" H 6925 9650 50  0001 C CNN
+	1    6925 9650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D352
+U 1 1 5B115E8C
+P 7250 9650
+F 0 "D352" H 7250 9750 50  0000 C CNN
+F 1 "LED" H 7250 9550 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7250 9650 50  0001 C CNN
+F 3 "" H 7250 9650 50  0001 C CNN
+	1    7250 9650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D353
+U 1 1 5B115E92
+P 7600 9650
+F 0 "D353" H 7600 9750 50  0000 C CNN
+F 1 "LED" H 7600 9550 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7600 9650 50  0001 C CNN
+F 3 "" H 7600 9650 50  0001 C CNN
+	1    7600 9650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D354
+U 1 1 5B115E98
+P 7900 9650
+F 0 "D354" H 7900 9750 50  0000 C CNN
+F 1 "LED" H 7900 9550 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7900 9650 50  0001 C CNN
+F 3 "" H 7900 9650 50  0001 C CNN
+	1    7900 9650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D355
+U 1 1 5B115E9E
+P 8175 9650
+F 0 "D355" H 8175 9750 50  0000 C CNN
+F 1 "LED" H 8175 9550 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8175 9650 50  0001 C CNN
+F 3 "" H 8175 9650 50  0001 C CNN
+	1    8175 9650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D356
+U 1 1 5B115EA4
+P 8475 9650
+F 0 "D356" H 8475 9750 50  0000 C CNN
+F 1 "LED" H 8475 9550 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8475 9650 50  0001 C CNN
+F 3 "" H 8475 9650 50  0001 C CNN
+	1    8475 9650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D357
+U 1 1 5B115EAA
+P 8775 9650
+F 0 "D357" H 8775 9750 50  0000 C CNN
+F 1 "LED" H 8775 9550 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8775 9650 50  0001 C CNN
+F 3 "" H 8775 9650 50  0001 C CNN
+	1    8775 9650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D358
+U 1 1 5B115EB0
+P 9075 9650
+F 0 "D358" H 9075 9750 50  0000 C CNN
+F 1 "LED" H 9075 9550 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9075 9650 50  0001 C CNN
+F 3 "" H 9075 9650 50  0001 C CNN
+	1    9075 9650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D359
+U 1 1 5B115EB6
+P 9350 9650
+F 0 "D359" H 9350 9750 50  0000 C CNN
+F 1 "LED" H 9350 9550 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9350 9650 50  0001 C CNN
+F 3 "" H 9350 9650 50  0001 C CNN
+	1    9350 9650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D360
+U 1 1 5B115EBC
+P 9625 9650
+F 0 "D360" H 9625 9750 50  0000 C CNN
+F 1 "LED" H 9625 9550 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9625 9650 50  0001 C CNN
+F 3 "" H 9625 9650 50  0001 C CNN
+	1    9625 9650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D373
+U 1 1 5B115EC2
+P 6150 10125
+F 0 "D373" H 6150 10225 50  0000 C CNN
+F 1 "LED" H 6150 10025 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6150 10125 50  0001 C CNN
+F 3 "" H 6150 10125 50  0001 C CNN
+	1    6150 10125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D374
+U 1 1 5B115EC8
+P 6575 10125
+F 0 "D374" H 6575 10225 50  0000 C CNN
+F 1 "LED" H 6575 10025 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6575 10125 50  0001 C CNN
+F 3 "" H 6575 10125 50  0001 C CNN
+	1    6575 10125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D375
+U 1 1 5B115ECE
+P 6925 10125
+F 0 "D375" H 6925 10225 50  0000 C CNN
+F 1 "LED" H 6925 10025 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 6925 10125 50  0001 C CNN
+F 3 "" H 6925 10125 50  0001 C CNN
+	1    6925 10125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D376
+U 1 1 5B115ED4
+P 7250 10125
+F 0 "D376" H 7250 10225 50  0000 C CNN
+F 1 "LED" H 7250 10025 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7250 10125 50  0001 C CNN
+F 3 "" H 7250 10125 50  0001 C CNN
+	1    7250 10125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D377
+U 1 1 5B115EDA
+P 7600 10125
+F 0 "D377" H 7600 10225 50  0000 C CNN
+F 1 "LED" H 7600 10025 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7600 10125 50  0001 C CNN
+F 3 "" H 7600 10125 50  0001 C CNN
+	1    7600 10125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D378
+U 1 1 5B115EE0
+P 7900 10125
+F 0 "D378" H 7900 10225 50  0000 C CNN
+F 1 "LED" H 7900 10025 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 7900 10125 50  0001 C CNN
+F 3 "" H 7900 10125 50  0001 C CNN
+	1    7900 10125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D379
+U 1 1 5B115EE6
+P 8175 10125
+F 0 "D379" H 8175 10225 50  0000 C CNN
+F 1 "LED" H 8175 10025 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8175 10125 50  0001 C CNN
+F 3 "" H 8175 10125 50  0001 C CNN
+	1    8175 10125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D380
+U 1 1 5B115EEC
+P 8475 10125
+F 0 "D380" H 8475 10225 50  0000 C CNN
+F 1 "LED" H 8475 10025 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8475 10125 50  0001 C CNN
+F 3 "" H 8475 10125 50  0001 C CNN
+	1    8475 10125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D381
+U 1 1 5B115EF2
+P 8775 10125
+F 0 "D381" H 8775 10225 50  0000 C CNN
+F 1 "LED" H 8775 10025 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 8775 10125 50  0001 C CNN
+F 3 "" H 8775 10125 50  0001 C CNN
+	1    8775 10125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D382
+U 1 1 5B115EF8
+P 9075 10125
+F 0 "D382" H 9075 10225 50  0000 C CNN
+F 1 "LED" H 9075 10025 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9075 10125 50  0001 C CNN
+F 3 "" H 9075 10125 50  0001 C CNN
+	1    9075 10125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D383
+U 1 1 5B115EFE
+P 9350 10125
+F 0 "D383" H 9350 10225 50  0000 C CNN
+F 1 "LED" H 9350 10025 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9350 10125 50  0001 C CNN
+F 3 "" H 9350 10125 50  0001 C CNN
+	1    9350 10125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D384
+U 1 1 5B115F04
+P 9625 10125
+F 0 "D384" H 9625 10225 50  0000 C CNN
+F 1 "LED" H 9625 10025 50  0000 C CNN
+F 2 "384 well matrix parts:smallpadLED_D3.0mm" H 9625 10125 50  0001 C CNN
+F 3 "" H 9625 10125 50  0001 C CNN
+	1    9625 10125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Conn_01x24_Male J1
+U 1 1 5B145D28
+P 5700 625
+F 0 "J1" H 5700 1825 50  0000 C CNN
+F 1 "Conn_01x24_Male" H 5700 -675 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x24_Pitch2.54mm" H 5700 625 50  0001 C CNN
+F 3 "" H 5700 625 50  0001 C CNN
+	1    5700 625 
+	0    -1   1    0   
+$EndComp
+$Comp
+L Conn_01x16_Male J2
+U 1 1 5B176990
+P 775 5250
+F 0 "J2" H 775 6050 50  0000 C CNN
+F 1 "Conn_01x16_Male" H 775 4350 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x16_Pitch2.54mm" H 775 5250 50  0001 C CNN
+F 3 "" H 775 5250 50  0001 C CNN
+	1    775  5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5575 1700 1750 1700
+Connection ~ 2100 1700
+Wire Wire Line
+	2100 2000 2000 2000
+Wire Wire Line
+	2525 2000 2350 2000
+Connection ~ 2000 2000
+Connection ~ 2350 2000
+Wire Wire Line
+	1750 1700 1750 1750
+Connection ~ 2525 1700
+Connection ~ 2875 1700
+Connection ~ 3200 1700
+Connection ~ 3550 1700
+Connection ~ 3850 1700
+Connection ~ 4125 1700
+Connection ~ 4425 1700
+Connection ~ 4725 1700
+Connection ~ 5025 1700
+Connection ~ 5300 1700
+Wire Wire Line
+	1750 2175 5575 2175
+Connection ~ 2100 2175
+Wire Wire Line
+	2100 2475 2000 2475
+Wire Wire Line
+	2350 2475 2525 2475
+Connection ~ 2000 2475
+Connection ~ 2350 2475
+Wire Wire Line
+	1750 2175 1750 2225
+Connection ~ 2525 2175
+Connection ~ 2875 2175
+Connection ~ 3200 2175
+Connection ~ 3550 2175
+Connection ~ 3850 2175
+Connection ~ 4125 2175
+Connection ~ 4425 2175
+Connection ~ 4725 2175
+Connection ~ 5025 2175
+Connection ~ 5300 2175
+Wire Wire Line
+	2750 2000 2875 2000
+Wire Wire Line
+	2750 1475 2750 3500
+Wire Wire Line
+	2750 2475 2875 2475
+Wire Wire Line
+	3200 2475 3100 2475
+Wire Wire Line
+	3100 2000 3200 2000
+Wire Wire Line
+	3425 2000 3550 2000
+Wire Wire Line
+	3400 2475 3550 2475
+Wire Wire Line
+	3750 2475 3850 2475
+Wire Wire Line
+	3750 2000 3850 2000
+Wire Wire Line
+	4125 2000 4050 2000
+Wire Wire Line
+	4050 1050 4050 3500
+Wire Wire Line
+	4050 2475 4125 2475
+Wire Wire Line
+	4425 2475 4325 2475
+Wire Wire Line
+	4325 2000 4425 2000
+Wire Wire Line
+	4725 2000 4625 2000
+Wire Wire Line
+	4625 2475 4725 2475
+Wire Wire Line
+	4925 2000 5025 2000
+Wire Wire Line
+	4950 2000 4950 3500
+Wire Wire Line
+	4950 2475 5025 2475
+Wire Wire Line
+	5300 2000 5200 2000
+Wire Wire Line
+	5200 1525 5200 3500
+Wire Wire Line
+	5200 2475 5300 2475
+Wire Wire Line
+	5475 2000 5575 2000
+Wire Wire Line
+	5475 1425 5475 3500
+Wire Wire Line
+	5475 2475 5575 2475
+Wire Wire Line
+	1750 2725 5575 2725
+Connection ~ 2100 2725
+Wire Wire Line
+	2000 3025 2100 3025
+Wire Wire Line
+	2525 3025 2350 3025
+Connection ~ 2000 3025
+Connection ~ 2350 3025
+Wire Wire Line
+	1750 2775 1750 2725
+Connection ~ 2525 2725
+Connection ~ 2875 2725
+Connection ~ 3200 2725
+Connection ~ 3550 2725
+Connection ~ 3850 2725
+Connection ~ 4125 2725
+Connection ~ 4425 2725
+Connection ~ 4725 2725
+Connection ~ 5025 2725
+Connection ~ 5300 2725
+Wire Wire Line
+	1750 3200 5575 3200
+Connection ~ 2100 3200
+Wire Wire Line
+	1975 3500 2100 3500
+Wire Wire Line
+	2325 3500 2525 3500
+Connection ~ 2000 3500
+Connection ~ 2350 3500
+Wire Wire Line
+	1750 3200 1750 3250
+Connection ~ 2525 3200
+Connection ~ 2875 3200
+Connection ~ 3200 3200
+Connection ~ 3550 3200
+Connection ~ 3850 3200
+Connection ~ 4125 3200
+Connection ~ 4425 3200
+Connection ~ 4725 3200
+Connection ~ 5025 3200
+Connection ~ 5300 3200
+Wire Wire Line
+	2350 925  2350 3500
+Wire Wire Line
+	2750 3025 2875 3025
+Wire Wire Line
+	2750 3500 2875 3500
+Wire Wire Line
+	3075 3500 3200 3500
+Wire Wire Line
+	3100 1500 3100 3500
+Wire Wire Line
+	3100 3025 3200 3025
+Wire Wire Line
+	3400 3025 3550 3025
+Wire Wire Line
+	3500 3025 3500 3500
+Wire Wire Line
+	3500 3500 3550 3500
+Wire Wire Line
+	3725 3500 3850 3500
+Wire Wire Line
+	3750 2450 3750 3500
+Wire Wire Line
+	3750 3025 3850 3025
+Wire Wire Line
+	4125 3025 4050 3025
+Wire Wire Line
+	4050 3500 4125 3500
+Wire Wire Line
+	4325 3025 4425 3025
+Wire Wire Line
+	4625 3025 4725 3025
+Wire Wire Line
+	4600 3500 4725 3500
+Wire Wire Line
+	4950 3025 5025 3025
+Wire Wire Line
+	4950 3500 5025 3500
+Wire Wire Line
+	5200 3025 5300 3025
+Wire Wire Line
+	5200 3500 5300 3500
+Wire Wire Line
+	5475 3025 5575 3025
+Wire Wire Line
+	5475 3500 5575 3500
+Connection ~ 2750 2475
+Connection ~ 3100 2475
+Connection ~ 3500 2475
+Connection ~ 3750 2450
+Connection ~ 4050 2475
+Connection ~ 4325 2475
+Connection ~ 4625 2475
+Connection ~ 4950 2475
+Connection ~ 5200 2475
+Connection ~ 5475 2475
+Wire Wire Line
+	5550 3850 1725 3850
+Connection ~ 2075 3850
+Wire Wire Line
+	2075 4150 1975 4150
+Wire Wire Line
+	2500 4150 2325 4150
+Connection ~ 1975 4150
+Connection ~ 2325 4150
+Wire Wire Line
+	1725 3850 1725 3900
+Connection ~ 2500 3850
+Connection ~ 2850 3850
+Connection ~ 3175 3850
+Connection ~ 3525 3850
+Connection ~ 3825 3850
+Connection ~ 4100 3850
+Connection ~ 4400 3850
+Connection ~ 4700 3850
+Connection ~ 5000 3850
+Connection ~ 5275 3850
+Wire Wire Line
+	1725 4325 5550 4325
+Connection ~ 2075 4325
+Wire Wire Line
+	2075 4625 1975 4625
+Wire Wire Line
+	2500 4625 2325 4625
+Connection ~ 1975 4625
+Connection ~ 2325 4625
+Wire Wire Line
+	1725 4325 1725 4375
+Connection ~ 2500 4325
+Connection ~ 2850 4325
+Connection ~ 3175 4325
+Connection ~ 3525 4325
+Connection ~ 3825 4325
+Connection ~ 4100 4325
+Connection ~ 4400 4325
+Connection ~ 4700 4325
+Connection ~ 5000 4325
+Connection ~ 5275 4325
+Wire Wire Line
+	1975 3500 1975 5650
+Wire Wire Line
+	2325 3500 2325 5650
+Wire Wire Line
+	2850 4150 2725 4150
+Wire Wire Line
+	2725 3500 2725 5650
+Wire Wire Line
+	2725 4625 2850 4625
+Wire Wire Line
+	3175 4625 3075 4625
+Wire Wire Line
+	3075 3500 3075 4725
+Wire Wire Line
+	3075 4150 3175 4150
+Wire Wire Line
+	3525 4150 3475 4150
+Wire Wire Line
+	3475 4150 3475 4725
+Wire Wire Line
+	3475 4625 3525 4625
+Wire Wire Line
+	3725 4625 3825 4625
+Wire Wire Line
+	3725 3500 3725 4625
+Wire Wire Line
+	3725 4150 3825 4150
+Wire Wire Line
+	4100 4150 4025 4150
+Wire Wire Line
+	4025 3500 4025 5650
+Wire Wire Line
+	4025 4625 4100 4625
+Wire Wire Line
+	4400 4625 4300 4625
+Wire Wire Line
+	4300 3500 4300 5650
+Wire Wire Line
+	4300 4150 4400 4150
+Wire Wire Line
+	4700 4150 4600 4150
+Wire Wire Line
+	4600 3500 4600 5650
+Wire Wire Line
+	4600 4625 4700 4625
+Wire Wire Line
+	5000 4150 4925 4150
+Wire Wire Line
+	4925 3500 4925 6625
+Wire Wire Line
+	4925 4625 5000 4625
+Wire Wire Line
+	5275 4150 5175 4150
+Wire Wire Line
+	5175 3500 5175 5650
+Wire Wire Line
+	5175 4625 5275 4625
+Wire Wire Line
+	5550 4150 5450 4150
+Wire Wire Line
+	5450 3500 5450 6050
+Wire Wire Line
+	5450 4625 5550 4625
+Wire Wire Line
+	1725 4875 5550 4875
+Connection ~ 2075 4875
+Wire Wire Line
+	1975 5175 2075 5175
+Wire Wire Line
+	2325 5175 2500 5175
+Connection ~ 1975 5175
+Connection ~ 2325 5175
+Wire Wire Line
+	1725 4925 1725 4875
+Connection ~ 2500 4875
+Connection ~ 2850 4875
+Connection ~ 3175 4875
+Connection ~ 3525 4875
+Connection ~ 3825 4875
+Connection ~ 4100 4875
+Connection ~ 4400 4875
+Connection ~ 4700 4875
+Connection ~ 5000 4875
+Connection ~ 5275 4875
+Wire Wire Line
+	1725 5350 5550 5350
+Connection ~ 2075 5350
+Wire Wire Line
+	1975 5650 2075 5650
+Wire Wire Line
+	2325 5650 2500 5650
+Connection ~ 1975 5650
+Connection ~ 2325 5650
+Wire Wire Line
+	1725 5400 1725 5350
+Connection ~ 2500 5350
+Connection ~ 2850 5350
+Connection ~ 3175 5350
+Connection ~ 3525 5350
+Connection ~ 3825 5350
+Connection ~ 4100 5350
+Connection ~ 4400 5350
+Connection ~ 4700 5350
+Connection ~ 5000 5350
+Connection ~ 5275 5350
+Wire Wire Line
+	2725 5175 2850 5175
+Wire Wire Line
+	2725 5650 2850 5650
+Wire Wire Line
+	3175 5650 3075 5650
+Wire Wire Line
+	3075 5650 3075 5175
+Wire Wire Line
+	3025 5175 3175 5175
+Wire Wire Line
+	3400 5175 3525 5175
+Wire Wire Line
+	3475 5175 3475 5975
+Wire Wire Line
+	3475 5650 3525 5650
+Wire Wire Line
+	3725 5650 3825 5650
+Wire Wire Line
+	3725 4600 3725 5650
+Wire Wire Line
+	3725 5175 3825 5175
+Wire Wire Line
+	4025 5175 4100 5175
+Wire Wire Line
+	4025 5650 4100 5650
+Wire Wire Line
+	4300 5650 4400 5650
+Wire Wire Line
+	4300 5175 4400 5175
+Wire Wire Line
+	4600 5175 4700 5175
+Wire Wire Line
+	4600 5650 4700 5650
+Wire Wire Line
+	4925 5175 5000 5175
+Wire Wire Line
+	4925 5650 5000 5650
+Wire Wire Line
+	5175 5175 5275 5175
+Wire Wire Line
+	5175 5650 5275 5650
+Wire Wire Line
+	5450 5175 5550 5175
+Wire Wire Line
+	5450 5650 5550 5650
+Connection ~ 2725 4625
+Connection ~ 3075 4625
+Connection ~ 3475 4625
+Connection ~ 3725 4600
+Connection ~ 4025 4625
+Connection ~ 4300 4625
+Connection ~ 4600 4625
+Connection ~ 4925 4625
+Connection ~ 5175 4625
+Connection ~ 5450 4625
+Connection ~ 5550 3500
+Connection ~ 5275 3500
+Wire Wire Line
+	4925 3500 5000 3500
+Connection ~ 5000 3500
+Connection ~ 3825 3500
+Connection ~ 3525 3500
+Connection ~ 3175 3500
+Connection ~ 2500 3500
+Connection ~ 2075 3500
+Wire Wire Line
+	1750 1750 975  1750
+Wire Wire Line
+	1200 4925 1725 4925
+Wire Wire Line
+	1725 4375 1450 4375
+Wire Wire Line
+	1450 4375 1450 4350
+Wire Wire Line
+	1725 3900 1425 3900
+Wire Wire Line
+	1425 3900 1425 3825
+Wire Wire Line
+	1750 3250 1400 3250
+Wire Wire Line
+	1400 3250 1400 3200
+Wire Wire Line
+	1050 2775 1750 2775
+Connection ~ 2000 2500
+Connection ~ 3100 3025
+Connection ~ 2750 3025
+Wire Wire Line
+	3400 2475 3400 3025
+Connection ~ 3500 3025
+Connection ~ 3750 3025
+Connection ~ 4050 3025
+Connection ~ 4325 3025
+Connection ~ 4625 3025
+Connection ~ 4950 3025
+Connection ~ 5200 3025
+Connection ~ 5475 3025
+Wire Wire Line
+	3425 1000 3425 2475
+Connection ~ 3425 2475
+Wire Wire Line
+	5450 3500 5500 3500
+Connection ~ 5500 3500
+Connection ~ 5450 4150
+Wire Wire Line
+	5175 3500 5225 3500
+Connection ~ 5225 3500
+Connection ~ 5175 4150
+Connection ~ 4925 4150
+Connection ~ 4625 3500
+Connection ~ 4600 4150
+Wire Wire Line
+	4300 3500 4425 3500
+Connection ~ 4300 4150
+Connection ~ 4325 3500
+Wire Wire Line
+	4025 3500 4075 3500
+Connection ~ 4075 3500
+Connection ~ 4025 4150
+Connection ~ 3750 3500
+Connection ~ 3725 4150
+Wire Wire Line
+	3475 4200 3400 4200
+Wire Wire Line
+	3400 4200 3400 3500
+Wire Wire Line
+	3400 3500 3525 3500
+Connection ~ 3475 4200
+Connection ~ 3100 3500
+Connection ~ 3075 4150
+Wire Wire Line
+	2725 3500 2775 3500
+Connection ~ 2775 3500
+Connection ~ 2725 4150
+Connection ~ 5450 5175
+Connection ~ 5175 5175
+Connection ~ 4925 5175
+Connection ~ 4600 5175
+Connection ~ 4300 5175
+Connection ~ 4025 5175
+Connection ~ 3725 5175
+Wire Wire Line
+	3400 5175 3400 4725
+Wire Wire Line
+	3400 4725 3475 4725
+Connection ~ 3475 5175
+Wire Wire Line
+	3025 5175 3025 4725
+Wire Wire Line
+	3025 4725 3075 4725
+Connection ~ 3075 5175
+Connection ~ 2725 5175
+Connection ~ 5475 2000
+Wire Wire Line
+	5300 1525 5200 1525
+Connection ~ 5200 2000
+Wire Wire Line
+	4925 1350 4925 2000
+Connection ~ 4950 2000
+Connection ~ 4625 2000
+Connection ~ 4325 2000
+Connection ~ 4050 2000
+Connection ~ 3750 2000
+Connection ~ 3425 2000
+Wire Wire Line
+	3200 1500 3100 1500
+Connection ~ 3100 2000
+Wire Wire Line
+	2750 1475 2875 1475
+Connection ~ 2750 2000
+Wire Wire Line
+	5550 1700 9700 1700
+Connection ~ 6225 1700
+Wire Wire Line
+	6225 2000 6125 2000
+Wire Wire Line
+	6650 2000 6475 2000
+Connection ~ 6125 2000
+Connection ~ 6475 2000
+Connection ~ 6650 1700
+Connection ~ 7000 1700
+Connection ~ 7325 1700
+Connection ~ 7675 1700
+Connection ~ 7975 1700
+Connection ~ 8250 1700
+Connection ~ 8550 1700
+Connection ~ 8850 1700
+Connection ~ 9150 1700
+Connection ~ 9425 1700
+Wire Wire Line
+	5525 2175 9700 2175
+Connection ~ 6225 2175
+Wire Wire Line
+	6225 2475 6125 2475
+Wire Wire Line
+	6475 2475 6650 2475
+Connection ~ 6125 2475
+Connection ~ 6475 2475
+Connection ~ 6650 2175
+Connection ~ 7000 2175
+Connection ~ 7325 2175
+Connection ~ 7675 2175
+Connection ~ 7975 2175
+Connection ~ 8250 2175
+Connection ~ 8550 2175
+Connection ~ 8850 2175
+Connection ~ 9150 2175
+Connection ~ 9425 2175
+Wire Wire Line
+	6875 2000 7000 2000
+Wire Wire Line
+	6875 1450 6875 3500
+Wire Wire Line
+	6875 2475 7000 2475
+Wire Wire Line
+	7325 2475 7225 2475
+Wire Wire Line
+	7225 2000 7325 2000
+Wire Wire Line
+	7550 2000 7675 2000
+Wire Wire Line
+	7525 2475 7675 2475
+Wire Wire Line
+	7875 2475 7975 2475
+Wire Wire Line
+	7875 1275 7875 2475
+Wire Wire Line
+	7875 2000 7975 2000
+Wire Wire Line
+	8250 2000 8175 2000
+Wire Wire Line
+	8175 1125 8175 3500
+Wire Wire Line
+	8175 2475 8250 2475
+Wire Wire Line
+	8550 2475 8450 2475
+Wire Wire Line
+	8450 975  8450 3500
+Wire Wire Line
+	8450 2000 8550 2000
+Wire Wire Line
+	8850 2000 8750 2000
+Wire Wire Line
+	8750 950  8750 3500
+Wire Wire Line
+	8750 2475 8850 2475
+Wire Wire Line
+	9050 2000 9150 2000
+Wire Wire Line
+	9075 2000 9075 3500
+Wire Wire Line
+	9075 2475 9150 2475
+Wire Wire Line
+	9425 2000 9325 2000
+Wire Wire Line
+	9325 900  9325 3500
+Wire Wire Line
+	9325 2475 9425 2475
+Wire Wire Line
+	9600 2000 9700 2000
+Wire Wire Line
+	9600 825  9600 3500
+Wire Wire Line
+	9600 2475 9700 2475
+Wire Wire Line
+	5550 2725 9700 2725
+Connection ~ 6225 2725
+Wire Wire Line
+	6125 3025 6225 3025
+Wire Wire Line
+	6650 3025 6475 3025
+Connection ~ 6125 3025
+Connection ~ 6475 3025
+Connection ~ 6650 2725
+Connection ~ 7000 2725
+Connection ~ 7325 2725
+Connection ~ 7675 2725
+Connection ~ 7975 2725
+Connection ~ 8250 2725
+Connection ~ 8550 2725
+Connection ~ 8850 2725
+Connection ~ 9150 2725
+Connection ~ 9425 2725
+Wire Wire Line
+	5550 3200 9700 3200
+Connection ~ 6225 3200
+Wire Wire Line
+	6100 3500 6225 3500
+Wire Wire Line
+	6450 3500 6650 3500
+Connection ~ 6125 3500
+Connection ~ 6475 3500
+Connection ~ 6650 3200
+Connection ~ 7000 3200
+Connection ~ 7325 3200
+Connection ~ 7675 3200
+Connection ~ 7975 3200
+Connection ~ 8250 3200
+Connection ~ 8550 3200
+Connection ~ 8850 3200
+Connection ~ 9150 3200
+Connection ~ 9425 3200
+Wire Wire Line
+	6475 1350 6475 3500
+Wire Wire Line
+	6875 3025 7000 3025
+Wire Wire Line
+	6875 3500 7000 3500
+Wire Wire Line
+	7200 3500 7325 3500
+Wire Wire Line
+	7225 1400 7225 3500
+Wire Wire Line
+	7225 3025 7325 3025
+Wire Wire Line
+	7525 3025 7675 3025
+Wire Wire Line
+	7625 3025 7625 3500
+Wire Wire Line
+	7625 3500 7675 3500
+Wire Wire Line
+	7850 3500 7975 3500
+Wire Wire Line
+	7875 2450 7875 3500
+Wire Wire Line
+	7875 3025 7975 3025
+Wire Wire Line
+	8250 3025 8175 3025
+Wire Wire Line
+	8175 3500 8250 3500
+Wire Wire Line
+	8450 3025 8550 3025
+Wire Wire Line
+	8750 3025 8850 3025
+Wire Wire Line
+	8725 3500 8850 3500
+Wire Wire Line
+	9075 3025 9150 3025
+Wire Wire Line
+	9075 3500 9150 3500
+Wire Wire Line
+	9325 3025 9425 3025
+Wire Wire Line
+	9325 3500 9425 3500
+Wire Wire Line
+	9600 3025 9700 3025
+Wire Wire Line
+	9600 3500 9700 3500
+Connection ~ 6875 2475
+Connection ~ 7225 2475
+Connection ~ 7625 2475
+Connection ~ 7875 2450
+Connection ~ 8175 2475
+Connection ~ 8450 2475
+Connection ~ 8750 2475
+Connection ~ 9075 2475
+Connection ~ 9325 2475
+Connection ~ 9600 2475
+Wire Wire Line
+	5525 3850 9675 3850
+Connection ~ 6200 3850
+Wire Wire Line
+	6200 4150 6100 4150
+Wire Wire Line
+	6625 4150 6450 4150
+Connection ~ 6100 4150
+Connection ~ 6450 4150
+Connection ~ 6625 3850
+Connection ~ 6975 3850
+Connection ~ 7300 3850
+Connection ~ 7650 3850
+Connection ~ 7950 3850
+Connection ~ 8225 3850
+Connection ~ 8525 3850
+Connection ~ 8825 3850
+Connection ~ 9125 3850
+Connection ~ 9400 3850
+Wire Wire Line
+	5525 4325 9675 4325
+Connection ~ 6200 4325
+Wire Wire Line
+	6200 4625 6100 4625
+Wire Wire Line
+	6625 4625 6450 4625
+Connection ~ 6100 4625
+Connection ~ 6450 4625
+Connection ~ 6625 4325
+Connection ~ 6975 4325
+Connection ~ 7300 4325
+Connection ~ 7650 4325
+Connection ~ 7950 4325
+Connection ~ 8225 4325
+Connection ~ 8525 4325
+Connection ~ 8825 4325
+Connection ~ 9125 4325
+Connection ~ 9400 4325
+Wire Wire Line
+	6100 3500 6100 5650
+Wire Wire Line
+	6450 3500 6450 5650
+Wire Wire Line
+	6975 4150 6850 4150
+Wire Wire Line
+	6850 3500 6850 5650
+Wire Wire Line
+	6850 4625 6975 4625
+Wire Wire Line
+	7300 4625 7200 4625
+Wire Wire Line
+	7200 3500 7200 4725
+Wire Wire Line
+	7200 4150 7300 4150
+Wire Wire Line
+	7650 4150 7600 4150
+Wire Wire Line
+	7600 4150 7600 4725
+Wire Wire Line
+	7600 4625 7650 4625
+Wire Wire Line
+	7850 4625 7950 4625
+Wire Wire Line
+	7850 3500 7850 4625
+Wire Wire Line
+	7850 4150 7950 4150
+Wire Wire Line
+	8225 4150 8150 4150
+Wire Wire Line
+	8150 3500 8150 5725
+Wire Wire Line
+	8150 4625 8225 4625
+Wire Wire Line
+	8525 4625 8425 4625
+Wire Wire Line
+	8425 3500 8425 5650
+Wire Wire Line
+	8425 4150 8525 4150
+Wire Wire Line
+	8825 4150 8725 4150
+Wire Wire Line
+	8725 3500 8725 5700
+Wire Wire Line
+	8725 4625 8825 4625
+Wire Wire Line
+	9125 4150 9050 4150
+Wire Wire Line
+	9050 3500 9050 5925
+Wire Wire Line
+	9050 4625 9125 4625
+Wire Wire Line
+	9400 4150 9300 4150
+Wire Wire Line
+	9300 3500 9300 5650
+Wire Wire Line
+	9300 4625 9400 4625
+Wire Wire Line
+	9675 4150 9575 4150
+Wire Wire Line
+	9575 3500 9575 5650
+Wire Wire Line
+	9575 4625 9675 4625
+Wire Wire Line
+	5525 4875 9675 4875
+Connection ~ 6200 4875
+Wire Wire Line
+	6100 5175 6200 5175
+Wire Wire Line
+	6450 5175 6625 5175
+Connection ~ 6100 5175
+Connection ~ 6450 5175
+Connection ~ 6625 4875
+Connection ~ 6975 4875
+Connection ~ 7300 4875
+Connection ~ 7650 4875
+Connection ~ 7950 4875
+Connection ~ 8225 4875
+Connection ~ 8525 4875
+Connection ~ 8825 4875
+Connection ~ 9125 4875
+Connection ~ 9400 4875
+Wire Wire Line
+	5500 5350 9675 5350
+Connection ~ 6200 5350
+Wire Wire Line
+	6075 5650 6200 5650
+Wire Wire Line
+	6425 5650 6625 5650
+Connection ~ 6100 5650
+Connection ~ 6450 5650
+Connection ~ 6625 5350
+Connection ~ 6975 5350
+Connection ~ 7300 5350
+Connection ~ 7650 5350
+Connection ~ 7950 5350
+Connection ~ 8225 5350
+Connection ~ 8525 5350
+Connection ~ 8825 5350
+Connection ~ 9125 5350
+Connection ~ 9400 5350
+Wire Wire Line
+	6850 5175 6975 5175
+Wire Wire Line
+	6825 5650 6975 5650
+Wire Wire Line
+	7175 5650 7300 5650
+Wire Wire Line
+	7200 5650 7200 5175
+Wire Wire Line
+	7150 5175 7300 5175
+Wire Wire Line
+	7525 5175 7650 5175
+Wire Wire Line
+	7600 5175 7600 5650
+Wire Wire Line
+	7500 5650 7650 5650
+Wire Wire Line
+	7825 5650 7950 5650
+Wire Wire Line
+	7850 4600 7850 5650
+Wire Wire Line
+	7850 5175 7950 5175
+Wire Wire Line
+	8150 5175 8225 5175
+Wire Wire Line
+	8150 5650 8225 5650
+Wire Wire Line
+	8400 5650 8525 5650
+Wire Wire Line
+	8425 5175 8525 5175
+Wire Wire Line
+	8725 5175 8825 5175
+Wire Wire Line
+	8725 5650 8825 5650
+Wire Wire Line
+	9050 5175 9125 5175
+Wire Wire Line
+	9050 5650 9125 5650
+Wire Wire Line
+	9300 5175 9400 5175
+Wire Wire Line
+	9275 5650 9400 5650
+Wire Wire Line
+	9575 5175 9675 5175
+Wire Wire Line
+	9550 5650 9675 5650
+Connection ~ 6850 4625
+Connection ~ 7200 4625
+Connection ~ 7600 4625
+Connection ~ 7850 4600
+Connection ~ 8150 4625
+Connection ~ 8425 4625
+Connection ~ 8725 4625
+Connection ~ 9050 4625
+Connection ~ 9300 4625
+Connection ~ 9575 4625
+Connection ~ 9675 3500
+Connection ~ 9400 3500
+Wire Wire Line
+	9050 3500 9125 3500
+Connection ~ 9125 3500
+Connection ~ 7950 3500
+Connection ~ 7650 3500
+Connection ~ 7300 3500
+Connection ~ 6625 3500
+Connection ~ 6200 3500
+Connection ~ 6125 2500
+Wire Wire Line
+	6125 1325 6125 3500
+Connection ~ 7225 3025
+Connection ~ 6875 3025
+Wire Wire Line
+	7525 2475 7525 3025
+Connection ~ 7625 3025
+Connection ~ 7875 3025
+Connection ~ 8175 3025
+Connection ~ 8450 3025
+Connection ~ 8750 3025
+Connection ~ 9075 3025
+Connection ~ 9325 3025
+Connection ~ 9600 3025
+Wire Wire Line
+	7550 1325 7550 2475
+Connection ~ 7550 2475
+Wire Wire Line
+	9575 3500 9625 3500
+Connection ~ 9625 3500
+Connection ~ 9575 4150
+Wire Wire Line
+	9300 3500 9350 3500
+Connection ~ 9350 3500
+Connection ~ 9300 4150
+Connection ~ 9050 4150
+Connection ~ 8750 3500
+Connection ~ 8725 4150
+Wire Wire Line
+	8425 3500 8550 3500
+Connection ~ 8425 4150
+Connection ~ 8450 3500
+Wire Wire Line
+	8150 3500 8200 3500
+Connection ~ 8200 3500
+Connection ~ 8150 4150
+Connection ~ 7875 3500
+Connection ~ 7850 4150
+Wire Wire Line
+	7600 4200 7525 4200
+Wire Wire Line
+	7525 4200 7525 3500
+Wire Wire Line
+	7525 3500 7650 3500
+Connection ~ 7600 4200
+Connection ~ 7225 3500
+Connection ~ 7200 4150
+Wire Wire Line
+	6850 3500 6900 3500
+Connection ~ 6900 3500
+Connection ~ 6850 4150
+Connection ~ 9575 5175
+Connection ~ 9300 5175
+Connection ~ 9050 5175
+Connection ~ 8725 5175
+Connection ~ 8425 5175
+Connection ~ 8150 5175
+Connection ~ 7850 5175
+Wire Wire Line
+	7525 5175 7525 4725
+Wire Wire Line
+	7525 4725 7600 4725
+Connection ~ 7600 5175
+Wire Wire Line
+	7150 5175 7150 4725
+Wire Wire Line
+	7150 4725 7200 4725
+Connection ~ 7200 5175
+Connection ~ 6850 5175
+Connection ~ 9600 2000
+Connection ~ 9325 2000
+Wire Wire Line
+	9050 925  9050 2000
+Connection ~ 9075 2000
+Connection ~ 8750 2000
+Connection ~ 8450 2000
+Connection ~ 8175 2000
+Connection ~ 7875 2000
+Connection ~ 7550 2000
+Connection ~ 7225 2000
+Connection ~ 6875 2000
+Wire Wire Line
+	5575 6325 1750 6325
+Connection ~ 2100 6325
+Wire Wire Line
+	2100 6625 2000 6625
+Wire Wire Line
+	2525 6625 2350 6625
+Connection ~ 2000 6625
+Connection ~ 2350 6625
+Connection ~ 2525 6325
+Connection ~ 2875 6325
+Connection ~ 3200 6325
+Connection ~ 3550 6325
+Connection ~ 3850 6325
+Connection ~ 4125 6325
+Connection ~ 4425 6325
+Connection ~ 4725 6325
+Connection ~ 5025 6325
+Connection ~ 5300 6325
+Wire Wire Line
+	1750 6800 5575 6800
+Connection ~ 2100 6800
+Wire Wire Line
+	2100 7100 2000 7100
+Wire Wire Line
+	2350 7100 2525 7100
+Connection ~ 2000 7100
+Connection ~ 2350 7100
+Connection ~ 2525 6800
+Connection ~ 2875 6800
+Connection ~ 3200 6800
+Connection ~ 3550 6800
+Connection ~ 3850 6800
+Connection ~ 4125 6800
+Connection ~ 4425 6800
+Connection ~ 4725 6800
+Connection ~ 5025 6800
+Connection ~ 5300 6800
+Wire Wire Line
+	2750 6625 2875 6625
+Wire Wire Line
+	2750 5650 2750 8125
+Wire Wire Line
+	2750 7100 2875 7100
+Wire Wire Line
+	3200 7100 3100 7100
+Wire Wire Line
+	3100 6625 3200 6625
+Wire Wire Line
+	3425 6625 3550 6625
+Wire Wire Line
+	3400 7100 3550 7100
+Wire Wire Line
+	3750 7100 3850 7100
+Wire Wire Line
+	3750 5650 3750 7100
+Wire Wire Line
+	3750 6625 3850 6625
+Wire Wire Line
+	4125 6625 4050 6625
+Wire Wire Line
+	4050 5650 4050 8125
+Wire Wire Line
+	4050 7100 4125 7100
+Wire Wire Line
+	4425 7100 4325 7100
+Wire Wire Line
+	4325 5650 4325 8125
+Wire Wire Line
+	4325 6625 4425 6625
+Wire Wire Line
+	4725 6625 4625 6625
+Wire Wire Line
+	4625 5650 4625 8125
+Wire Wire Line
+	4625 7100 4725 7100
+Wire Wire Line
+	4925 6625 5025 6625
+Wire Wire Line
+	4950 6625 4950 8125
+Wire Wire Line
+	4950 7100 5025 7100
+Wire Wire Line
+	5300 6625 5200 6625
+Wire Wire Line
+	5200 5650 5200 8125
+Wire Wire Line
+	5200 7100 5300 7100
+Wire Wire Line
+	5475 6625 5575 6625
+Wire Wire Line
+	5475 6050 5475 8125
+Wire Wire Line
+	5475 7100 5575 7100
+Connection ~ 2100 7350
+Wire Wire Line
+	2000 7650 2100 7650
+Wire Wire Line
+	2525 7650 2350 7650
+Connection ~ 2000 7650
+Connection ~ 2350 7650
+Connection ~ 2525 7350
+Connection ~ 2875 7350
+Connection ~ 3200 7350
+Connection ~ 3550 7350
+Connection ~ 3850 7350
+Connection ~ 4125 7350
+Connection ~ 4425 7350
+Connection ~ 4725 7350
+Connection ~ 5025 7350
+Connection ~ 5300 7350
+Wire Wire Line
+	1550 7825 9650 7825
+Connection ~ 2100 7825
+Wire Wire Line
+	1975 8125 2100 8125
+Wire Wire Line
+	2325 8125 2525 8125
+Connection ~ 2000 8125
+Connection ~ 2350 8125
+Connection ~ 2525 7825
+Connection ~ 2875 7825
+Connection ~ 3200 7825
+Connection ~ 3550 7825
+Connection ~ 3850 7825
+Connection ~ 4125 7825
+Connection ~ 4425 7825
+Connection ~ 4725 7825
+Connection ~ 5025 7825
+Connection ~ 5300 7825
+Wire Wire Line
+	2350 5650 2350 8125
+Wire Wire Line
+	2750 7650 2875 7650
+Wire Wire Line
+	2750 8125 2875 8125
+Wire Wire Line
+	3075 8125 3200 8125
+Wire Wire Line
+	3100 5650 3100 8125
+Wire Wire Line
+	3100 7650 3200 7650
+Wire Wire Line
+	3400 7650 3550 7650
+Wire Wire Line
+	3500 7650 3500 8125
+Wire Wire Line
+	3500 8125 3550 8125
+Wire Wire Line
+	3725 8125 3850 8125
+Wire Wire Line
+	3750 7075 3750 8125
+Wire Wire Line
+	3750 7650 3850 7650
+Wire Wire Line
+	4125 7650 4050 7650
+Wire Wire Line
+	4050 8125 4125 8125
+Wire Wire Line
+	4325 7650 4425 7650
+Wire Wire Line
+	4625 7650 4725 7650
+Wire Wire Line
+	4600 8125 4725 8125
+Wire Wire Line
+	4950 7650 5025 7650
+Wire Wire Line
+	4950 8125 5025 8125
+Wire Wire Line
+	5200 7650 5300 7650
+Wire Wire Line
+	5200 8125 5300 8125
+Wire Wire Line
+	5475 7650 5575 7650
+Wire Wire Line
+	5475 8125 5575 8125
+Connection ~ 2750 7100
+Connection ~ 3100 7100
+Connection ~ 3500 7100
+Connection ~ 3750 7075
+Connection ~ 4050 7100
+Connection ~ 4325 7100
+Connection ~ 4625 7100
+Connection ~ 4950 7100
+Connection ~ 5200 7100
+Connection ~ 5475 7100
+Wire Wire Line
+	1450 8475 9625 8475
+Connection ~ 2075 8475
+Wire Wire Line
+	2075 8775 1975 8775
+Wire Wire Line
+	2500 8775 2325 8775
+Connection ~ 1975 8775
+Connection ~ 2325 8775
+Connection ~ 2500 8475
+Connection ~ 2850 8475
+Connection ~ 3175 8475
+Connection ~ 3525 8475
+Connection ~ 3825 8475
+Connection ~ 4100 8475
+Connection ~ 4400 8475
+Connection ~ 4700 8475
+Connection ~ 5000 8475
+Connection ~ 5275 8475
+Wire Wire Line
+	1400 8950 9625 8950
+Connection ~ 2075 8950
+Wire Wire Line
+	2075 9250 1975 9250
+Wire Wire Line
+	2500 9250 2325 9250
+Connection ~ 1975 9250
+Connection ~ 2325 9250
+Connection ~ 2500 8950
+Connection ~ 2850 8950
+Connection ~ 3175 8950
+Connection ~ 3525 8950
+Connection ~ 3825 8950
+Connection ~ 4100 8950
+Connection ~ 4400 8950
+Connection ~ 4700 8950
+Connection ~ 5000 8950
+Connection ~ 5275 8950
+Wire Wire Line
+	1975 8125 1975 10275
+Wire Wire Line
+	2325 8125 2325 10275
+Wire Wire Line
+	2850 8775 2725 8775
+Wire Wire Line
+	2725 8125 2725 10275
+Wire Wire Line
+	2725 9250 2850 9250
+Wire Wire Line
+	3175 9250 3075 9250
+Wire Wire Line
+	3075 8125 3075 9350
+Wire Wire Line
+	3075 8775 3175 8775
+Wire Wire Line
+	3525 8775 3475 8775
+Wire Wire Line
+	3475 8775 3475 9350
+Wire Wire Line
+	3475 9250 3525 9250
+Wire Wire Line
+	3725 9250 3825 9250
+Wire Wire Line
+	3725 8125 3725 9250
+Wire Wire Line
+	3725 8775 3825 8775
+Wire Wire Line
+	4100 8775 4025 8775
+Wire Wire Line
+	4025 8125 4025 10275
+Wire Wire Line
+	4025 9250 4100 9250
+Wire Wire Line
+	4400 9250 4300 9250
+Wire Wire Line
+	4300 8125 4300 10275
+Wire Wire Line
+	4300 8775 4400 8775
+Wire Wire Line
+	4700 8775 4600 8775
+Wire Wire Line
+	4600 8125 4600 10275
+Wire Wire Line
+	4600 9250 4700 9250
+Wire Wire Line
+	5000 8775 4925 8775
+Wire Wire Line
+	4925 8125 4925 10275
+Wire Wire Line
+	4925 9250 5000 9250
+Wire Wire Line
+	5275 8775 5175 8775
+Wire Wire Line
+	5175 8125 5175 10275
+Wire Wire Line
+	5175 9250 5275 9250
+Wire Wire Line
+	5550 8775 5450 8775
+Wire Wire Line
+	5450 8125 5450 10275
+Wire Wire Line
+	5450 9250 5550 9250
+Wire Wire Line
+	1275 9500 9625 9500
+Connection ~ 2075 9500
+Wire Wire Line
+	1975 9800 2075 9800
+Wire Wire Line
+	2325 9800 2500 9800
+Connection ~ 1975 9800
+Connection ~ 2325 9800
+Connection ~ 2500 9500
+Connection ~ 2850 9500
+Connection ~ 3175 9500
+Connection ~ 3525 9500
+Connection ~ 3825 9500
+Connection ~ 4100 9500
+Connection ~ 4400 9500
+Connection ~ 4700 9500
+Connection ~ 5000 9500
+Connection ~ 5275 9500
+Wire Wire Line
+	1150 9975 9625 9975
+Connection ~ 2075 9975
+Wire Wire Line
+	1975 10275 2075 10275
+Wire Wire Line
+	2325 10275 2500 10275
+Connection ~ 1975 10275
+Connection ~ 2325 10275
+Connection ~ 2500 9975
+Connection ~ 2850 9975
+Connection ~ 3175 9975
+Connection ~ 3525 9975
+Connection ~ 3825 9975
+Connection ~ 4100 9975
+Connection ~ 4400 9975
+Connection ~ 4700 9975
+Connection ~ 5000 9975
+Connection ~ 5275 9975
+Wire Wire Line
+	2725 9800 2850 9800
+Wire Wire Line
+	2725 10275 2850 10275
+Wire Wire Line
+	3175 10275 3075 10275
+Wire Wire Line
+	3075 10275 3075 9800
+Wire Wire Line
+	3025 9800 3175 9800
+Wire Wire Line
+	3400 9800 3525 9800
+Wire Wire Line
+	3475 9800 3475 10275
+Wire Wire Line
+	3475 10275 3525 10275
+Wire Wire Line
+	3725 10275 3825 10275
+Wire Wire Line
+	3725 9225 3725 10275
+Wire Wire Line
+	3725 9800 3825 9800
+Wire Wire Line
+	4025 9800 4100 9800
+Wire Wire Line
+	4025 10275 4100 10275
+Wire Wire Line
+	4300 10275 4400 10275
+Wire Wire Line
+	4300 9800 4400 9800
+Wire Wire Line
+	4600 9800 4700 9800
+Wire Wire Line
+	4600 10275 4700 10275
+Wire Wire Line
+	4925 9800 5000 9800
+Wire Wire Line
+	4925 10275 5000 10275
+Wire Wire Line
+	5175 9800 5275 9800
+Wire Wire Line
+	5175 10275 5275 10275
+Wire Wire Line
+	5450 9800 5550 9800
+Wire Wire Line
+	5450 10275 5550 10275
+Connection ~ 2725 9250
+Connection ~ 3075 9250
+Connection ~ 3475 9250
+Connection ~ 3725 9225
+Connection ~ 4025 9250
+Connection ~ 4300 9250
+Connection ~ 4600 9250
+Connection ~ 4925 9250
+Connection ~ 5175 9250
+Connection ~ 5450 9250
+Connection ~ 5550 8125
+Connection ~ 5275 8125
+Wire Wire Line
+	4925 8125 5000 8125
+Connection ~ 5000 8125
+Connection ~ 3825 8125
+Connection ~ 3525 8125
+Connection ~ 3175 8125
+Connection ~ 2500 8125
+Connection ~ 2075 8125
+Connection ~ 2000 7125
+Wire Wire Line
+	2000 5650 2000 8125
+Connection ~ 3100 7650
+Connection ~ 2750 7650
+Wire Wire Line
+	3400 7100 3400 7650
+Connection ~ 3500 7650
+Connection ~ 3750 7650
+Connection ~ 4050 7650
+Connection ~ 4325 7650
+Connection ~ 4625 7650
+Connection ~ 4950 7650
+Connection ~ 5200 7650
+Connection ~ 5475 7650
+Wire Wire Line
+	3425 5975 3425 7100
+Connection ~ 3425 7100
+Wire Wire Line
+	5450 8125 5500 8125
+Connection ~ 5500 8125
+Connection ~ 5450 8775
+Wire Wire Line
+	5175 8125 5225 8125
+Connection ~ 5225 8125
+Connection ~ 5175 8775
+Connection ~ 4925 8775
+Connection ~ 4625 8125
+Connection ~ 4600 8775
+Wire Wire Line
+	4300 8125 4425 8125
+Connection ~ 4300 8775
+Connection ~ 4325 8125
+Wire Wire Line
+	4025 8125 4075 8125
+Connection ~ 4075 8125
+Connection ~ 4025 8775
+Connection ~ 3750 8125
+Connection ~ 3725 8775
+Wire Wire Line
+	3475 8825 3400 8825
+Wire Wire Line
+	3400 8825 3400 8125
+Wire Wire Line
+	3400 8125 3525 8125
+Connection ~ 3475 8825
+Connection ~ 3100 8125
+Connection ~ 3075 8775
+Wire Wire Line
+	2725 8125 2775 8125
+Connection ~ 2775 8125
+Connection ~ 2725 8775
+Connection ~ 5450 9800
+Connection ~ 5175 9800
+Connection ~ 4925 9800
+Connection ~ 4600 9800
+Connection ~ 4300 9800
+Connection ~ 4025 9800
+Connection ~ 3725 9800
+Wire Wire Line
+	3400 9800 3400 9350
+Wire Wire Line
+	3400 9350 3475 9350
+Connection ~ 3475 9800
+Wire Wire Line
+	3025 9800 3025 9350
+Wire Wire Line
+	3025 9350 3075 9350
+Connection ~ 3075 9800
+Connection ~ 2725 9800
+Connection ~ 5475 6625
+Connection ~ 5200 6625
+Connection ~ 4950 6625
+Connection ~ 4625 6625
+Connection ~ 4325 6625
+Connection ~ 4050 6625
+Connection ~ 3750 6625
+Connection ~ 3425 6625
+Connection ~ 3100 6625
+Connection ~ 2750 6625
+Wire Wire Line
+	5550 6325 9650 6325
+Connection ~ 6175 6325
+Wire Wire Line
+	6175 6625 6075 6625
+Wire Wire Line
+	6600 6625 6425 6625
+Connection ~ 6075 6625
+Connection ~ 6425 6625
+Connection ~ 6600 6325
+Connection ~ 6950 6325
+Connection ~ 7275 6325
+Connection ~ 7625 6325
+Connection ~ 7925 6325
+Connection ~ 8200 6325
+Connection ~ 8500 6325
+Connection ~ 8800 6325
+Connection ~ 9100 6325
+Connection ~ 9375 6325
+Wire Wire Line
+	5525 6800 9650 6800
+Connection ~ 6175 6800
+Wire Wire Line
+	6175 7100 6075 7100
+Wire Wire Line
+	6425 7100 6600 7100
+Connection ~ 6075 7100
+Connection ~ 6425 7100
+Connection ~ 6600 6800
+Connection ~ 6950 6800
+Connection ~ 7275 6800
+Connection ~ 7625 6800
+Connection ~ 7925 6800
+Connection ~ 8200 6800
+Connection ~ 8500 6800
+Connection ~ 8800 6800
+Connection ~ 9100 6800
+Connection ~ 9375 6800
+Wire Wire Line
+	6825 6625 6950 6625
+Wire Wire Line
+	6825 5650 6825 8125
+Wire Wire Line
+	6825 7100 6950 7100
+Wire Wire Line
+	7275 7100 7175 7100
+Wire Wire Line
+	7175 6625 7275 6625
+Wire Wire Line
+	7500 6625 7625 6625
+Wire Wire Line
+	7475 7100 7625 7100
+Wire Wire Line
+	7825 7100 7925 7100
+Wire Wire Line
+	7825 5650 7825 7100
+Wire Wire Line
+	7825 6625 7925 6625
+Wire Wire Line
+	8200 6625 8125 6625
+Wire Wire Line
+	8125 5725 8125 8125
+Wire Wire Line
+	8125 7100 8200 7100
+Wire Wire Line
+	8500 7100 8400 7100
+Wire Wire Line
+	8400 5650 8400 8125
+Wire Wire Line
+	8400 6625 8500 6625
+Wire Wire Line
+	8800 6625 8700 6625
+Wire Wire Line
+	8700 5700 8700 8125
+Wire Wire Line
+	8700 7100 8800 7100
+Wire Wire Line
+	9000 6625 9100 6625
+Wire Wire Line
+	9025 6625 9025 8125
+Wire Wire Line
+	9025 7100 9100 7100
+Wire Wire Line
+	9375 6625 9275 6625
+Wire Wire Line
+	9275 5650 9275 8125
+Wire Wire Line
+	9275 7100 9375 7100
+Wire Wire Line
+	9550 6625 9650 6625
+Wire Wire Line
+	9550 5650 9550 8125
+Wire Wire Line
+	9550 7100 9650 7100
+Wire Wire Line
+	1625 7350 9650 7350
+Connection ~ 6175 7350
+Wire Wire Line
+	6075 7650 6175 7650
+Wire Wire Line
+	6600 7650 6425 7650
+Connection ~ 6075 7650
+Connection ~ 6425 7650
+Connection ~ 6600 7350
+Connection ~ 6950 7350
+Connection ~ 7275 7350
+Connection ~ 7625 7350
+Connection ~ 7925 7350
+Connection ~ 8200 7350
+Connection ~ 8500 7350
+Connection ~ 8800 7350
+Connection ~ 9100 7350
+Connection ~ 9375 7350
+Connection ~ 6175 7825
+Wire Wire Line
+	6050 8125 6175 8125
+Wire Wire Line
+	6400 8125 6600 8125
+Connection ~ 6075 8125
+Connection ~ 6425 8125
+Connection ~ 6600 7825
+Connection ~ 6950 7825
+Connection ~ 7275 7825
+Connection ~ 7625 7825
+Connection ~ 7925 7825
+Connection ~ 8200 7825
+Connection ~ 8500 7825
+Connection ~ 8800 7825
+Connection ~ 9100 7825
+Connection ~ 9375 7825
+Wire Wire Line
+	6425 5650 6425 8125
+Wire Wire Line
+	6825 7650 6950 7650
+Wire Wire Line
+	6825 8125 6950 8125
+Wire Wire Line
+	7150 8125 7275 8125
+Wire Wire Line
+	7175 5650 7175 8125
+Wire Wire Line
+	7175 7650 7275 7650
+Wire Wire Line
+	7475 7650 7625 7650
+Wire Wire Line
+	7575 7650 7575 8125
+Wire Wire Line
+	7575 8125 7625 8125
+Wire Wire Line
+	7800 8125 7925 8125
+Wire Wire Line
+	7825 7075 7825 8125
+Wire Wire Line
+	7825 7650 7925 7650
+Wire Wire Line
+	8200 7650 8125 7650
+Wire Wire Line
+	8125 8125 8200 8125
+Wire Wire Line
+	8400 7650 8500 7650
+Wire Wire Line
+	8700 7650 8800 7650
+Wire Wire Line
+	8675 8125 8800 8125
+Wire Wire Line
+	9025 7650 9100 7650
+Wire Wire Line
+	9025 8125 9100 8125
+Wire Wire Line
+	9275 7650 9375 7650
+Wire Wire Line
+	9275 8125 9375 8125
+Wire Wire Line
+	9550 7650 9650 7650
+Wire Wire Line
+	9550 8125 9650 8125
+Connection ~ 6825 7100
+Connection ~ 7175 7100
+Connection ~ 7575 7100
+Connection ~ 7825 7075
+Connection ~ 8125 7100
+Connection ~ 8400 7100
+Connection ~ 8700 7100
+Connection ~ 9025 7100
+Connection ~ 9275 7100
+Connection ~ 9550 7100
+Connection ~ 6150 8475
+Wire Wire Line
+	6150 8775 6050 8775
+Wire Wire Line
+	6575 8775 6400 8775
+Connection ~ 6050 8775
+Connection ~ 6400 8775
+Connection ~ 6575 8475
+Connection ~ 6925 8475
+Connection ~ 7250 8475
+Connection ~ 7600 8475
+Connection ~ 7900 8475
+Connection ~ 8175 8475
+Connection ~ 8475 8475
+Connection ~ 8775 8475
+Connection ~ 9075 8475
+Connection ~ 9350 8475
+Connection ~ 6150 8950
+Wire Wire Line
+	6150 9250 6050 9250
+Wire Wire Line
+	6575 9250 6400 9250
+Connection ~ 6050 9250
+Connection ~ 6400 9250
+Connection ~ 6575 8950
+Connection ~ 6925 8950
+Connection ~ 7250 8950
+Connection ~ 7600 8950
+Connection ~ 7900 8950
+Connection ~ 8175 8950
+Connection ~ 8475 8950
+Connection ~ 8775 8950
+Connection ~ 9075 8950
+Connection ~ 9350 8950
+Wire Wire Line
+	6050 8125 6050 10275
+Wire Wire Line
+	6400 8125 6400 10275
+Wire Wire Line
+	6925 8775 6800 8775
+Wire Wire Line
+	6800 8125 6800 10275
+Wire Wire Line
+	6800 9250 6925 9250
+Wire Wire Line
+	7250 9250 7150 9250
+Wire Wire Line
+	7150 8125 7150 9350
+Wire Wire Line
+	7150 8775 7250 8775
+Wire Wire Line
+	7600 8775 7550 8775
+Wire Wire Line
+	7550 8775 7550 9350
+Wire Wire Line
+	7550 9250 7600 9250
+Wire Wire Line
+	7800 9250 7900 9250
+Wire Wire Line
+	7800 8125 7800 9250
+Wire Wire Line
+	7800 8775 7900 8775
+Wire Wire Line
+	8175 8775 8100 8775
+Wire Wire Line
+	8100 8125 8100 10275
+Wire Wire Line
+	8100 9250 8175 9250
+Wire Wire Line
+	8475 9250 8375 9250
+Wire Wire Line
+	8375 8125 8375 10275
+Wire Wire Line
+	8375 8775 8475 8775
+Wire Wire Line
+	8775 8775 8675 8775
+Wire Wire Line
+	8675 8125 8675 10275
+Wire Wire Line
+	8675 9250 8775 9250
+Wire Wire Line
+	9075 8775 9000 8775
+Wire Wire Line
+	9000 8125 9000 10275
+Wire Wire Line
+	9000 9250 9075 9250
+Wire Wire Line
+	9350 8775 9250 8775
+Wire Wire Line
+	9250 8125 9250 10275
+Wire Wire Line
+	9250 9250 9350 9250
+Wire Wire Line
+	9625 8775 9525 8775
+Wire Wire Line
+	9525 8125 9525 10275
+Wire Wire Line
+	9525 9250 9625 9250
+Connection ~ 6150 9500
+Wire Wire Line
+	6050 9800 6150 9800
+Wire Wire Line
+	6400 9800 6575 9800
+Connection ~ 6050 9800
+Connection ~ 6400 9800
+Connection ~ 6575 9500
+Connection ~ 6925 9500
+Connection ~ 7250 9500
+Connection ~ 7600 9500
+Connection ~ 7900 9500
+Connection ~ 8175 9500
+Connection ~ 8475 9500
+Connection ~ 8775 9500
+Connection ~ 9075 9500
+Connection ~ 9350 9500
+Connection ~ 6150 9975
+Wire Wire Line
+	6050 10275 6150 10275
+Wire Wire Line
+	6400 10275 6575 10275
+Connection ~ 6050 10275
+Connection ~ 6400 10275
+Connection ~ 6575 9975
+Connection ~ 6925 9975
+Connection ~ 7250 9975
+Connection ~ 7600 9975
+Connection ~ 7900 9975
+Connection ~ 8175 9975
+Connection ~ 8475 9975
+Connection ~ 8775 9975
+Connection ~ 9075 9975
+Connection ~ 9350 9975
+Wire Wire Line
+	6800 9800 6925 9800
+Wire Wire Line
+	6800 10275 6925 10275
+Wire Wire Line
+	7250 10275 7150 10275
+Wire Wire Line
+	7150 10275 7150 9800
+Wire Wire Line
+	7100 9800 7250 9800
+Wire Wire Line
+	7475 9800 7600 9800
+Wire Wire Line
+	7550 9800 7550 10275
+Wire Wire Line
+	7550 10275 7600 10275
+Wire Wire Line
+	7800 10275 7900 10275
+Wire Wire Line
+	7800 9225 7800 10275
+Wire Wire Line
+	7800 9800 7900 9800
+Wire Wire Line
+	8100 9800 8175 9800
+Wire Wire Line
+	8100 10275 8175 10275
+Wire Wire Line
+	8375 10275 8475 10275
+Wire Wire Line
+	8375 9800 8475 9800
+Wire Wire Line
+	8675 9800 8775 9800
+Wire Wire Line
+	8675 10275 8775 10275
+Wire Wire Line
+	9000 9800 9075 9800
+Wire Wire Line
+	9000 10275 9075 10275
+Wire Wire Line
+	9250 9800 9350 9800
+Wire Wire Line
+	9250 10275 9350 10275
+Wire Wire Line
+	9525 9800 9625 9800
+Wire Wire Line
+	9525 10275 9625 10275
+Connection ~ 6800 9250
+Connection ~ 7150 9250
+Connection ~ 7550 9250
+Connection ~ 7800 9225
+Connection ~ 8100 9250
+Connection ~ 8375 9250
+Connection ~ 8675 9250
+Connection ~ 9000 9250
+Connection ~ 9250 9250
+Connection ~ 9525 9250
+Connection ~ 9625 8125
+Connection ~ 9350 8125
+Wire Wire Line
+	9000 8125 9075 8125
+Connection ~ 9075 8125
+Connection ~ 7900 8125
+Connection ~ 7600 8125
+Connection ~ 7250 8125
+Connection ~ 6575 8125
+Connection ~ 6150 8125
+Connection ~ 6075 7125
+Wire Wire Line
+	6075 5650 6075 8125
+Connection ~ 7175 7650
+Connection ~ 6825 7650
+Wire Wire Line
+	7475 7100 7475 7650
+Connection ~ 7575 7650
+Connection ~ 7825 7650
+Connection ~ 8125 7650
+Connection ~ 8400 7650
+Connection ~ 8700 7650
+Connection ~ 9025 7650
+Connection ~ 9275 7650
+Connection ~ 9550 7650
+Wire Wire Line
+	7500 5650 7500 7100
+Connection ~ 7500 7100
+Wire Wire Line
+	9525 8125 9575 8125
+Connection ~ 9575 8125
+Connection ~ 9525 8775
+Wire Wire Line
+	9250 8125 9300 8125
+Connection ~ 9300 8125
+Connection ~ 9250 8775
+Connection ~ 9000 8775
+Connection ~ 8700 8125
+Connection ~ 8675 8775
+Wire Wire Line
+	8375 8125 8500 8125
+Connection ~ 8375 8775
+Connection ~ 8400 8125
+Wire Wire Line
+	8100 8125 8150 8125
+Connection ~ 8150 8125
+Connection ~ 8100 8775
+Connection ~ 7825 8125
+Connection ~ 7800 8775
+Wire Wire Line
+	7550 8825 7475 8825
+Wire Wire Line
+	7475 8825 7475 8125
+Wire Wire Line
+	7475 8125 7600 8125
+Connection ~ 7550 8825
+Connection ~ 7175 8125
+Connection ~ 7150 8775
+Wire Wire Line
+	6800 8125 6850 8125
+Connection ~ 6850 8125
+Connection ~ 6800 8775
+Connection ~ 9525 9800
+Connection ~ 9250 9800
+Connection ~ 9000 9800
+Connection ~ 8675 9800
+Connection ~ 8375 9800
+Connection ~ 8100 9800
+Connection ~ 7800 9800
+Wire Wire Line
+	7475 9800 7475 9350
+Wire Wire Line
+	7475 9350 7550 9350
+Connection ~ 7550 9800
+Wire Wire Line
+	7100 9800 7100 9350
+Wire Wire Line
+	7100 9350 7150 9350
+Connection ~ 7150 9800
+Connection ~ 6800 9800
+Connection ~ 9550 6625
+Connection ~ 9275 6625
+Wire Wire Line
+	9000 5925 9000 6625
+Connection ~ 9025 6625
+Connection ~ 8700 6625
+Connection ~ 8400 6625
+Connection ~ 8125 6625
+Connection ~ 7825 6625
+Connection ~ 7500 6625
+Connection ~ 7175 6625
+Connection ~ 6825 6625
+Connection ~ 9575 5650
+Connection ~ 9300 5650
+Wire Wire Line
+	9050 5925 9000 5925
+Connection ~ 9050 5650
+Wire Wire Line
+	8725 5700 8700 5700
+Connection ~ 8725 5650
+Connection ~ 8425 5650
+Wire Wire Line
+	8150 5725 8125 5725
+Connection ~ 8150 5650
+Connection ~ 7850 5650
+Connection ~ 7600 5650
+Connection ~ 7200 5650
+Connection ~ 6850 5650
+Wire Wire Line
+	5450 6050 5475 6050
+Connection ~ 5450 5650
+Connection ~ 5200 5650
+Connection ~ 4925 5650
+Connection ~ 4625 5650
+Connection ~ 4325 5650
+Connection ~ 4050 5650
+Connection ~ 3750 5650
+Wire Wire Line
+	3475 5975 3425 5975
+Connection ~ 3475 5650
+Connection ~ 3100 5650
+Wire Wire Line
+	2750 5650 2775 5650
+Connection ~ 2775 5650
+Wire Wire Line
+	2350 5650 2375 5650
+Connection ~ 2375 5650
+Connection ~ 2000 5650
+Connection ~ 5550 1700
+Connection ~ 5525 2175
+Connection ~ 5550 2725
+Connection ~ 5550 3200
+Connection ~ 5525 3850
+Connection ~ 5525 4325
+Connection ~ 5525 4875
+Connection ~ 5500 5350
+Connection ~ 5550 6325
+Connection ~ 5525 6800
+Connection ~ 5575 7350
+Connection ~ 5550 8950
+Wire Wire Line
+	5700 1425 5700 825 
+Connection ~ 5475 1425
+Wire Wire Line
+	5475 1425 5700 1425
+Wire Wire Line
+	6125 1325 5800 1325
+Wire Wire Line
+	5800 1325 5800 825 
+Wire Wire Line
+	6475 1350 6225 1350
+Wire Wire Line
+	6225 1350 6225 1275
+Wire Wire Line
+	6225 1275 5900 1275
+Wire Wire Line
+	5900 1275 5900 825 
+Wire Wire Line
+	6875 1450 6550 1450
+Wire Wire Line
+	6550 1450 6550 1225
+Wire Wire Line
+	6550 1225 6000 1225
+Wire Wire Line
+	6000 1225 6000 825 
+Wire Wire Line
+	6100 825  6100 1175
+Wire Wire Line
+	6100 1175 6650 1175
+Wire Wire Line
+	6650 1175 6650 1400
+Wire Wire Line
+	6650 1400 7225 1400
+Wire Wire Line
+	6775 1325 7550 1325
+Wire Wire Line
+	6775 1325 6775 1100
+Wire Wire Line
+	6775 1100 6200 1100
+Wire Wire Line
+	6200 1100 6200 825 
+Wire Wire Line
+	6300 825  6300 1050
+Wire Wire Line
+	6300 1050 6825 1050
+Wire Wire Line
+	6825 1050 6825 1275
+Wire Wire Line
+	6825 1275 7875 1275
+Wire Wire Line
+	8175 1125 6925 1125
+Wire Wire Line
+	6925 1125 6925 1000
+Wire Wire Line
+	6925 1000 6400 1000
+Wire Wire Line
+	6400 1000 6400 825 
+Wire Wire Line
+	6500 825  6500 975 
+Wire Wire Line
+	6500 975  8450 975 
+Wire Wire Line
+	6600 825  6600 950 
+Wire Wire Line
+	6600 950  8750 950 
+Wire Wire Line
+	6700 825  6700 925 
+Wire Wire Line
+	6700 925  9050 925 
+Wire Wire Line
+	6800 825  6800 900 
+Wire Wire Line
+	6800 900  9325 900 
+Wire Wire Line
+	6900 825  9600 825 
+Wire Wire Line
+	2000 900  2000 3500
+Wire Wire Line
+	5600 825  5600 1400
+Wire Wire Line
+	5600 1400 5300 1400
+Wire Wire Line
+	5300 1400 5300 1525
+Wire Wire Line
+	4925 1350 5525 1350
+Wire Wire Line
+	5525 1350 5525 825 
+Wire Wire Line
+	5525 825  5500 825 
+Wire Wire Line
+	4625 1125 4625 3500
+Wire Wire Line
+	4625 1125 5400 1125
+Wire Wire Line
+	5400 1125 5400 825 
+Wire Wire Line
+	4325 1100 4325 3500
+Wire Wire Line
+	3750 1025 3750 2475
+Wire Wire Line
+	4325 1100 5300 1100
+Wire Wire Line
+	5300 1100 5300 825 
+Wire Wire Line
+	4050 1050 5250 1050
+Wire Wire Line
+	5250 1050 5250 825 
+Wire Wire Line
+	5250 825  5200 825 
+Wire Wire Line
+	3750 1025 5100 1025
+Wire Wire Line
+	5100 1025 5100 825 
+Wire Wire Line
+	3425 1000 5000 1000
+Wire Wire Line
+	5000 1000 5000 825 
+Wire Wire Line
+	3200 1500 3200 975 
+Wire Wire Line
+	3200 975  4900 975 
+Wire Wire Line
+	4900 975  4900 825 
+Wire Wire Line
+	2875 1475 2875 950 
+Wire Wire Line
+	2875 950  4800 950 
+Wire Wire Line
+	4800 950  4800 825 
+Wire Wire Line
+	2350 925  4700 925 
+Wire Wire Line
+	4700 925  4700 825 
+Wire Wire Line
+	2000 900  4600 900 
+Wire Wire Line
+	4600 900  4600 825 
+Wire Wire Line
+	975  1750 975  4550
+Wire Wire Line
+	1750 2225 1025 2225
+Wire Wire Line
+	1025 2225 1025 4650
+Wire Wire Line
+	1025 4650 975  4650
+Wire Wire Line
+	1050 2775 1050 4750
+Wire Wire Line
+	1050 4750 975  4750
+Wire Wire Line
+	1400 3200 1075 3200
+Wire Wire Line
+	1075 3200 1075 4850
+Wire Wire Line
+	1075 4850 975  4850
+Wire Wire Line
+	1425 3825 1100 3825
+Wire Wire Line
+	1100 3825 1100 4950
+Wire Wire Line
+	1100 4950 975  4950
+Wire Wire Line
+	1450 4350 1150 4350
+Wire Wire Line
+	1150 4350 1150 5050
+Wire Wire Line
+	1150 5050 975  5050
+Wire Wire Line
+	1200 4925 1200 5150
+Wire Wire Line
+	1200 5150 975  5150
+Wire Wire Line
+	1725 5400 1350 5400
+Wire Wire Line
+	1350 5400 1350 5250
+Wire Wire Line
+	1350 5250 975  5250
+Wire Wire Line
+	1750 6325 1750 5450
+Wire Wire Line
+	1750 5450 1250 5450
+Wire Wire Line
+	1250 5450 1250 5350
+Wire Wire Line
+	1250 5350 975  5350
+Wire Wire Line
+	1750 6800 1750 6550
+Wire Wire Line
+	1750 6550 1675 6550
+Wire Wire Line
+	1675 6550 1675 5500
+Wire Wire Line
+	1675 5500 1075 5500
+Wire Wire Line
+	1075 5500 1075 5450
+Wire Wire Line
+	1075 5450 975  5450
+Wire Wire Line
+	975  5550 1625 5550
+Wire Wire Line
+	975  5650 1550 5650
+Wire Wire Line
+	1550 5650 1550 7825
+Wire Wire Line
+	975  5750 1450 5750
+Wire Wire Line
+	1450 5750 1450 8475
+Wire Wire Line
+	975  5850 1400 5850
+Wire Wire Line
+	1400 5850 1400 8950
+Wire Wire Line
+	975  5950 1275 5950
+Wire Wire Line
+	1275 5950 1275 9500
+Wire Wire Line
+	975  6050 1150 6050
+Wire Wire Line
+	1150 6050 1150 9975
+Wire Wire Line
+	1625 5550 1625 7350
+Wire Wire Line
+	5025 7350 5025 7325
+Wire Wire Line
+	5550 8475 5500 8475
+Connection ~ 5500 8475
+Connection ~ 5550 8475
+Wire Wire Line
+	5575 7825 5550 7825
+Connection ~ 5550 7825
+Connection ~ 5575 7825
+Wire Wire Line
+	5550 9975 5575 9975
+Connection ~ 5575 9975
+Connection ~ 5550 9975
+Wire Wire Line
+	5550 9500 5575 9500
+Connection ~ 5575 9500
+Connection ~ 5550 9500
+$EndSCHEMATC

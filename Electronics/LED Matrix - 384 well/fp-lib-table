@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name LEDs)(type KiCad)(uri "$(KISYSMOD)/LEDs.pretty")(options "")(descr ""))
+  (lib (name "LED Matrix")(type KiCad)(uri "$(KIPRJMOD)")(options "")(descr ""))
+  (lib (name "384 well matrix parts")(type KiCad)(uri "$(KIPRJMOD)/384 well matrix parts.pretty")(options "")(descr ""))
+)

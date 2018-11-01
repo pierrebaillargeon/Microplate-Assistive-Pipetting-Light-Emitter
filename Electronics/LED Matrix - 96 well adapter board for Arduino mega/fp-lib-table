@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name LEDs)(type KiCad)(uri "$(KISYSMOD)/LEDs.pretty")(options "")(descr ""))
+  (lib (name "LED Matrix")(type KiCad)(uri "C:/Users/bpierre/Dropbox (Personal)/electronics/LED Matrix - 96 well")(options "")(descr ""))
+)

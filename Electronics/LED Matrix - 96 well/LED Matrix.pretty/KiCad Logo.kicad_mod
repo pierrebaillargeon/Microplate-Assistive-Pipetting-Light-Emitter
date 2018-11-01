@@ -1,0 +1,8 @@
+(module "KiCad Logo" (layer F.Cu) (tedit 5AFF2674)
+  (fp_text reference REF** (at 3.81 3.81) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value "KiCad Logo" (at -5.08 3.81) (layer F.Fab)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+)
