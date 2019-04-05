@@ -1,4 +1,4 @@
-(kicad_pcb (version 20171130) (host pcbnew "(5.0.0-rc3-dev)")
+(kicad_pcb (version 20171130) (host pcbnew "(5.0.0)")
 
   (general
     (thickness 1.6)
@@ -11,7 +11,7 @@
 
   (page A4)
   (layers
-    (0 F.Cu signal hide)
+    (0 F.Cu signal)
     (31 B.Cu signal hide)
     (32 B.Adhes user)
     (33 F.Adhes user)
@@ -61,7 +61,7 @@
     (aux_axis_origin 39.37 123.444)
     (visible_elements 7FFFFFFF)
     (pcbplotparams
-      (layerselection 0x00080_fffffffe)
+      (layerselection 0x3ffff_ffffffff)
       (usegerberextensions false)
       (usegerberattributes false)
       (usegerberadvancedattributes false)
@@ -71,7 +71,7 @@
       (plotframeref false)
       (viasonmask false)
       (mode 1)
-      (useauxorigin false)
+      (useauxorigin true)
       (hpglpennumber 1)
       (hpglpenspeed 20)
       (hpglpendiameter 15.000000)
@@ -86,7 +86,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory "gerber/"))
+      (outputdirectory "JLCPCB/"))
   )
 
   (net 0 "")
@@ -2918,7 +2918,7 @@
     (tags "capacitor 0805")
     (path /5B8776BA)
     (attr smd)
-    (fp_text reference C58 (at 2.5952 -0.0628) (layer F.SilkS)
+    (fp_text reference C58 (at 2.9 -0.012) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value CAP (at 0 1.75 270) (layer F.Fab)
@@ -8961,7 +8961,7 @@
       (net 126 "Net-(U1-Pad27)"))
   )
 
-  (module Fiducials:Fiducial_1mm_Mask3mm (layer F.Cu) (tedit 5C997FE2) (tstamp 5CB21003)
+  (module Fiducials:Fiducial_1mm_Mask3mm locked (layer F.Cu) (tedit 5C997FE2) (tstamp 5CB21003)
     (at 49.53 43.18)
     (descr "Circular Fiducial, 1mm bare copper, 3mm soldermask opening (recommended)")
     (tags fiducial)
@@ -8981,7 +8981,7 @@
       (solder_mask_margin 1) (clearance 1))
   )
 
-  (module Fiducials:Fiducial_1mm_Mask3mm (layer F.Cu) (tedit 5C998028) (tstamp 5CB210AB)
+  (module Fiducials:Fiducial_1mm_Mask3mm locked (layer F.Cu) (tedit 5C998028) (tstamp 5CB210AB)
     (at 151.9 43.18)
     (descr "Circular Fiducial, 1mm bare copper, 3mm soldermask opening (recommended)")
     (tags fiducial)
@@ -9001,7 +9001,7 @@
       (solder_mask_margin 1) (clearance 1))
   )
 
-  (module Fiducials:Fiducial_1mm_Mask3mm (layer F.Cu) (tedit 5C998058) (tstamp 5CB21122)
+  (module Fiducials:Fiducial_1mm_Mask3mm locked (layer F.Cu) (tedit 5C998058) (tstamp 5CB21122)
     (at 49.53 119.38)
     (descr "Circular Fiducial, 1mm bare copper, 3mm soldermask opening (recommended)")
     (tags fiducial)
@@ -9021,7 +9021,7 @@
       (solder_mask_margin 1) (clearance 1))
   )
 
-  (module Fiducials:Fiducial_1mm_Mask3mm (layer F.Cu) (tedit 5C99807A) (tstamp 5CB2119C)
+  (module Fiducials:Fiducial_1mm_Mask3mm locked (layer F.Cu) (tedit 5C99807A) (tstamp 5CB2119C)
     (at 151.9 119.38)
     (descr "Circular Fiducial, 1mm bare copper, 3mm soldermask opening (recommended)")
     (tags fiducial)
@@ -11247,7 +11247,7 @@
   (segment (start 157.32964 77.70392) (end 156.40464 77.70392) (width 0.25) (layer B.Cu) (net 101))
   (segment (start 157.32964 79.00392) (end 156.40464 79.00392) (width 0.25) (layer B.Cu) (net 128))
 
-  (zone (net 2) (net_name GND) (layer B.Cu) (tstamp 5B8444B3) (hatch edge 0.508)
+  (zone (net 2) (net_name GND) (layer B.Cu) (tstamp 5CB232FB) (hatch edge 0.508)
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
