@@ -1,4 +1,4 @@
-update=9/19/2018 11:08:25 AM
+update=4/9/2019 11:27:14 PM
 version=1
 last_client=kicad
 [general]
@@ -25,11 +25,11 @@ ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=Neopixel mini - 96 well with HCC mod.net
-PadDrill=3.048
-PadDrillOvalY=3.048
-PadSizeH=4.064
-PadSizeV=4.064
+LastNetListRead=Neopixel mini - 96 well - April 2019.net
+PadDrill=1
+PadDrillOvalY=1
+PadSizeH=1.7
+PadSizeV=1.7
 PcbTextSizeV=1.5
 PcbTextSizeH=1.5
 PcbTextThickness=0.3
