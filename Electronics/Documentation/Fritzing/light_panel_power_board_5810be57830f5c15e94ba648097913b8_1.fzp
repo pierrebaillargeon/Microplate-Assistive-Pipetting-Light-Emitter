@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<module moduleId="light_panel_power_board_5810be57830f5c15e94ba648097913b8_1" referenceFile="generic_ic_dip_6_300mil.fzp">
+ <version>4</version>
+ <author>Fritzing Part-o-matic</author>
+ <title>DIP - 6 pins</title>
+ <label>IC</label>
+ <date>Sun Jun 9 2019</date>
+ <tags>
+  <tag>DIP</tag>
+  <tag>fritzing core</tag>
+ </tags>
+ <properties>
+  <property name="family">Generic IC</property>
+  <property name="package">DIP (Dual Inline) [THT]</property>
+  <property name="pins">6</property>
+  <property name="pin spacing">300mil</property>
+  <property name="chip label">IC</property>
+  <property name="hole size"></property>
+  <property name="editable pin labels">false</property>
+  <property name="layer"></property>
+  <property name="part number"></property>
+  <property name="variant">variant 1</property>
+ </properties>
+ <taxonomy>part.dip.6.pins</taxonomy>
+ <description>A DIP stand-in part for whatever IC you want.  With 6 pins on a 300mil dual inline package (DIP) footprint.</description>
+ <views>
+  <iconView>
+   <layers image="icon/light_panel_power_board_5810be57830f5c15e94ba648097913b8_7_icon.svg">
+    <layer layerId="icon"/>
+   </layers>
+  </iconView>
+  <breadboardView>
+   <layers image="breadboard/light_panel_power_board_5810be57830f5c15e94ba648097913b8_7_breadboard.svg">
+    <layer layerId="breadboard"/>
+   </layers>
+  </breadboardView>
+  <schematicView>
+   <layers image="schematic/light_panel_power_board_5810be57830f5c15e94ba648097913b8_7_schematic.svg">
+    <layer layerId="schematic"/>
+   </layers>
+  </schematicView>
+  <pcbView>
+   <layers image="pcb/light_panel_power_board_5810be57830f5c15e94ba648097913b8_7_pcb.svg">
+    <layer layerId="silkscreen"/>
+    <layer layerId="copper0"/>
+    <layer layerId="copper1"/>
+   </layers>
+  </pcbView>
+ </views>
+ <connectors>
+  <connector id="connector0" type="male" name="5v-in">
+   <description>pin 1</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector0pin" terminalId="connector0terminal"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector0pin" terminalId="connector0terminal"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector0pin"/>
+     <p layer="copper1" svgId="connector0pin"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector1" type="male" name="data-in">
+   <description>pin 2</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector1pin" terminalId="connector1terminal"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector1pin" terminalId="connector1terminal"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector1pin"/>
+     <p layer="copper1" svgId="connector1pin"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector2" type="male" name="gnd-in">
+   <description>pin 3</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector2pin" terminalId="connector2terminal"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector2pin" terminalId="connector2terminal"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector2pin"/>
+     <p layer="copper1" svgId="connector2pin"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector3" type="male" name="5v-out">
+   <description>pin 4</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector3pin" terminalId="connector3terminal"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector3pin" terminalId="connector3terminal"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector3pin"/>
+     <p layer="copper1" svgId="connector3pin"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector4" type="male" name="data-out">
+   <description>pin 5</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector4pin" terminalId="connector4terminal"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector4pin" terminalId="connector4terminal"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector4pin"/>
+     <p layer="copper1" svgId="connector4pin"/>
+    </pcbView>
+   </views>
+  </connector>
+  <connector id="connector5" type="male" name="gnd-out">
+   <description>pin 6</description>
+   <views>
+    <breadboardView>
+     <p layer="breadboard" svgId="connector5pin" terminalId="connector5terminal"/>
+    </breadboardView>
+    <schematicView>
+     <p layer="schematic" svgId="connector5pin" terminalId="connector5terminal"/>
+    </schematicView>
+    <pcbView>
+     <p layer="copper0" svgId="connector5pin"/>
+     <p layer="copper1" svgId="connector5pin"/>
+    </pcbView>
+   </views>
+  </connector>
+ </connectors>
+</module>
