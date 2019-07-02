@@ -12,5 +12,5 @@ If you are interested in purchasing preassembled illumination panels, as opposed
   
 <A href="https://raw.githubusercontent.com/pierrebaillargeon/Microplate-Assistive-Pipetting-Light-Emitter/master/Electronics/Documentation/96-well_RGB_light_guide_v1.3-prototype_PCB.png"><img src="https://raw.githubusercontent.com/pierrebaillargeon/Microplate-Assistive-Pipetting-Light-Emitter/master/Electronics/Documentation/96-well_RGB_light_guide_v1.3-prototype_PCB.png" width="900"></a>
   
-<A href="https://raw.githubusercontent.com/pierrebaillargeon/Microplate-Assistive-Pipetting-Light-Emitter/master/Electronics/Documentation/384-well_RGB_light_guide_v1.0-prototype_PCB.jpg"><img src="https://raw.githubusercontent.com/pierrebaillargeon/Microplate-Assistive-Pipetting-Light-Emitter/master/Electronics/Documentation/384-well_RGB_light_guide_v1.0-prototype_PCB.jpg" width="900"></a>
+<A href="https://raw.githubusercontent.com/pierrebaillargeon/Microplate-Assistive-Pipetting-Light-Emitter/master/Electronics/Documentation/384-well_RGB_light_guide_v1.1.png"><img src="https://raw.githubusercontent.com/pierrebaillargeon/Microplate-Assistive-Pipetting-Light-Emitter/master/Electronics/Documentation/384-well_RGB_light_guide_v1.1.png" width="900"></a>
 
