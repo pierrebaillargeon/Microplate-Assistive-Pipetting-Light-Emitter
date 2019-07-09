@@ -15,13 +15,13 @@
 /* The PIN variable should be set to the I/O pin that your microcontroller is using to send data to your light panel */ 
 #define PIN 4
 /* NUM_LEDS should be set to 96 or 384 */ 
-#define NUM_LEDS 96
+#define NUM_LEDS 384
 /* NUM_COLUMNS should be set to 12 or 24 */ 
-#define NUM_COLUMNS 12
+/* #define NUM_COLUMNS 24 */ 
 /* Valid brightness values are between 0 and 255 - do NOT set brightness above 100 unless your power supply can provide
  * adequate current for the given light panel.
  */
-#define BRIGHTNESS 100
+#define BRIGHTNESS 20
 
 /* Set the I/O pin for your button to be used to indicate 'forward' in the program below */ 
 Button forwardButton(3);
@@ -45,6 +45,7 @@ int wellNumber=0;
 int activePixelNumber=0;
 int controlWell=0;
 int hitIntensity=0;
+int NUM_COLUMNS=0;
 
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUM_LEDS, PIN, NEO_GRB + NEO_KHZ800);
 
@@ -52,6 +53,13 @@ void setup() {
 
   forwardButton.begin();
   modeButton.begin();
+
+  if(NUM_LEDS==96) {
+    NUM_COLUMNS=12;
+  }
+  else if(NUM_LEDS==384) {
+    NUM_COLUMNS=24;
+  }
 
   // This is for Trinket 5V 16MHz, you can remove these three lines if you are not using a Trinket
   #if defined (__AVR_ATtiny85__)
@@ -121,7 +129,7 @@ void changeState(int operationState, int stateCounter) {
           activePixelNumber = activePixelNumber - 1;
         }
         strip.setPixelColor(activePixelNumber,strip.Color(180,0,0)); 
-        delay(50);
+        delay(10);
         strip.show();
       }
     }
@@ -140,7 +148,7 @@ void changeState(int operationState, int stateCounter) {
           activePixelNumber = activePixelNumber - 1;
         }
         strip.setPixelColor(activePixelNumber,strip.Color(255,255,0)); 
-        delay(50);
+        delay(10);
         strip.show();  
       }     
     } 
@@ -157,13 +165,24 @@ void changeState(int operationState, int stateCounter) {
     else if(stateCounter==4) {    
       for(int j = 0; j < NUM_LEDS ; j++){
         randomValue=random(6);      
-        controlWell=0;        
-        if(j==0 || j==12 || j==24 || j==36 || j==48 || j==60 || j==72 || j==84 ) {
+        controlWell=0;  
+        if(NUM_LEDS==96) {      
+         if(j==0 || j==12 || j==24 || j==36 || j==48 || j==60 || j==72 || j==84 ) {
           controlWell=1;              
-        }
-        if(j==11 || j==23 || j==35 || j==47 || j==59 || j==71 || j==83 || j==95 ) {
+         }
+         if(j==11 || j==23 || j==35 || j==47 || j==59 || j==71 || j==83 || j==95 ) { 
           randomValue=-1;
-        }      
+         }
+        }
+        else if(NUM_LEDS==384) {
+          if(j==0 || j==24 || j==48 || j==36 || j==72 || j==96 || j==120 || j==144 || j==168 || j==192 || j==216 || j==240 || j==264 || j==288 || j==312 || j==336 || j==360 ) { 
+            controlWell=1;                
+          }
+          if(j==23 || j==47 || j==71 || j==95 || j==119 || j==143 || j==167 || j==191 || j==215 || j==239 || j==263 || j==287 || j==311 || j==335 || j==359 || j==383 ) { 
+            randomValue=-1;
+          }      
+        }                         
+        
         if(randomValue==1 && controlWell==0){ 
           hitIntensity=random(255);
           strip.setPixelColor(j,strip.Color(0,hitIntensity,0)); 
@@ -200,17 +219,27 @@ void changeState(int operationState, int stateCounter) {
       strip.setPixelColor(0,strip.Color(255,165,0)); 
       strip.show();    
     }
-    else {
-      strip.setPixelColor(stateCounter+1,strip.Color(255,165,0));
-      strip.setPixelColor(stateCounter+13,strip.Color(255,165,0));
-      strip.setPixelColor(stateCounter+25,strip.Color(255,165,0));
-      strip.setPixelColor(stateCounter+37,strip.Color(255,165,0));
-      strip.setPixelColor(stateCounter+49,strip.Color(255,165,0));
-      strip.setPixelColor(stateCounter+61,strip.Color(255,165,0));
-      strip.setPixelColor(stateCounter+73,strip.Color(255,165,0));
-      strip.setPixelColor(stateCounter+85,strip.Color(255,165,0));      
+    else {     
+      if(NUM_LEDS==96) {
+        strip.setPixelColor(stateCounter+1,strip.Color(255,165,0));
+        strip.setPixelColor(stateCounter+13,strip.Color(255,165,0));
+        strip.setPixelColor(stateCounter+25,strip.Color(255,165,0));
+        strip.setPixelColor(stateCounter+37,strip.Color(255,165,0));
+        strip.setPixelColor(stateCounter+49,strip.Color(255,165,0));
+        strip.setPixelColor(stateCounter+61,strip.Color(255,165,0));
+        strip.setPixelColor(stateCounter+73,strip.Color(255,165,0));
+        strip.setPixelColor(stateCounter+85,strip.Color(255,165,0));      
+      }      
+      else if(NUM_LEDS==384) {
+        for(int columnOnePixel=1; columnOnePixel<364; columnOnePixel+=24) {
+          strip.setPixelColor(stateCounter+columnOnePixel,strip.Color(255,165,0));  
+        }
+        for(int columnTwoPixel=11; columnTwoPixel<374; columnTwoPixel+=24) {
+          strip.setPixelColor(stateCounter+columnTwoPixel,strip.Color(255,165,0));  
+        }            
+      }
     }
-    if(stateCounter==8) {
+    if(stateCounter==10) {
         modeCounter=0;
     }          
     strip.show();
