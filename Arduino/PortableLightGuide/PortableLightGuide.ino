@@ -21,7 +21,7 @@
 /* Valid brightness values are between 0 and 255 - do NOT set brightness above 100 unless your power supply can provide
  * adequate current for the given light panel.
  */
-#define BRIGHTNESS 20
+#define BRIGHTNESS 50
 
 /* Set the I/O pin for your button to be used to indicate 'forward' in the program below */ 
 Button forwardButton(3);
@@ -218,30 +218,63 @@ void changeState(int operationState, int stateCounter) {
       clearDisplay();
       strip.setPixelColor(0,strip.Color(255,165,0)); 
       strip.show();    
-    }
-    else {     
-      if(NUM_LEDS==96) {
-        strip.setPixelColor(stateCounter+1,strip.Color(255,165,0));
-        strip.setPixelColor(stateCounter+13,strip.Color(255,165,0));
-        strip.setPixelColor(stateCounter+25,strip.Color(255,165,0));
-        strip.setPixelColor(stateCounter+37,strip.Color(255,165,0));
-        strip.setPixelColor(stateCounter+49,strip.Color(255,165,0));
-        strip.setPixelColor(stateCounter+61,strip.Color(255,165,0));
-        strip.setPixelColor(stateCounter+73,strip.Color(255,165,0));
-        strip.setPixelColor(stateCounter+85,strip.Color(255,165,0));      
-      }      
-      else if(NUM_LEDS==384) {
+    }      
+    if(NUM_LEDS==96) {      
+      strip.setPixelColor(stateCounter+1,strip.Color(255,165,0));
+      strip.setPixelColor(stateCounter+13,strip.Color(255,165,0));
+      strip.setPixelColor(stateCounter+25,strip.Color(255,165,0));
+      strip.setPixelColor(stateCounter+37,strip.Color(255,165,0));
+      strip.setPixelColor(stateCounter+49,strip.Color(255,165,0));
+      strip.setPixelColor(stateCounter+61,strip.Color(255,165,0));
+      strip.setPixelColor(stateCounter+73,strip.Color(255,165,0));
+      strip.setPixelColor(stateCounter+85,strip.Color(255,165,0));      
+      if(stateCounter==9) {
+        modeCounter=0;
+      }          
+    }      
+    else if(NUM_LEDS==384) {
+      if(stateCounter!=0 && stateCounter<11) {
         for(int columnOnePixel=1; columnOnePixel<364; columnOnePixel+=24) {
           strip.setPixelColor(stateCounter+columnOnePixel,strip.Color(255,165,0));  
         }
         for(int columnTwoPixel=11; columnTwoPixel<374; columnTwoPixel+=24) {
           strip.setPixelColor(stateCounter+columnTwoPixel,strip.Color(255,165,0));  
-        }            
-      }
-    }
-    if(stateCounter==10) {
+        }       
+      }     
+      else if(stateCounter==11) {
+        /* if we have shown the 10 titration operations, show the final brightness decrease to represent titration curves */
+        for(int titrationCurveDisplay=0; titrationCurveDisplay< 384 ; titrationCurveDisplay+=24){
+          setPixelColorBrightness(titrationCurveDisplay,0,0,0,100);
+          setPixelColorBrightness(titrationCurveDisplay+1,0,0,0,100);
+          setPixelColorBrightness(titrationCurveDisplay+2,255,165,0,100);
+          setPixelColorBrightness(titrationCurveDisplay+3,255,165,0,80);
+          setPixelColorBrightness(titrationCurveDisplay+4,255,165,0,65);
+          setPixelColorBrightness(titrationCurveDisplay+5,255,165,0,55);
+          setPixelColorBrightness(titrationCurveDisplay+6,255,165,0,45);
+          setPixelColorBrightness(titrationCurveDisplay+7,255,165,0,35);
+          setPixelColorBrightness(titrationCurveDisplay+8,255,165,0,25);
+          setPixelColorBrightness(titrationCurveDisplay+9,255,165,0,20);     
+          setPixelColorBrightness(titrationCurveDisplay+10,255,165,0,15);     
+          setPixelColorBrightness(titrationCurveDisplay+11,255,165,0,0);     
+          setPixelColorBrightness(titrationCurveDisplay+12,255,165,0,100);
+          setPixelColorBrightness(titrationCurveDisplay+13,255,165,0,80);
+          setPixelColorBrightness(titrationCurveDisplay+14,255,165,0,65);
+          setPixelColorBrightness(titrationCurveDisplay+15,255,165,0,55);
+          setPixelColorBrightness(titrationCurveDisplay+16,255,165,0,45);
+          setPixelColorBrightness(titrationCurveDisplay+17,255,165,0,35);
+          setPixelColorBrightness(titrationCurveDisplay+18,255,165,0,25);
+          setPixelColorBrightness(titrationCurveDisplay+19,255,165,0,20);     
+          setPixelColorBrightness(titrationCurveDisplay+20,255,165,0,15);     
+          setPixelColorBrightness(titrationCurveDisplay+21,255,165,0,0);  
+          setPixelColorBrightness(titrationCurveDisplay+22,0,0,0,100);
+          setPixelColorBrightness(titrationCurveDisplay+23,0,0,0,100);              
+        }      
+      }          
+      if(stateCounter==12) {
         modeCounter=0;
-    }          
+      }          
+    }       
+    
     strip.show();
   }
   
@@ -312,4 +345,10 @@ void clearDisplay() {
     strip.setPixelColor(x,strip.Color(0,0,0));
   }
   return;
+}
+
+
+
+void setPixelColorBrightness( uint16_t n, uint8_t r, uint8_t g, uint8_t b, uint16_t brightness) {
+   strip.setPixelColor(n, (brightness*r/255) , (brightness*g/255), (brightness*b/255));
 }
