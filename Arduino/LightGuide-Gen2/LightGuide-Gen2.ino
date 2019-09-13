@@ -30,7 +30,7 @@ void setup() {
   
   FastLED.addLeds<NEOPIXEL, 6>(leds, 384); 
   
-  Serial.begin(9600);
+  Serial.begin(500000);
   /* Print instructions to serial port; useful for debugging or reminding users what the command format is */   
   Serial.println(F("Enter data the following format: <A,1,S,Barcode>"));
   Serial.println(F("First parameter is row letter, second parameter is column, third parameter is illumination command."));
@@ -65,7 +65,7 @@ void loop() {
     /* Convert the row letter to a number */ 
     rowNumber = convertRowLetterToNumber(rowLetter);
     /* Clear the display from the previous command */     
-    clearDisplay();
+    //clearDisplay();
     /* Execute the new command */ 
     parseIlluminationCommand(String(illuminationCommand));
     /* Set newData to false to indicate that we have processed this command */ 
@@ -143,9 +143,9 @@ void illuminateRow(int row){
   Serial.println(row);           
   for (int column=0;column<numColumns;column++){
     leds[24*row+column] = CRGB::White;        
-    Serial.println(24*row+column);
+    //Serial.println(24*row+column);
   }           
-  FastLED.show();
+  //FastLED.show();
 }
 
 /* Turns on all LEDs for a given column */ 
@@ -155,9 +155,9 @@ void illuminateColumn(int column){
   column=column-1;
   for(int row=0;row<numRows;row++) {
     leds[row*24+column] = CRGB::White;
-    Serial.println(row*24+column); 
+    //Serial.println(row*24+column); 
   }           
-  FastLED.show();
+  //FastLED.show();
 }
 
 /* Turns on an individual LED for a given row and column */ 
@@ -187,6 +187,18 @@ void parseIlluminationCommand(String illuminationCommand){
   else if(illuminationCommand == "S"){    
     illuminateWell(columnNumber,rowNumber);
   }
+  /* Turn off a single row */ 
+  else if(illuminationCommand == "CR"){    
+    clearRow(rowNumber);
+  }  
+  /* Turn off a column row */ 
+  else if(illuminationCommand == "CC"){    
+    clearColumn(columnNumber);
+  }    
+  /* Update display */ 
+  else if(illuminationCommand == "U"){    
+    updateDisplay();
+  }    
   else{
     Serial.println(F("ERROR Appropriate value not received."));    
   }
@@ -205,5 +217,35 @@ void illuminationTest() {
     leds[x] = CRGB::White;    
   }
   FastLED.show();
+}
+
+
+
+/* Turns off all LEDs for a given row */ 
+void clearRow(int row){       
+  Serial.print(F("Clearing row:"));
+  Serial.println(row);   
+  for(int column=0;column<numColumns;column++) {
+    leds[24*row+column] = CRGB::Black;        
+    //Serial.println(24*row+column);
+  }             
+}
+
+/* Command for updating the display */ 
+void updateDisplay() {
+  FastLED.show();
+}
+
+
+/* Turns off all LEDs for a given column */ 
+void clearColumn(int column){       
+  Serial.print(F("Clearing column:"));
+  Serial.println(column); 
+  column=column-1;
+  for(int row=0;row<numRows;row++) {
+    leds[row*24+column] = CRGB::Black;
+    //Serial.println(row*24+column); 
+  }           
+  //FastLED.show();
 }
 
