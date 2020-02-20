@@ -141,9 +141,8 @@ void clearDisplay(){
 void illuminateRow(int row){   
   Serial.print(F("Row:"));
   Serial.println(row);           
-  for (int column=0;column<numColumns;column++){
-    leds[24*row+column] = CRGB::White;        
-    //Serial.println(24*row+column);
+  for (int column=1;column=<numColumns;column++){
+    setLED(row, column, CRGB::White);
   }           
   //FastLED.show();
 }
@@ -151,21 +150,18 @@ void illuminateRow(int row){
 /* Turns on all LEDs for a given column */ 
 void illuminateColumn(int column){       
   Serial.print(F("Column:"));
-  Serial.println(column); 
-  column=column-1;
+  Serial.println(column);
   for(int row=0;row<numRows;row++) {
-    leds[row*24+column] = CRGB::White;
-    //Serial.println(row*24+column); 
+    setLED(row, column, CRGB::White);
   }           
   //FastLED.show();
 }
 
 /* Turns on an individual LED for a given row and column */ 
-void illuminateWell(int c, int r){
-  pixelNumber = (r)*numColumns+(c-1);
-  Serial.print(F("Pixel #:"));
-  Serial.println(pixelNumber);
-  leds[pixelNumber] = CRGB::White;
+void illuminateWell(int row, int column){
+//  Serial.print(F("Pixel #:"));
+//  Serial.println(pixelNumber);
+  setLED(row, column, CRGB::White);
   FastLED.show();           
 }
 
@@ -185,7 +181,7 @@ void parseIlluminationCommand(String illuminationCommand){
   }
   /* Light up a single LED */ 
   else if(illuminationCommand == "S"){    
-    illuminateWell(columnNumber,rowNumber);
+    illuminateWell(rowNumber, columnNumber);
   }
   /* Turn off a single row */ 
   else if(illuminationCommand == "CR"){    
@@ -225,9 +221,8 @@ void illuminationTest() {
 void clearRow(int row){       
   Serial.print(F("Clearing row:"));
   Serial.println(row);   
-  for(int column=0;column<numColumns;column++) {
-    leds[24*row+column] = CRGB::Black;        
-    //Serial.println(24*row+column);
+  for(int column=1;column=<numColumns;column++) {
+    setLED(row, column, CRBG::Black);
   }             
 }
 
@@ -240,12 +235,13 @@ void updateDisplay() {
 /* Turns off all LEDs for a given column */ 
 void clearColumn(int column){       
   Serial.print(F("Clearing column:"));
-  Serial.println(column); 
-  column=column-1;
+  Serial.println(column);
   for(int row=0;row<numRows;row++) {
-    leds[row*24+column] = CRGB::Black;
-    //Serial.println(row*24+column); 
+    setLED(row, column, CRBG::Black);
   }           
   //FastLED.show();
 }
 
+void setLED(int row, int column, CRGB color){
+  leds[row*numColumns + (column-1)] = color;
+}

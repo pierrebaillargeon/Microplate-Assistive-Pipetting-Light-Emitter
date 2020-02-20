@@ -49,9 +49,9 @@ def get_column_number_from_well(well):
     return column_number
 
 
-def send_serial_command(wellName, destination, barcode):
-    row_name = get_row_name_from_well(wellName)
-    column_number = get_column_number_from_well(wellName)
+def send_serial_command(well_name, destination, barcode):
+    row_name = get_row_name_from_well(well_name)
+    column_number = get_column_number_from_well(well_name)
     serial_string = destination + " <" + row_name + "," + column_number + ",S," + barcode + ">"
     serial_string = bytes(serial_string, 'us-ascii')
     print(serial_string)
