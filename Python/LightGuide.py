@@ -141,7 +141,7 @@ class lightPanelGUI(Frame):
         self.fileName = askopenfilename()  # show an open file dialog box and return the path to the selected file
         self.csvData = pd.read_csv(self.fileName,names=['Source_barcode','Destination_barcode','Source_well','Destination_well','Transfer_volume'],header=0)
         self.csvRecordCount=len(self.csvData.index)
-        self.currentCsvPosition=0;
+        self.currentCsvPosition=0
         center = Frame(self.master, bg='gray2', width=450, height=500, pady=3)
         center.grid(row=1, sticky="nsew")
         pt = Table(center, dataframe=self.csvData, showtoolbar=False, showstatusbar=False, height=450)
