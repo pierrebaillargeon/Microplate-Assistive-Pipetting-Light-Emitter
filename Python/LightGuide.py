@@ -4,17 +4,37 @@ from tkinter.filedialog import askopenfilename
 from tkinter import *
 import serial
 import pandas as pd
-from pandastable import Table, TableModel
+from pandastable import Table
+
+TEST = True
 
 with open("config.txt", "r") as file:
     if file.mode == "r":
         serialPorts = file.readlines()
         COMportOne = serialPorts[0].strip('\n')
         COMportTwo = serialPorts[1].strip('\n')
-        sourcePanelSerialConnection = serial.Serial(COMportOne, '9600', timeout=0, stopbits=serial.STOPBITS_TWO)
-        destinationPanelSerialConnection = serial.Serial(COMportTwo, '9600', timeout=0, stopbits=serial.STOPBITS_TWO)
+        if TEST:
+            print("Setting up source on port "+COMportOne)
+            print("Setting up destination on port "+COMportTwo)
+        else:
+            sourcePanelSerialConnection = serial.Serial(COMportOne, '9600', timeout=0, stopbits=serial.STOPBITS_TWO)
+            destinationPanelSerialConnection = serial.Serial(COMportTwo, '9600', timeout=0, stopbits=serial.STOPBITS_TWO)
     else:
         print("Error reading serial ports config file.")
+
+
+def write_source(bytestring):
+    if TEST:
+        print("Sending bytestring to source: " + str(bytestring))
+    else:
+        sourcePanelSerialConnection.write(bytestring)
+
+
+def write_destination(bytestring):
+    if TEST:
+        print("Sending bytestring to destination: " + str(bytestring))
+    else:
+        destinationPanelSerialConnection.write(bytestring)
 
 def getRowNameFromWell(well):
     rowName = well[0:1]  # for row
@@ -31,18 +51,16 @@ def sendSerialCommand(wellName,destination,barcode):
     serialString = bytes(serialString, 'us-ascii')
     print(serialString)
     if destination=="source":
-        sourcePanelSerialConnection.write(serialString)
+        write_source(serialString)
     else:
-        destinationPanelSerialConnection.write(serialString)
-        # print("Writing to destination: "+str(serialString))
+        write_destination(serialString)
 
 def turnPanelsOff():
     serialString = "<A,1,X,>"
     serialString = bytes(serialString, 'us-ascii')
     print(serialString)
-    sourcePanelSerialConnection.write(serialString)
-    destinationPanelSerialConnection.write(serialString)
-    # print("Writing to destination: " + str(serialString))
+    write_source(serialString)
+    write_destination(serialString)
 
 def parseCommands(self):
 
@@ -61,8 +79,9 @@ def parseCommands(self):
 
 def onClosing():
     turnPanelsOff()
-    sourcePanelSerialConnection.close()
-    destinationPanelSerialConnection.close()
+    if not TEST:
+        sourcePanelSerialConnection.close()
+        destinationPanelSerialConnection.close()
     print("Closing serial ports!")
     mainWindow.destroy()
     exit()
