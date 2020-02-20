@@ -6,15 +6,15 @@ import serial
 import pandas as pd
 from pandastable import Table, TableModel
 
-file = open("C:\PipettingLightGuide\config.txt","r")
-if file.mode == "r":
-    serialPorts = file.readlines()
-    COMportOne = serialPorts[0].strip('\n')
-    COMportTwo = serialPorts[1].strip('\n')
-    sourcePanelSerialConnection = serial.Serial(COMportOne, '9600', timeout=0, stopbits=serial.STOPBITS_TWO)
-    destinationPanelSerialConnection = serial.Serial(COMportTwo, '9600', timeout=0, stopbits=serial.STOPBITS_TWO)
-else:
-    print("Error reading serial ports config file.")
+with open("config.txt", "r") as file:
+    if file.mode == "r":
+        serialPorts = file.readlines()
+        COMportOne = serialPorts[0].strip('\n')
+        COMportTwo = serialPorts[1].strip('\n')
+        sourcePanelSerialConnection = serial.Serial(COMportOne, '9600', timeout=0, stopbits=serial.STOPBITS_TWO)
+        destinationPanelSerialConnection = serial.Serial(COMportTwo, '9600', timeout=0, stopbits=serial.STOPBITS_TWO)
+    else:
+        print("Error reading serial ports config file.")
 
 def getRowNameFromWell(well):
     rowName = well[0:1]  # for row
@@ -34,6 +34,7 @@ def sendSerialCommand(wellName,destination,barcode):
         sourcePanelSerialConnection.write(serialString)
     else:
         destinationPanelSerialConnection.write(serialString)
+        # print("Writing to destination: "+str(serialString))
 
 def turnPanelsOff():
     serialString = "<A,1,X,>"
@@ -41,6 +42,7 @@ def turnPanelsOff():
     print(serialString)
     sourcePanelSerialConnection.write(serialString)
     destinationPanelSerialConnection.write(serialString)
+    # print("Writing to destination: " + str(serialString))
 
 def parseCommands(self):
 
