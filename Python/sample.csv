@@ -1,0 +1,4 @@
+Source_barcode,Destination_barcode,Source_well,Dest_well,Transfer_volume
+S1007372,D0573282,A1,H12,5.25
+S1007372,D0573282,C9,C1,5.25
+S1007372,D0573282,G5,B10,5.25
