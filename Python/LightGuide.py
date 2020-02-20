@@ -69,21 +69,6 @@ def turn_panels_off():
     write_destination(serial_string)
 
 
-def parse_commands(self):
-    # update the row currently highlighted in the pandastable
-    pt.setSelectedRow(self.currentCsvPosition)
-    # pt.setRowColors(rows=self.currentCsvPosition, clr="#95D680", cols='all')
-    pt.redraw()
-
-    # get the current source and destination wells, then send them to the send_serial_command for LEDs to be lit
-    source_well_name = self.csvData.at[self.currentCsvPosition, 'Source_well']
-    destination_well_name = self.csvData.at[self.currentCsvPosition, 'Destination_well']
-    source_barcode = self.csvData.at[self.currentCsvPosition, 'Source_barcode']
-    destination_barcode = self.csvData.at[self.currentCsvPosition, 'Destination_barcode']
-    send_serial_command(source_well_name, "source", source_barcode)
-    send_serial_command(destination_well_name, "destination", destination_barcode)
-
-
 def on_closing():
     turn_panels_off()
     if not TEST:
@@ -96,11 +81,14 @@ def on_closing():
 
 class LightPanelGUI(Frame):
 
-    def __init__(self, master):
+    def __init__(self, master, **kw):
+        super().__init__(master, **kw)
         self.csvData = pd.DataFrame()
         self.currentCsvPosition = 0
         self.csvRecordCount = 0
         self.scrollCount = 1
+        self.fileName = ""
+        self.pt = None
 
         self.master = master
         self.master.title("Microplate Assistive Pipetting Light Emitter")
@@ -131,20 +119,19 @@ class LightPanelGUI(Frame):
 
     def next_well(self):
         # set the current row to have a grey background to indicate work on this record is complete
-        pt.setRowColors(rows=self.currentCsvPosition, clr="#D3D3D3", cols='all')
-        pt.redraw()
-        # check to see how many times the next button has been clicked and scroll the table every two clicks
+        self.pt.setRowColors(rows=self.currentCsvPosition, clr="#D3D3D3", cols='all')
+        self.pt.redraw()
+
         if self.currentCsvPosition < self.csvRecordCount - 1:
             self.currentCsvPosition = self.currentCsvPosition + 1
-        parse_commands(self)
+        self.parse_commands()
 
     def previous_well(self):
         if self.currentCsvPosition > 0:
             self.currentCsvPosition = self.currentCsvPosition - 1
-        parse_commands(self)
+        self.parse_commands()
 
     def open_file(self):
-        global pt
         self.fileName = askopenfilename()  # show an open file dialog box and return the path to the selected file
         self.csvData = pd.read_csv(self.fileName,
                                    names=['Source_barcode', 'Destination_barcode', 'Source_well', 'Destination_well',
@@ -153,10 +140,24 @@ class LightPanelGUI(Frame):
         self.currentCsvPosition = 0
         center = Frame(self.master, bg='gray2', width=450, height=500, pady=3)
         center.grid(row=1, sticky="nsew")
-        pt = Table(center, dataframe=self.csvData, showtoolbar=False, showstatusbar=False, height=450)
-        pt.adjustColumnWidths(30)
-        pt.show()
-        parse_commands(self)
+        self.pt = Table(center, dataframe=self.csvData, showtoolbar=False, showstatusbar=False, height=450)
+        self.pt.adjustColumnWidths(30)
+        self.pt.show()
+        self.parse_commands()
+
+    def parse_commands(self):
+        # update the row currently highlighted in the pandastable
+        self.pt.setSelectedRow(self.currentCsvPosition)
+        # pt.setRowColors(rows=self.currentCsvPosition, clr="#95D680", cols='all')
+        self.pt.redraw()
+
+        # get the current source and destination wells, then send them to the send_serial_command for LEDs to be lit
+        source_well_name = self.csvData.at[self.currentCsvPosition, 'Source_well']
+        destination_well_name = self.csvData.at[self.currentCsvPosition, 'Destination_well']
+        source_barcode = self.csvData.at[self.currentCsvPosition, 'Source_barcode']
+        destination_barcode = self.csvData.at[self.currentCsvPosition, 'Destination_barcode']
+        send_serial_command(source_well_name, "source", source_barcode)
+        send_serial_command(destination_well_name, "destination", destination_barcode)
 
 
 if __name__ == '__main__':
