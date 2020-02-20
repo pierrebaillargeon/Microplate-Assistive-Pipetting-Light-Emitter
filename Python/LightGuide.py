@@ -50,13 +50,13 @@ def get_column_number_from_well(well):
     return column_number
 
 
-def send_serial_command(well_name, destination, barcode):
+def send_serial_command(well_name, to_source, barcode):
     row_name = get_row_name_from_well(well_name)
     column_number = get_column_number_from_well(well_name)
-    serial_string = destination + " <" + row_name + "," + column_number + ",S," + barcode + ">"
+    serial_string = "<" + row_name + "," + column_number + ",S," + barcode + ">"
     serial_string = bytes(serial_string, 'us-ascii')
     print(serial_string)
-    if destination == "source":
+    if to_source:
         write_source(serial_string)
     else:
         write_destination(serial_string)
@@ -157,8 +157,8 @@ class LightPanelGUI(Frame):
         destination_well_name = self.csvData.at[self.currentCsvPosition, 'Destination_well']
         source_barcode = self.csvData.at[self.currentCsvPosition, 'Source_barcode']
         destination_barcode = self.csvData.at[self.currentCsvPosition, 'Destination_barcode']
-        send_serial_command(source_well_name, "source", source_barcode)
-        send_serial_command(destination_well_name, "destination", destination_barcode)
+        send_serial_command(source_well_name, True, source_barcode)
+        send_serial_command(destination_well_name, False, destination_barcode)
 
 
 if __name__ == '__main__':
