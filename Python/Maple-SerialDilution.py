@@ -4,7 +4,9 @@ import time
 import tkinter
 from tkinter import *
 
-import serial
+import SerialUtils
+
+DRY_RUN = True
 
 alphabet = list(string.ascii_uppercase)
 last_received = ''
@@ -12,43 +14,15 @@ last_received = ''
 with open("config.txt", "r") as file:
     serialPorts = file.readlines()
     COMPortOne = serialPorts[0].strip()
-    sourcePanelSerialConnection = serial.Serial(COMPortOne, '500000', timeout=0, stopbits=serial.STOPBITS_ONE)
-
-
-def get_row_name_from_well(well):
-    row_name = well[0:1]  # for row
-    return row_name
-
-
-def get_column_number_from_well(well):
-    column_number = well[1:3]
-    return column_number
-
-
-# read data from serial port
-def read_serial():
-    data_from_serial = sourcePanelSerialConnection.read(2000)
-    # print(data_from_serial)
+    if DRY_RUN:
+        sourcePanelSerialConnection = None
+        print("Setting up source on port " + COMPortOne)
+    else:
+        sourcePanelSerialConnection = serial.Serial(COMPortOne, '500000', timeout=0, stopbits=serial.STOPBITS_ONE)
 
 
 def send_serial_command(value, command):
-    # rowName = get_row_name_from_well(wellName)
-    # columnNumber = get_column_number_from_well(wellName)
-    serial_string = "<" + value + "," + value + "," + command + ",Titration>\r\n"
-    serial_string = bytes(serial_string, 'us-ascii')
-    print(serial_string)
-    # if destination=="source":
-    sourcePanelSerialConnection.write(serial_string)
-    time.sleep(.15)
-
-    read_serial()
-
-
-def turn_panels_off():
-    serial_string = "<A,1,X,>"
-    serial_string = bytes(serial_string, 'us-ascii')
-    print(serial_string)
-    sourcePanelSerialConnection.write(serial_string)
+    SerialUtils.send_serial_command(sourcePanelSerialConnection, command, "Titration", row=value, column=value)
 
 
 def parse_commands(self):
@@ -112,8 +86,7 @@ def parse_commands(self):
 
 
 def on_closing():
-    turn_panels_off()
-    # sourcePanelSerialConnection.close()
+    SerialUtils.close_connection(sourcePanelSerialConnection)
     print("Closing serial ports!")
     mainWindow.destroy()
     exit()
@@ -180,7 +153,6 @@ class LightPanelGUI(Frame):
         self.maskEntry.grid(row=8, column=0, sticky=W, padx=30, pady=(0, 10))
 
         time.sleep(2)
-        read_serial()
         # send the initial command to light up the panel with the default parameters
         parse_commands(self)
 

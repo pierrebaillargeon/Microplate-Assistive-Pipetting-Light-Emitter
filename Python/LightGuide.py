@@ -4,10 +4,10 @@ from tkinter import *
 from tkinter.filedialog import askopenfilename
 
 import pandas as pd
-import serial
 from pandastable import Table
+import SerialUtils
 
-TEST = True
+DRY_RUN = True
 COLUMNS = ['Source_barcode', 'Destination_barcode', 'Source_well', 'Destination_well', 'Transfer_volume']
 
 with open("config.txt", "r") as file:
@@ -15,9 +15,11 @@ with open("config.txt", "r") as file:
         serialPorts = file.readlines()
         COMPortOne = serialPorts[0].strip()
         COMPortTwo = serialPorts[1].strip()
-        if TEST:
+        if DRY_RUN:
             print("Setting up source on port " + COMPortOne)
+            sourcePanelSerialConnection = None
             print("Setting up destination on port " + COMPortTwo)
+            destinationPanelSerialConnection = None
         else:
             sourcePanelSerialConnection = serial.Serial(COMPortOne, '9600', timeout=0, stopbits=serial.STOPBITS_TWO)
             destinationPanelSerialConnection = serial.Serial(COMPortTwo, '9600', timeout=0,
@@ -26,55 +28,13 @@ with open("config.txt", "r") as file:
         print("Error reading serial ports config file.")
 
 
-def write_source(bytestring):
-    if TEST:
-        print("Sending bytestring to source: " + str(bytestring))
-    else:
-        sourcePanelSerialConnection.write(bytestring)
-
-
-def write_destination(bytestring):
-    if TEST:
-        print("Sending bytestring to destination: " + str(bytestring))
-    else:
-        destinationPanelSerialConnection.write(bytestring)
-
-
-def get_row_name_from_well(well):
-    row_name = well[0:1]  # for row
-    return row_name
-
-
-def get_column_number_from_well(well):
-    column_number = well[1:3]
-    return column_number
-
-
 def send_serial_command(well_name, to_source, barcode):
-    row_name = get_row_name_from_well(well_name)
-    column_number = get_column_number_from_well(well_name)
-    serial_string = "<" + row_name + "," + column_number + ",S," + barcode + ">"
-    serial_string = bytes(serial_string, 'us-ascii')
-    print(serial_string)
-    if to_source:
-        write_source(serial_string)
-    else:
-        write_destination(serial_string)
-
-
-def turn_panels_off():
-    serial_string = "<A,1,X,>"
-    serial_string = bytes(serial_string, 'us-ascii')
-    print(serial_string)
-    write_source(serial_string)
-    write_destination(serial_string)
+    SerialUtils.send_serial_command(sourcePanelSerialConnection if to_source else destinationPanelSerialConnection, "S",
+                                    barcode, well_name=well_name)
 
 
 def on_closing():
-    turn_panels_off()
-    if not TEST:
-        sourcePanelSerialConnection.close()
-        destinationPanelSerialConnection.close()
+    SerialUtils.close_connection(sourcePanelSerialConnection, destinationPanelSerialConnection)
     print("Closing serial ports!")
     mainWindow.destroy()
     exit()

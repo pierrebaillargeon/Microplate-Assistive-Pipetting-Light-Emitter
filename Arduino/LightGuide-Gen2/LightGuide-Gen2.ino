@@ -187,7 +187,7 @@ void parseIlluminationCommand(String illuminationCommand){
   else if(illuminationCommand == "CR"){    
     clearRow(rowNumber);
   }  
-  /* Turn off a column row */ 
+  /* Turn off a single column */
   else if(illuminationCommand == "CC"){    
     clearColumn(columnNumber);
   }    
