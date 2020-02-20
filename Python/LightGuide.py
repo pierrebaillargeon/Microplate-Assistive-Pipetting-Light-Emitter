@@ -13,8 +13,8 @@ COLUMNS = ['Source_barcode', 'Destination_barcode', 'Source_well', 'Destination_
 with open("config.txt", "r") as file:
     if file.mode == "r":
         serialPorts = file.readlines()
-        COMPortOne = serialPorts[0].strip('\n')
-        COMPortTwo = serialPorts[1].strip('\n')
+        COMPortOne = serialPorts[0].strip()
+        COMPortTwo = serialPorts[1].strip()
         if TEST:
             print("Setting up source on port " + COMPortOne)
             print("Setting up destination on port " + COMPortTwo)

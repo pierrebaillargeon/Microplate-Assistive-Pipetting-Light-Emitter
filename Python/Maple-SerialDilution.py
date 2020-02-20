@@ -9,14 +9,10 @@ import serial
 alphabet = list(string.ascii_uppercase)
 last_received = ''
 
-file = open("C:\PipettingLightGuide\config.txt", "r")
-if file.mode == "r":
+with open("config.txt", "r") as file:
     serialPorts = file.readlines()
-    COMPortOne = serialPorts[0].strip('\n')
+    COMPortOne = serialPorts[0].strip()
     sourcePanelSerialConnection = serial.Serial(COMPortOne, '500000', timeout=0, stopbits=serial.STOPBITS_ONE)
-
-else:
-    print("Error reading serial ports config file.")
 
 
 def get_row_name_from_well(well):
