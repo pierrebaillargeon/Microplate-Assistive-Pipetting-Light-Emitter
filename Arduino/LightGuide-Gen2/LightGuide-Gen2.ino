@@ -7,28 +7,30 @@
 #include <FastLED.h>
 #include "Adafruit_LiquidCrystal.h"
 
+#define NUM_COLUMNS 24 //Number of rows in the LED grid
+#define NUM_ROWS 16 //Number of columns in the LED grid
+#define NUM_PIXELS NUM_COLUMNS*NUM_ROWS //Number of LEDs in the LED grid
+
+#define DATA_PIN 6 //The data pin for the LEDs
+
+#define NUM_CHARS 32 //determines the number of characters for the lists: receivedCharArray,tempStorage, rowLetter, and illuminationCommand
+
 boolean newData = false;  //stores whether the program is presently receiving new data/input.
-const byte numChars = 32; //determines the number of characters for the lists: receivedCharArray,tempStorage, rowLetter, and illuminationCommand
-char receivedCharArray[numChars]; // Stores the character input received from the user
+char receivedCharArray[NUM_CHARS]; // Stores the character input received from the user
 
 /* Components of command received over serial port - row, column and illumination command */ 
-char rowLetter[numChars]= {0}; //Stores a single character, that is later used to determine the target row that the user wants to light-up
-char plateBarcode[numChars];
+char rowLetter[NUM_CHARS]= {0}; //Stores a single character, that is later used to determine the target row that the user wants to light-up
+char plateBarcode[NUM_CHARS];
 int rowNumber;  //used to store the usable-index-number-value obtained with targetIndex, so that targetIndex can be reset to -1 so the convertRowLetterToNumber() keeps working
 int columnNumber = 0; //Stores a single number, that is later used to determine the target column that the user wants to light-up
-char illuminationCommand[numChars] = {0}; //Stores a single character, that is later used to determine whether the user wants to light-up a row, a column, or a single bulb 
+char illuminationCommand[NUM_CHARS] = {0}; //Stores a single character, that is later used to determine whether the user wants to light-up a row, a column, or a single bulb 
 
-/* Definition of I/O pin count for light guide in 384 well configuration */ 
-const int numColumns = 24;
-const int numRows = 16;
-int pixelNumber;
-
-CRGB leds[384];
+CRGB leds[NUM_PIXELS];
 Adafruit_LiquidCrystal lcd(0);
 
 void setup() {
   
-  FastLED.addLeds<NEOPIXEL, 6>(leds, 384); 
+  FastLED.addLeds<NEOPIXEL, DATA_PIN>(leds, NUM_PIXELS); 
   
   Serial.begin(500000);
   /* Print instructions to serial port; useful for debugging or reminding users what the command format is */   
@@ -141,7 +143,7 @@ void clearDisplay(){
 void illuminateRow(int row){   
   Serial.print(F("Row:"));
   Serial.println(row);           
-  for (int column=1;column=<numColumns;column++){
+  for (int column=1;column=<NUM_COLUMNS;column++){
     setLED(row, column, CRGB::White);
   }           
   //FastLED.show();
@@ -151,7 +153,7 @@ void illuminateRow(int row){
 void illuminateColumn(int column){       
   Serial.print(F("Column:"));
   Serial.println(column);
-  for(int row=0;row<numRows;row++) {
+  for(int row=0;row<NUM_ROWS;row++) {
     setLED(row, column, CRGB::White);
   }           
   //FastLED.show();
@@ -159,8 +161,6 @@ void illuminateColumn(int column){
 
 /* Turns on an individual LED for a given row and column */ 
 void illuminateWell(int row, int column){
-//  Serial.print(F("Pixel #:"));
-//  Serial.println(pixelNumber);
   setLED(row, column, CRGB::White);
   FastLED.show();           
 }
@@ -209,7 +209,7 @@ int convertRowLetterToNumber(char rowLetterReceived[0]){
 
 /* Function to to illuminate one row at a time, useful to run at startup to identify dead LEDs */ 
 void illuminationTest() {
-  for(int x=0;x<384;x++) {
+  for(int x=0;x<NUM_PIXELS;x++) {
     leds[x] = CRGB::White;    
   }
   FastLED.show();
@@ -221,7 +221,7 @@ void illuminationTest() {
 void clearRow(int row){       
   Serial.print(F("Clearing row:"));
   Serial.println(row);   
-  for(int column=1;column=<numColumns;column++) {
+  for(int column=1;column=<NUM_COLUMNS;column++) {
     setLED(row, column, CRBG::Black);
   }             
 }
@@ -236,12 +236,12 @@ void updateDisplay() {
 void clearColumn(int column){       
   Serial.print(F("Clearing column:"));
   Serial.println(column);
-  for(int row=0;row<numRows;row++) {
+  for(int row=0;row<NUM_ROWS;row++) {
     setLED(row, column, CRBG::Black);
   }           
   //FastLED.show();
 }
 
 void setLED(int row, int column, CRGB color){
-  leds[row*numColumns + (column-1)] = color;
+  leds[row*NUM_COLUMNS + (column-1)] = color;
 }
