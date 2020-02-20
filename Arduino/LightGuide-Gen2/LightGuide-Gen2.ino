@@ -5,7 +5,7 @@
 /* Date: 10/29/2018                              */ 
 
 #include <FastLED.h>
-#include "Adafruit_LiquidCrystal.h"
+#include <Adafruit_LiquidCrystal.h>
 
 #define NUM_COLUMNS 24 //Number of rows in the LED grid
 #define NUM_ROWS 16 //Number of columns in the LED grid
@@ -89,8 +89,8 @@ void recvWithStartEndMarkers() {
       if (receivedCharacter != endMarker) {
         receivedCharArray[indexListCounter] = receivedCharacter;
         indexListCounter++;
-        if (indexListCounter >= numChars) {
-          indexListCounter = numChars - 1;
+        if (indexListCounter >= NUM_CHARS) {
+          indexListCounter = NUM_CHARS - 1;
         }
       }
       else {
@@ -143,7 +143,7 @@ void clearDisplay(){
 void illuminateRow(int row){   
   Serial.print(F("Row:"));
   Serial.println(row);           
-  for (int column=1;column=<NUM_COLUMNS;column++){
+  for (int column=1;column<=NUM_COLUMNS;column++){
     setLED(row, column, CRGB::White);
   }           
   //FastLED.show();
@@ -221,8 +221,8 @@ void illuminationTest() {
 void clearRow(int row){       
   Serial.print(F("Clearing row:"));
   Serial.println(row);   
-  for(int column=1;column=<NUM_COLUMNS;column++) {
-    setLED(row, column, CRBG::Black);
+  for(int column=1;column<=NUM_COLUMNS;column++) {
+    setLED(row, column, CRGB::Black);
   }             
 }
 
@@ -237,7 +237,7 @@ void clearColumn(int column){
   Serial.print(F("Clearing column:"));
   Serial.println(column);
   for(int row=0;row<NUM_ROWS;row++) {
-    setLED(row, column, CRBG::Black);
+    setLED(row, column, CRGB::Black);
   }           
   //FastLED.show();
 }
