@@ -1,137 +1,141 @@
 # to compile to deployable executable use pyinstaller Maple-SerialDilution.py
-import tkinter
-from tkinter import *
-import serial
 import string
 import time
+import tkinter
+from tkinter import *
+
+import serial
 
 alphabet = list(string.ascii_uppercase)
 last_received = ''
 
-file = open("C:\PipettingLightGuide\config.txt","r")
+file = open("C:\PipettingLightGuide\config.txt", "r")
 if file.mode == "r":
     serialPorts = file.readlines()
-    COMportOne = serialPorts[0].strip('\n')
-    sourcePanelSerialConnection = serial.Serial(COMportOne, '500000', timeout=0, stopbits=serial.STOPBITS_ONE)
+    COMPortOne = serialPorts[0].strip('\n')
+    sourcePanelSerialConnection = serial.Serial(COMPortOne, '500000', timeout=0, stopbits=serial.STOPBITS_ONE)
 
 else:
     print("Error reading serial ports config file.")
 
-def getRowNameFromWell(well):
-    rowName = well[0:1]  # for row
-    return rowName
 
-def getColumnNumberFromWell(well):
-    columnNumber = well[1:3]
-    return columnNumber
+def get_row_name_from_well(well):
+    row_name = well[0:1]  # for row
+    return row_name
+
+
+def get_column_number_from_well(well):
+    column_number = well[1:3]
+    return column_number
+
 
 # read data from serial port
-def readSerial():
-    dataFromSerial = sourcePanelSerialConnection.read(2000)
-    #print(dataFromSerial)
+def read_serial():
+    data_from_serial = sourcePanelSerialConnection.read(2000)
+    # print(data_from_serial)
 
-def sendSerialCommand(value,command):
 
-    #rowName = getRowNameFromWell(wellName)
-    #columnNumber = getColumnNumberFromWell(wellName)
-    serialString = "<" + value + "," +  value + "," + command + ",Titration>\r\n"
-    serialString = bytes(serialString, 'us-ascii')
-    print(serialString)
-    #if destination=="source":
-    sourcePanelSerialConnection.write(serialString)
+def send_serial_command(value, command):
+    # rowName = get_row_name_from_well(wellName)
+    # columnNumber = get_column_number_from_well(wellName)
+    serial_string = "<" + value + "," + value + "," + command + ",Titration>\r\n"
+    serial_string = bytes(serial_string, 'us-ascii')
+    print(serial_string)
+    # if destination=="source":
+    sourcePanelSerialConnection.write(serial_string)
     time.sleep(.15)
 
-    readSerial()
+    read_serial()
 
-def turnPanelsOff():
-    serialString = "<A,1,X,>"
-    serialString = bytes(serialString, 'us-ascii')
-    print(serialString)
-    sourcePanelSerialConnection.write(serialString)
 
-def parseCommands(self):
+def turn_panels_off():
+    serial_string = "<A,1,X,>"
+    serial_string = bytes(serial_string, 'us-ascii')
+    print(serial_string)
+    sourcePanelSerialConnection.write(serial_string)
 
+
+def parse_commands(self):
     # send the command to clear existing LEDs
-    sendSerialCommand("1", "X")
+    send_serial_command("1", "X")
 
-    startValueList = self.startValues.get().split(',')
-    #print(startValueList)
-    rowMaskList = self.maskValues.get().split('-')
-    #print(rowMaskList)
-    #print(self.titrationMode.get())
+    start_value_list = self.startValues.get().split(',')
+    # print(start_value_list)
+    row_mask_list = self.maskValues.get().split('-')
+    # print(row_mask_list)
+    # print(self.titrationMode.get())
 
-    if(self.titrationMode.get()=="By column"):
-        sendCommand="C"
-        startMaskValue = alphabet.index(rowMaskList[0])
-        endMaskValue = alphabet.index(rowMaskList[1])
+    if self.titrationMode.get() == "By column":
+        send_command = "C"
+        start_mask_value = alphabet.index(row_mask_list[0])
+        end_mask_value = alphabet.index(row_mask_list[1])
     else:
-        sendCommand="R"
-        startMaskValue = int(rowMaskList[0])
-        endMaskValue = int(rowMaskList[1])
+        send_command = "R"
+        start_mask_value = int(row_mask_list[0])
+        end_mask_value = int(row_mask_list[1])
 
-    for value in startValueList:
-        if(self.titrationMode.get()=="By column"):
-            sendSerialCommand(value,sendCommand)
+    for value in start_value_list:
+        if self.titrationMode.get() == "By column":
+            send_serial_command(value, send_command)
         else:
-            sendSerialCommand(value, sendCommand)
+            send_serial_command(value, send_command)
 
     # define the upper bound for the mask
-    selectedDensity = self.plateDensitySelection.get()
-    selectedTitrationMode = self.titrationMode.get()
-    if (selectedDensity == "96 well"):
-        if (selectedTitrationMode == "By column"):
-            upperMaskBoundary = 8
-            lowerMaskBoundary = 0
+    selected_density = self.plateDensitySelection.get()
+    selected_titration_mode = self.titrationMode.get()
+    if selected_density == "96 well":
+        if selected_titration_mode == "By column":
+            upper_mask_boundary = 8
+            lower_mask_boundary = 0
         else:
-            upperMaskBoundary = 12
-            lowerMaskBoundary = 1
+            upper_mask_boundary = 12
+            lower_mask_boundary = 1
     else:
-        if (selectedTitrationMode == "By column"):
-            upperMaskBoundary = 16
-            lowerMaskBoundary = 0
+        if selected_titration_mode == "By column":
+            upper_mask_boundary = 16
+            lower_mask_boundary = 0
         else:
-            upperMaskBoundary = 25
-            lowerMaskBoundary = 1
+            upper_mask_boundary = 25
+            lower_mask_boundary = 1
 
-
-    for z in range(lowerMaskBoundary, upperMaskBoundary):
-        if(self.titrationMode.get()=="By column"):
-            letterValue = alphabet[z]
-            if(z < startMaskValue):
-                sendSerialCommand(letterValue,"CR")
-            if (z > endMaskValue):
-                sendSerialCommand(letterValue, "CR")
+    for z in range(lower_mask_boundary, upper_mask_boundary):
+        if self.titrationMode.get() == "By column":
+            letter_value = alphabet[z]
+            if z < start_mask_value:
+                send_serial_command(letter_value, "CR")
+            if z > end_mask_value:
+                send_serial_command(letter_value, "CR")
         else:
-            if (z < startMaskValue):
-                sendSerialCommand(str(z), "CC")
-            if (z > endMaskValue):
-                sendSerialCommand(str(z), "CC")
+            if z < start_mask_value:
+                send_serial_command(str(z), "CC")
+            if z > end_mask_value:
+                send_serial_command(str(z), "CC")
 
     # send the command to toggle LEDs on for previous LED instructions sent
-    sendSerialCommand(value, "U")
+    send_serial_command(value, "U")
 
 
-def onClosing():
-    turnPanelsOff()
+def on_closing():
+    turn_panels_off()
     # sourcePanelSerialConnection.close()
     print("Closing serial ports!")
     mainWindow.destroy()
     exit()
 
-class lightPanelGUI(Frame):
 
-    def __init__(self,master):
+class LightPanelGUI(Frame):
+
+    def __init__(self, master):
 
         self.master = master
         self.master.title("Microplate Assistive Pipetting Light Emitter")
-        self.master.maxsize(425,300)
-        self.master.minsize(425,300)
+        self.master.maxsize(425, 300)
+        self.master.minsize(425, 300)
 
         c = Canvas(self.master)
         c.configure(yscrollincrement='10c')
 
         # layout all of the main containers
-
 
         self.master.grid_rowconfigure(1, weight=1)
         self.master.grid_columnconfigure(0, weight=1)
@@ -147,114 +151,121 @@ class lightPanelGUI(Frame):
         self.plateDensityOptions = {'384 well', '96 well'}
         self.nextButtonText = tkinter.StringVar(value="Next column")
         self.previousButtonText = tkinter.StringVar(value="Previous column")
-        self.startValuesText=tkinter.StringVar(value="Start column(s)")
-        self.maskText=tkinter.StringVar(value="Row mask")
+        self.startValuesText = tkinter.StringVar(value="Start column(s)")
+        self.maskText = tkinter.StringVar(value="Row mask")
 
         # create the widgets
-        self.titrationModeColumn = tkinter.Radiobutton(self.master, text="By column", variable=self.titrationMode, value='By column', padx=0, pady=0, command=self.columnSelection)
-        self.titrationModeRow = tkinter.Radiobutton(self.master, text="By row", variable=self.titrationMode, value='By row', padx=0, pady=0, command=self.rowSelection)
-        self.backButton = tkinter.Button(self.master, textvariable=self.previousButtonText, command=self.previousSelection)
-        self.nextButton = tkinter.Button(self.master, textvariable=self.nextButtonText, command=self.nextSelection)
-        self.plateDensityDropdown = tkinter.OptionMenu(self.master, self.plateDensitySelection, *self.plateDensityOptions, command=self.updateParameters)
+        self.titrationModeColumn = tkinter.Radiobutton(self.master, text="By column", variable=self.titrationMode,
+                                                       value='By column', padx=0, pady=0, command=self.column_selection)
+        self.titrationModeRow = tkinter.Radiobutton(self.master, text="By row", variable=self.titrationMode,
+                                                    value='By row', padx=0, pady=0, command=self.row_selection)
+        self.backButton = tkinter.Button(self.master, textvariable=self.previousButtonText,
+                                         command=self.previous_selection)
+        self.nextButton = tkinter.Button(self.master, textvariable=self.nextButtonText, command=self.next_selection)
+        self.plateDensityDropdown = tkinter.OptionMenu(self.master, self.plateDensitySelection,
+                                                       *self.plateDensityOptions, command=self.update_parameters)
         self.startValuesEntry = tkinter.Entry(self.master, textvariable=self.startValues, width=4)
         self.maskEntry = tkinter.Entry(self.master, textvariable=self.maskValues, width=4)
 
-
-        Label(self.master, text="Titration Mode", font="Helvetica 18 bold").grid(row=0, column=0, sticky=W, padx=20, pady=0)
+        Label(self.master, text="Titration Mode", font="Helvetica 18 bold").grid(row=0, column=0, sticky=W, padx=20,
+                                                                                 pady=0)
         self.titrationModeColumn.grid(row=1, column=0, sticky=W, padx=30, pady=0)
         self.titrationModeRow.grid(row=2, column=0, sticky=W, padx=30, pady=0)
         self.nextButton.grid(row=1, column=3, padx=(0, 10), pady=0)
-        self.backButton.grid(row=1, column=4, padx=(0,10), pady=0)
-        Label(self.master, text="Plate Density", font="Helvetica 18 bold").grid(row=3, column=0, sticky=W, padx=20, pady=(10,0))
+        self.backButton.grid(row=1, column=4, padx=(0, 10), pady=0)
+        Label(self.master, text="Plate Density", font="Helvetica 18 bold").grid(row=3, column=0, sticky=W, padx=20,
+                                                                                pady=(10, 0))
         self.plateDensityDropdown.grid(row=4, column=0, sticky=W, padx=30, pady=0)
-        Label(self.master, textvariable=self.startValuesText, font="Helvetica 18 bold").grid(row=5, column=0, sticky=W, padx=20, pady=(10,0))
+        Label(self.master, textvariable=self.startValuesText, font="Helvetica 18 bold").grid(row=5, column=0, sticky=W,
+                                                                                             padx=20, pady=(10, 0))
         self.startValuesEntry.grid(row=6, column=0, sticky=W, padx=30, pady=0)
-        Label(self.master, textvariable=self.maskText, font="Helvetica 18 bold").grid(row=7, column=0, sticky=W, padx=20, pady=(10,0))
-        self.maskEntry.grid(row=8, column=0, sticky=W, padx=30, pady=(0,10))
+        Label(self.master, textvariable=self.maskText, font="Helvetica 18 bold").grid(row=7, column=0, sticky=W,
+                                                                                      padx=20, pady=(10, 0))
+        self.maskEntry.grid(row=8, column=0, sticky=W, padx=30, pady=(0, 10))
 
         time.sleep(2)
-        readSerial()
+        read_serial()
         # send the initial command to light up the panel with the default parameters
-        parseCommands(self)
+        parse_commands(self)
 
-    def columnSelection(self):
+    def column_selection(self):
         self.nextButtonText.set("Next column")
         self.previousButtonText.set("Previous column")
         self.startValuesText.set("Start column(s)")
         self.maskText.set("Row mask")
-        self.updateParameters(self)
+        self.update_parameters(self)
 
-    def rowSelection(self):
+    def row_selection(self):
         self.nextButtonText.set("Next row")
         self.previousButtonText.set("Previous row")
         self.startValuesText.set("Start row(s)")
         self.maskText.set("Column mask")
-        self.updateParameters(self)
+        self.update_parameters(self)
 
-    def updateParameters(self, parameters):
-        selectedDensity = self.plateDensitySelection.get()
-        selectedTitrationMode = self.titrationMode.get()
-        if(selectedDensity == "96 well"):
-            if(selectedTitrationMode == "By column"):
+    def update_parameters(self, parameters):
+        selected_density = self.plateDensitySelection.get()
+        selected_titration_mode = self.titrationMode.get()
+        if selected_density == "96 well":
+            if selected_titration_mode == "By column":
                 self.startValues.set("2,7")
                 self.maskValues.set("A-H")
             else:
                 self.startValues.set("B,E")
                 self.maskValues.set("1-12")
         else:
-            if (selectedTitrationMode == "By column"):
+            if selected_titration_mode == "By column":
                 self.startValues.set("3,13")
                 self.maskValues.set("A-P")
             else:
                 self.startValues.set("C,F")
                 self.maskValues.set("1-24")
 
-        parseCommands(self)
+        parse_commands(self)
 
-    def nextSelection(self):
-        startValueList = self.startValues.get().split(',')
-        selectedDensity = self.plateDensitySelection.get()
-        if(selectedDensity == '384 well'):
-            upperColumnLimit=24
-            upperRowLimit=15
+    def next_selection(self):
+        start_value_list = self.startValues.get().split(',')
+        selected_density = self.plateDensitySelection.get()
+        if selected_density == '384 well':
+            upper_column_limit = 24
+            upper_row_limit = 15
         else:
-            upperColumnLimit=12
-            upperRowLimit=7
-        if (self.titrationMode.get() == "By column"):
-            if (int(startValueList[1]) < upperColumnLimit):
-                lowerStartValue = int(startValueList[0]) + 1
-                upperStartValue = int(startValueList[1]) + 1
-                newStartValue = str(lowerStartValue) + "," + str(upperStartValue)
-                self.startValues.set(newStartValue)
+            upper_column_limit = 12
+            upper_row_limit = 7
+        if self.titrationMode.get() == "By column":
+            if int(start_value_list[1]) < upper_column_limit:
+                lower_start_value = int(start_value_list[0]) + 1
+                upper_start_value = int(start_value_list[1]) + 1
+                new_start_value = str(lower_start_value) + "," + str(upper_start_value)
+                self.startValues.set(new_start_value)
         else:
-            if (alphabet.index(startValueList[1]) < upperRowLimit):
-                lowerStartValue = alphabet[alphabet.index(startValueList[0]) + 1]
-                upperStartValue = alphabet[alphabet.index(startValueList[1]) + 1]
-                newStartValue = str(lowerStartValue) + "," + str(upperStartValue)
-                self.startValues.set(newStartValue)
+            if alphabet.index(start_value_list[1]) < upper_row_limit:
+                lower_start_value = alphabet[alphabet.index(start_value_list[0]) + 1]
+                upper_start_value = alphabet[alphabet.index(start_value_list[1]) + 1]
+                new_start_value = str(lower_start_value) + "," + str(upper_start_value)
+                self.startValues.set(new_start_value)
 
-        parseCommands(self)
+        parse_commands(self)
 
-    def previousSelection(self):
-
-        startValueList = self.startValues.get().split(',')
-        if (self.titrationMode.get() == "By column"):
-            if (int(startValueList[0]) > 1):
-                lowerStartValue = int(startValueList[0]) - 1
-                upperStartValue = int(startValueList[1]) - 1
-                newStartValue = str(lowerStartValue) + "," + str(upperStartValue)
-                self.startValues.set(newStartValue)
+    def previous_selection(self):
+        start_value_list = self.startValues.get().split(',')
+        if self.titrationMode.get() == "By column":
+            if int(start_value_list[0]) > 1:
+                lower_start_value = int(start_value_list[0]) - 1
+                upper_start_value = int(start_value_list[1]) - 1
+                new_start_value = str(lower_start_value) + "," + str(upper_start_value)
+                self.startValues.set(new_start_value)
         else:
-            if (alphabet.index(startValueList[0]) > 0):
-                lowerStartValue = alphabet[alphabet.index(startValueList[0]) - 1]
-                upperStartValue = alphabet[alphabet.index(startValueList[1]) - 1]
-                newStartValue = str(lowerStartValue) + "," + str(upperStartValue)
-                self.startValues.set(newStartValue)
+            if alphabet.index(start_value_list[0]) > 0:
+                lower_start_value = alphabet[alphabet.index(start_value_list[0]) - 1]
+                upper_start_value = alphabet[alphabet.index(start_value_list[1]) - 1]
+                new_start_value = str(lower_start_value) + "," + str(upper_start_value)
+                self.startValues.set(new_start_value)
 
-        parseCommands(self)
+        parse_commands(self)
+
 
 if __name__ == '__main__':
     mainWindow = tkinter.Tk()
-    lightPanelGUIinstance = lightPanelGUI(mainWindow)
-    mainWindow.protocol("WM_DELETE_WINDOW", onClosing)
+    lightPanelGUIInstance = LightPanelGUI(mainWindow)
+    mainWindow.protocol("WM_DELETE_WINDOW", on_closing)
     mainWindow.mainloop()
