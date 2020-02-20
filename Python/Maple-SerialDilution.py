@@ -25,66 +25,6 @@ def send_serial_command(value, command):
     SerialUtils.send_serial_command(sourcePanelSerialConnection, command, "Titration", row=value, column=value)
 
 
-def parse_commands(self):
-    # send the command to clear existing LEDs
-    send_serial_command("1", "X")
-
-    start_value_list = self.startValues.get().split(',')
-    # print(start_value_list)
-    row_mask_list = self.maskValues.get().split('-')
-    # print(row_mask_list)
-    # print(self.titrationMode.get())
-
-    if self.titrationMode.get() == "By column":
-        send_command = "C"
-        start_mask_value = alphabet.index(row_mask_list[0])
-        end_mask_value = alphabet.index(row_mask_list[1])
-    else:
-        send_command = "R"
-        start_mask_value = int(row_mask_list[0])
-        end_mask_value = int(row_mask_list[1])
-
-    for value in start_value_list:
-        if self.titrationMode.get() == "By column":
-            send_serial_command(value, send_command)
-        else:
-            send_serial_command(value, send_command)
-
-    # define the upper bound for the mask
-    selected_density = self.plateDensitySelection.get()
-    selected_titration_mode = self.titrationMode.get()
-    if selected_density == "96 well":
-        if selected_titration_mode == "By column":
-            upper_mask_boundary = 8
-            lower_mask_boundary = 0
-        else:
-            upper_mask_boundary = 12
-            lower_mask_boundary = 1
-    else:
-        if selected_titration_mode == "By column":
-            upper_mask_boundary = 16
-            lower_mask_boundary = 0
-        else:
-            upper_mask_boundary = 25
-            lower_mask_boundary = 1
-
-    for z in range(lower_mask_boundary, upper_mask_boundary):
-        if self.titrationMode.get() == "By column":
-            letter_value = alphabet[z]
-            if z < start_mask_value:
-                send_serial_command(letter_value, "CR")
-            if z > end_mask_value:
-                send_serial_command(letter_value, "CR")
-        else:
-            if z < start_mask_value:
-                send_serial_command(str(z), "CC")
-            if z > end_mask_value:
-                send_serial_command(str(z), "CC")
-
-    # send the command to toggle LEDs on for previous LED instructions sent
-    send_serial_command(value, "U")
-
-
 def on_closing():
     SerialUtils.close_connection(sourcePanelSerialConnection)
     print("Closing serial ports!")
@@ -94,8 +34,8 @@ def on_closing():
 
 class LightPanelGUI(Frame):
 
-    def __init__(self, master):
-
+    def __init__(self, master, **kw):
+        super().__init__(master, **kw)
         self.master = master
         self.master.title("Microplate Assistive Pipetting Light Emitter")
         self.master.maxsize(425, 300)
@@ -154,7 +94,7 @@ class LightPanelGUI(Frame):
 
         time.sleep(2)
         # send the initial command to light up the panel with the default parameters
-        parse_commands(self)
+        self.parse_commands()
 
     def column_selection(self):
         self.nextButtonText.set("Next column")
@@ -188,7 +128,7 @@ class LightPanelGUI(Frame):
                 self.startValues.set("C,F")
                 self.maskValues.set("1-24")
 
-        parse_commands(self)
+        self.parse_commands()
 
     def next_selection(self):
         start_value_list = self.startValues.get().split(',')
@@ -212,7 +152,7 @@ class LightPanelGUI(Frame):
                 new_start_value = str(lower_start_value) + "," + str(upper_start_value)
                 self.startValues.set(new_start_value)
 
-        parse_commands(self)
+        self.parse_commands()
 
     def previous_selection(self):
         start_value_list = self.startValues.get().split(',')
@@ -229,7 +169,63 @@ class LightPanelGUI(Frame):
                 new_start_value = str(lower_start_value) + "," + str(upper_start_value)
                 self.startValues.set(new_start_value)
 
-        parse_commands(self)
+        self.parse_commands()
+
+    def parse_commands(self):
+        # send the command to clear existing LEDs
+        send_serial_command("1", "X")
+
+        start_value_list = self.startValues.get().split(',')
+        # print(start_value_list)
+        row_mask_list = self.maskValues.get().split('-')
+        # print(row_mask_list)
+        # print(self.titrationMode.get())
+
+        if self.titrationMode.get() == "By column":
+            send_command = "C"
+            start_mask_value = alphabet.index(row_mask_list[0])
+            end_mask_value = alphabet.index(row_mask_list[1])
+        else:
+            send_command = "R"
+            start_mask_value = int(row_mask_list[0])
+            end_mask_value = int(row_mask_list[1])
+
+        for value in start_value_list:
+            send_serial_command(value, send_command)
+
+        # define the upper bound for the mask
+        selected_density = self.plateDensitySelection.get()
+        selected_titration_mode = self.titrationMode.get()
+        if selected_density == "96 well":
+            if selected_titration_mode == "By column":
+                upper_mask_boundary = 8
+                lower_mask_boundary = 0
+            else:
+                upper_mask_boundary = 12
+                lower_mask_boundary = 1
+        else:
+            if selected_titration_mode == "By column":
+                upper_mask_boundary = 16
+                lower_mask_boundary = 0
+            else:
+                upper_mask_boundary = 25
+                lower_mask_boundary = 1
+
+        for z in range(lower_mask_boundary, upper_mask_boundary):
+            if self.titrationMode.get() == "By column":
+                letter_value = alphabet[z]
+                if z < start_mask_value:
+                    send_serial_command(letter_value, "CR")
+                if z > end_mask_value:
+                    send_serial_command(letter_value, "CR")
+            else:
+                if z < start_mask_value:
+                    send_serial_command(str(z), "CC")
+                if z > end_mask_value:
+                    send_serial_command(str(z), "CC")
+
+        # send the command to toggle LEDs on for previous LED instructions sent
+        send_serial_command("1", "U")
 
 
 if __name__ == '__main__':
