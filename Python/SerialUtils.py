@@ -5,8 +5,9 @@ from typing import List
 def write_or_print(bytestring: bytes, serial_connection: serial.Serial):
     if serial_connection:
         serial_connection.write(bytestring)
+        print(serial_connection.read_until().decode("us-ascii"))
     else:
-        print("Sending bytestring " + str(bytestring))
+        print("Sending bytestring " + bytestring.decode("us-ascii"))
 
 
 def get_row_name_from_well(well: str):

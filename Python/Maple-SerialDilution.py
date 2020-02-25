@@ -1,12 +1,12 @@
 # to compile to deployable executable use pyinstaller Maple-SerialDilution.py
 import string
 import time
-import tkinter
 from tkinter import *
+import serial
 
 import SerialUtils
 
-DRY_RUN = True
+DRY_RUN = False
 
 alphabet = list(string.ascii_uppercase)
 last_received = ''
@@ -18,7 +18,7 @@ with open("config.txt", "r") as file:
         sourcePanelSerialConnection = None
         print("Setting up source on port " + COMPortOne)
     else:
-        sourcePanelSerialConnection = serial.Serial(COMPortOne, '500000', timeout=0, stopbits=serial.STOPBITS_ONE)
+        sourcePanelSerialConnection = serial.Serial(COMPortOne, '9600', stopbits=serial.STOPBITS_TWO)
 
 
 def send_serial_command(value, command):
@@ -53,28 +53,28 @@ class LightPanelGUI(Frame):
         self.titrationMode.set('By column')
         self.plateDensitySelection = StringVar()
         self.startValues = StringVar()
-        self.startValues.set("3,13")
+        self.startValues.set("2,7")
         self.maskValues = StringVar()
-        self.maskValues.set("A-P")
-        self.plateDensitySelection.set('384 well')
+        self.maskValues.set("A-H")
+        self.plateDensitySelection.set('96 well')
         self.plateDensityOptions = {'384 well', '96 well'}
-        self.nextButtonText = tkinter.StringVar(value="Next column")
-        self.previousButtonText = tkinter.StringVar(value="Previous column")
-        self.startValuesText = tkinter.StringVar(value="Start column(s)")
-        self.maskText = tkinter.StringVar(value="Row mask")
+        self.nextButtonText = StringVar(value="Next column")
+        self.previousButtonText = StringVar(value="Previous column")
+        self.startValuesText = StringVar(value="Start column(s)")
+        self.maskText = StringVar(value="Row mask")
 
         # create the widgets
-        self.titrationModeColumn = tkinter.Radiobutton(self.master, text="By column", variable=self.titrationMode,
-                                                       value='By column', padx=0, pady=0, command=self.column_selection)
-        self.titrationModeRow = tkinter.Radiobutton(self.master, text="By row", variable=self.titrationMode,
-                                                    value='By row', padx=0, pady=0, command=self.row_selection)
-        self.backButton = tkinter.Button(self.master, textvariable=self.previousButtonText,
-                                         command=self.previous_selection)
-        self.nextButton = tkinter.Button(self.master, textvariable=self.nextButtonText, command=self.next_selection)
-        self.plateDensityDropdown = tkinter.OptionMenu(self.master, self.plateDensitySelection,
-                                                       *self.plateDensityOptions, command=self.update_parameters)
-        self.startValuesEntry = tkinter.Entry(self.master, textvariable=self.startValues, width=4)
-        self.maskEntry = tkinter.Entry(self.master, textvariable=self.maskValues, width=4)
+        self.titrationModeColumn = Radiobutton(self.master, text="By column", variable=self.titrationMode,
+                                               value='By column', padx=0, pady=0, command=self.column_selection)
+        self.titrationModeRow = Radiobutton(self.master, text="By row", variable=self.titrationMode,
+                                            value='By row', padx=0, pady=0, command=self.row_selection)
+        self.backButton = Button(self.master, textvariable=self.previousButtonText,
+                                 command=self.previous_selection)
+        self.nextButton = Button(self.master, textvariable=self.nextButtonText, command=self.next_selection)
+        self.plateDensityDropdown = OptionMenu(self.master, self.plateDensitySelection,
+                                               *self.plateDensityOptions, command=lambda _: self.update_parameters())
+        self.startValuesEntry = Entry(self.master, textvariable=self.startValues, width=4)
+        self.maskEntry = Entry(self.master, textvariable=self.maskValues, width=4)
 
         Label(self.master, text="Titration Mode", font="Helvetica 18 bold").grid(row=0, column=0, sticky=W, padx=20,
                                                                                  pady=0)
@@ -101,14 +101,14 @@ class LightPanelGUI(Frame):
         self.previousButtonText.set("Previous column")
         self.startValuesText.set("Start column(s)")
         self.maskText.set("Row mask")
-        self.update_parameters(self)
+        self.update_parameters()
 
     def row_selection(self):
         self.nextButtonText.set("Next row")
         self.previousButtonText.set("Previous row")
         self.startValuesText.set("Start row(s)")
         self.maskText.set("Column mask")
-        self.update_parameters(self)
+        self.update_parameters()
 
     def update_parameters(self):
         selected_density = self.plateDensitySelection.get()
@@ -176,19 +176,19 @@ class LightPanelGUI(Frame):
         send_serial_command("1", "X")
 
         start_value_list = self.startValues.get().split(',')
-        # print(start_value_list)
-        row_mask_list = self.maskValues.get().split('-')
-        # print(row_mask_list)
+        print(start_value_list)
+        mask_list = self.maskValues.get().split('-')
+        print(mask_list)
         # print(self.titrationMode.get())
 
         if self.titrationMode.get() == "By column":
             send_command = "C"
-            start_mask_value = alphabet.index(row_mask_list[0])
-            end_mask_value = alphabet.index(row_mask_list[1])
+            start_mask_value = alphabet.index(mask_list[0])
+            end_mask_value = alphabet.index(mask_list[1])
         else:
             send_command = "R"
-            start_mask_value = int(row_mask_list[0])
-            end_mask_value = int(row_mask_list[1])
+            start_mask_value = int(mask_list[0])
+            end_mask_value = int(mask_list[1])
 
         for value in start_value_list:
             send_serial_command(value, send_command)
@@ -201,7 +201,7 @@ class LightPanelGUI(Frame):
                 upper_mask_boundary = 8
                 lower_mask_boundary = 0
             else:
-                upper_mask_boundary = 12
+                upper_mask_boundary = 13
                 lower_mask_boundary = 1
         else:
             if selected_titration_mode == "By column":
@@ -225,11 +225,11 @@ class LightPanelGUI(Frame):
                     send_serial_command(str(z), "CC")
 
         # send the command to toggle LEDs on for previous LED instructions sent
-        send_serial_command("1", "U")
+        # send_serial_command("1", "U")
 
 
 if __name__ == '__main__':
-    mainWindow = tkinter.Tk()
+    mainWindow = Tk()
     lightPanelGUIInstance = LightPanelGUI(mainWindow)
     mainWindow.protocol("WM_DELETE_WINDOW", on_closing)
     mainWindow.mainloop()
