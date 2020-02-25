@@ -73,6 +73,7 @@ void loop() {
     //clearDisplay();
     /* Execute the new command */ 
     parseIlluminationCommand(String(illuminationCommand));
+//    recvWithStartEndMarkers();
   }  
 }
 
@@ -141,22 +142,21 @@ void displayParsedCommand() {
 /* Turns off all LEDs */ 
 void clearDisplay(){     
   FastLED.clear();
-  FastLED.show();
-//  Serial.println(F("Display cleared."));    
+  FastLED.show();   
 } 
 
-/* Turns on all LEDs for a given row */ 
-void illuminateRow(int row){  
+/* Set all LEDs for a given row to a given color */ 
+void setRow(int row, CRGB color){  
   for (int column=1;column<=NUM_COLUMNS;column++){
-    setLED(row, column, onColor);
+    setLED(row, column, color);
   }           
   FastLED.show();
 }
 
-/* Turns on all LEDs for a given column */ 
-void illuminateColumn(int column){
+/* Set all LEDs for a given column to a given color */ 
+void setColumn(int column, CRGB color){
   for(int row=0;row<NUM_ROWS;row++) {
-    setLED(row, column, onColor);
+    setLED(row, column, color);
   }           
   FastLED.show();
 }
@@ -175,11 +175,11 @@ void parseIlluminationCommand(String illuminationCommand){
   }
   /* Light up a single column */ 
   else if(illuminationCommand == "C"){
-    illuminateColumn(columnNumber);
+    setColumn(columnNumber, onColor);
   }
   /* Light up a single row */ 
   else if(illuminationCommand == "R"){
-    illuminateRow(rowNumber);
+    setRow(rowNumber, onColor);
   }
   /* Light up a single LED */ 
   else if(illuminationCommand == "S"){
@@ -187,11 +187,11 @@ void parseIlluminationCommand(String illuminationCommand){
   }
   /* Turn off a single row */ 
   else if(illuminationCommand == "CR"){
-    clearRow(rowNumber);
+    setRow(rowNumber, offColor);
   }  
   /* Turn off a single column */
   else if(illuminationCommand == "CC"){
-    clearColumn(columnNumber);
+    setColumn(columnNumber, offColor);
   }    
   /* Update display */ 
   else if(illuminationCommand == "U"){
@@ -218,27 +218,8 @@ void illuminationTest() {
   }
 }
 
-
-
-/* Turns off all LEDs for a given row */ 
-void clearRow(int row){
-  for(int column=1;column<=NUM_COLUMNS;column++) {
-    setLED(row, column, offColor);
-  }
-//  FastLED.show();
-}
-
 /* Command for updating the display */ 
 void updateDisplay() {
-  FastLED.show();
-}
-
-
-/* Turns off all LEDs for a given column */ 
-void clearColumn(int column){
-  for(int row=0;row<NUM_ROWS;row++) {
-    setLED(row, column, offColor);
-  }           
   FastLED.show();
 }
 
