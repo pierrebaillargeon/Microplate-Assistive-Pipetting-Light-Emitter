@@ -2,12 +2,14 @@
 import tkinter
 from tkinter import *
 from tkinter.filedialog import askopenfilename
+import serial
 
 import pandas as pd
 from pandastable import Table
+
 import SerialUtils
 
-DRY_RUN = True
+DRY_RUN = False
 COLUMNS = ['Source_barcode', 'Destination_barcode', 'Source_well', 'Destination_well', 'Transfer_volume']
 
 with open("config.txt", "r") as file:
@@ -33,8 +35,12 @@ def send_serial_command(well_name, to_source, barcode):
                                     barcode, well_name=well_name)
 
 
+def clear_panels():
+    SerialUtils.clear_panels([sourcePanelSerialConnection, destinationPanelSerialConnection])
+
+
 def on_closing():
-    SerialUtils.close_connection(sourcePanelSerialConnection, destinationPanelSerialConnection)
+    SerialUtils.close_connection([sourcePanelSerialConnection, destinationPanelSerialConnection])
     print("Closing serial ports!")
     mainWindow.destroy()
     exit()
@@ -117,6 +123,8 @@ class LightPanelGUI(Frame):
         destination_well_name = self.csvData.at[self.currentCsvPosition, 'Destination_well']
         source_barcode = self.csvData.at[self.currentCsvPosition, 'Source_barcode']
         destination_barcode = self.csvData.at[self.currentCsvPosition, 'Destination_barcode']
+
+        clear_panels()
         send_serial_command(source_well_name, True, source_barcode)
         send_serial_command(destination_well_name, False, destination_barcode)
 

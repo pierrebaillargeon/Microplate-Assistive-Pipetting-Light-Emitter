@@ -7,13 +7,16 @@
 #include <FastLED.h>
 #include <Adafruit_LiquidCrystal.h>
 
-#define NUM_COLUMNS 24 //Number of rows in the LED grid
-#define NUM_ROWS 16 //Number of columns in the LED grid
+#define NUM_COLUMNS 12 //Number of rows in the LED grid
+#define NUM_ROWS 8 //Number of columns in the LED grid
 #define NUM_PIXELS NUM_COLUMNS*NUM_ROWS //Number of LEDs in the LED grid
 
 #define DATA_PIN 6 //The data pin for the LEDs
 
 #define NUM_CHARS 32 //determines the number of characters for the lists: receivedCharArray,tempStorage, rowLetter, and illuminationCommand
+
+CRGB onColor = CRGB(0,0,10);
+CRGB offColor = CRGB::Black;
 
 boolean newData = false;  //stores whether the program is presently receiving new data/input.
 char receivedCharArray[NUM_CHARS]; // Stores the character input received from the user
@@ -32,7 +35,7 @@ void setup() {
   
   FastLED.addLeds<NEOPIXEL, DATA_PIN>(leds, NUM_PIXELS); 
   
-  Serial.begin(500000);
+  Serial.begin(9600);
   /* Print instructions to serial port; useful for debugging or reminding users what the command format is */   
   Serial.println(F("Enter data the following format: <A,1,S,Barcode>"));
   Serial.println(F("First parameter is row letter, second parameter is column, third parameter is illumination command."));
@@ -41,9 +44,9 @@ void setup() {
   Serial.println(); 
 
   
- // illuminationTest();
-  clearDisplay();  
-
+  illuminationTest();
+  clearDisplay();
+  
   // set up the LCD's number of rows and columns: 
   // Print a message to the LCD.
   lcd.begin(16, 2);  
@@ -144,9 +147,9 @@ void illuminateRow(int row){
   Serial.print(F("Row:"));
   Serial.println(row);           
   for (int column=1;column<=NUM_COLUMNS;column++){
-    setLED(row, column, CRGB::White);
+    setLED(row, column, onColor);
   }           
-  //FastLED.show();
+  FastLED.show();
 }
 
 /* Turns on all LEDs for a given column */ 
@@ -154,14 +157,14 @@ void illuminateColumn(int column){
   Serial.print(F("Column:"));
   Serial.println(column);
   for(int row=0;row<NUM_ROWS;row++) {
-    setLED(row, column, CRGB::White);
+    setLED(row, column, onColor);
   }           
-  //FastLED.show();
+  FastLED.show();
 }
 
 /* Turns on an individual LED for a given row and column */ 
 void illuminateWell(int row, int column){
-  setLED(row, column, CRGB::White);
+  setLED(row, column, onColor);
   FastLED.show();           
 }
 
@@ -210,9 +213,11 @@ int convertRowLetterToNumber(char rowLetterReceived[0]){
 /* Function to to illuminate one row at a time, useful to run at startup to identify dead LEDs */ 
 void illuminationTest() {
   for(int x=0;x<NUM_PIXELS;x++) {
-    leds[x] = CRGB::White;    
+    leds[x] = onColor;
+//    delay(5);
+    FastLED.show();
   }
-  FastLED.show();
+//  FastLED.show();
 }
 
 
@@ -222,8 +227,9 @@ void clearRow(int row){
   Serial.print(F("Clearing row:"));
   Serial.println(row);   
   for(int column=1;column<=NUM_COLUMNS;column++) {
-    setLED(row, column, CRGB::Black);
-  }             
+    setLED(row, column, offColor);
+  }
+  FastLED.show();
 }
 
 /* Command for updating the display */ 
@@ -237,11 +243,12 @@ void clearColumn(int column){
   Serial.print(F("Clearing column:"));
   Serial.println(column);
   for(int row=0;row<NUM_ROWS;row++) {
-    setLED(row, column, CRGB::Black);
+    setLED(row, column, offColor);
   }           
-  //FastLED.show();
+  FastLED.show();
 }
 
+/*Row is zero-indexed, column is one-indexed*/
 void setLED(int row, int column, CRGB color){
   leds[row*NUM_COLUMNS + (column-1)] = color;
 }

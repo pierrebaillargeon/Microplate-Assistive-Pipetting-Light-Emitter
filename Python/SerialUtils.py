@@ -1,4 +1,5 @@
 import serial
+from typing import List
 
 
 def write_or_print(bytestring: bytes, serial_connection: serial.Serial):
@@ -40,15 +41,15 @@ def send_serial_command(serial_connection: serial.Serial, command: str, barcode:
     write_or_print(serial_string, serial_connection)
 
 
-def turn_panels_off(*args):
+def clear_panels(panels: List[serial.Serial]):
     serial_string = "<A,1,X,>"
     serial_string = bytes(serial_string, 'us-ascii')
-    for serial_connection in args:
+    for serial_connection in panels:
         write_or_print(serial_string, serial_connection)
 
 
-def close_connection(*args):
-    turn_panels_off(*args)
-    for serial_connection in args:
+def close_connection(panels: List[serial.Serial]):
+    clear_panels(panels)
+    for serial_connection in panels:
         if serial_connection is not None:
             serial_connection.close()

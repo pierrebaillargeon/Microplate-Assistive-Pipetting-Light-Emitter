@@ -26,7 +26,7 @@ def send_serial_command(value, command):
 
 
 def on_closing():
-    SerialUtils.close_connection(sourcePanelSerialConnection)
+    SerialUtils.close_connection([sourcePanelSerialConnection])
     print("Closing serial ports!")
     mainWindow.destroy()
     exit()
@@ -110,7 +110,7 @@ class LightPanelGUI(Frame):
         self.maskText.set("Column mask")
         self.update_parameters(self)
 
-    def update_parameters(self, parameters):
+    def update_parameters(self):
         selected_density = self.plateDensitySelection.get()
         selected_titration_mode = self.titrationMode.get()
         if selected_density == "96 well":

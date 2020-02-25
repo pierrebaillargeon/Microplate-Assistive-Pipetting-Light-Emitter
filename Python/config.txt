@@ -1,2 +1,2 @@
+COM3
 COM1
-COM2
