@@ -18,11 +18,15 @@ with open("config.txt", "r") as file:
         sourcePanelSerialConnection = None
         print("Setting up source on port " + COMPortOne)
     else:
-        sourcePanelSerialConnection = serial.Serial(COMPortOne, '9600', stopbits=serial.STOPBITS_TWO)
+        sourcePanelSerialConnection = serial.Serial(COMPortOne, '38400', parity=serial.PARITY_NONE,
+                                                    stopbits=serial.STOPBITS_ONE)
 
 
 def send_serial_command(value, command):
-    SerialUtils.send_serial_command(sourcePanelSerialConnection, command, "Titration", row=value, column=value)
+    if value.isdecimal():
+        SerialUtils.send_serial_command(sourcePanelSerialConnection, command, row="A", column=value)
+    else:
+        SerialUtils.send_serial_command(sourcePanelSerialConnection, command, row=value, column="1")
 
 
 def on_closing():
@@ -173,20 +177,20 @@ class LightPanelGUI(Frame):
 
     def parse_commands(self):
         # send the command to clear existing LEDs
-        send_serial_command("1", "X")
+        send_serial_command("1", "clear")
 
         start_value_list = self.startValues.get().split(',')
-        print(start_value_list)
+        # print(start_value_list)
         mask_list = self.maskValues.get().split('-')
-        print(mask_list)
+        # print(mask_list)
         # print(self.titrationMode.get())
 
         if self.titrationMode.get() == "By column":
-            send_command = "C"
+            send_command = "column_on"
             start_mask_value = alphabet.index(mask_list[0])
             end_mask_value = alphabet.index(mask_list[1])
         else:
-            send_command = "R"
+            send_command = "row_on"
             start_mask_value = int(mask_list[0])
             end_mask_value = int(mask_list[1])
 
@@ -215,14 +219,14 @@ class LightPanelGUI(Frame):
             if self.titrationMode.get() == "By column":
                 letter_value = alphabet[z]
                 if z < start_mask_value:
-                    send_serial_command(letter_value, "CR")
+                    send_serial_command(letter_value, "row_off")
                 if z > end_mask_value:
-                    send_serial_command(letter_value, "CR")
+                    send_serial_command(letter_value, "row_off")
             else:
                 if z < start_mask_value:
-                    send_serial_command(str(z), "CC")
+                    send_serial_command(str(z), "column_off")
                 if z > end_mask_value:
-                    send_serial_command(str(z), "CC")
+                    send_serial_command(str(z), "column_off")
 
         # send the command to toggle LEDs on for previous LED instructions sent
         # send_serial_command("1", "U")

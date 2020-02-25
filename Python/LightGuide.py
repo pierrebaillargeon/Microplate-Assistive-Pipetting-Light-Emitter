@@ -23,16 +23,17 @@ with open("config.txt", "r") as file:
             print("Setting up destination on port " + COMPortTwo)
             destinationPanelSerialConnection = None
         else:
-            sourcePanelSerialConnection = serial.Serial(COMPortOne, '9600', timeout=0, stopbits=serial.STOPBITS_TWO)
-            destinationPanelSerialConnection = serial.Serial(COMPortTwo, '9600', timeout=0,
-                                                             stopbits=serial.STOPBITS_TWO)
+            sourcePanelSerialConnection = serial.Serial(COMPortOne, '38400', parity=serial.PARITY_NONE,
+                                                        stopbits=serial.STOPBITS_ONE)
+            destinationPanelSerialConnection = serial.Serial(COMPortTwo, '38400', parity=serial.PARITY_NONE,
+                                                             stopbits=serial.STOPBITS_ONE)
     else:
         print("Error reading serial ports config file.")
 
 
-def send_serial_command(well_name, to_source, barcode):
-    SerialUtils.send_serial_command(sourcePanelSerialConnection if to_source else destinationPanelSerialConnection, "S",
-                                    barcode, well_name=well_name)
+def send_serial_command(well_name, to_source):
+    SerialUtils.send_serial_command(sourcePanelSerialConnection if to_source else destinationPanelSerialConnection,
+                                    "well_on", well_name=well_name)
 
 
 def clear_panels():
@@ -125,8 +126,8 @@ class LightPanelGUI(Frame):
         destination_barcode = self.csvData.at[self.currentCsvPosition, 'Destination_barcode']
 
         clear_panels()
-        send_serial_command(source_well_name, True, source_barcode)
-        send_serial_command(destination_well_name, False, destination_barcode)
+        send_serial_command(source_well_name, True)
+        send_serial_command(destination_well_name, False)
 
 
 if __name__ == '__main__':
