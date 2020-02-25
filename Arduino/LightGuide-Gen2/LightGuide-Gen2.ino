@@ -15,10 +15,11 @@
 
 #define NUM_CHARS 32 //determines the number of characters for the lists: receivedCharArray,tempStorage, rowLetter, and illuminationCommand
 
+#define HAVE_LCD false
+
 CRGB onColor = CRGB(0,0,10);
 CRGB offColor = CRGB::Black;
 
-boolean newData = false;  //stores whether the program is presently receiving new data/input.
 char receivedCharArray[NUM_CHARS]; // Stores the character input received from the user
 
 /* Components of command received over serial port - row, column and illumination command */ 
@@ -37,32 +38,31 @@ void setup() {
   
   Serial.begin(9600);
   /* Print instructions to serial port; useful for debugging or reminding users what the command format is */   
-  Serial.println(F("Enter data the following format: <A,1,S,Barcode>"));
-  Serial.println(F("First parameter is row letter, second parameter is column, third parameter is illumination command."));
-  Serial.println(F("Valid row and columns are plate density dependent."));
-  Serial.println(F("Valid illumination commands are: S - illuminate single well, R - illuminate entire row, C - illuminate entire column."));  
-  Serial.println(); 
+//  Serial.println(F("Enter data the following format: <A,1,S,Barcode>"));
+//  Serial.println(F("First parameter is row letter, second parameter is column, third parameter is illumination command."));
+//  Serial.println(F("Valid row and columns are plate density dependent."));
+//  Serial.println(F("Valid illumination commands are: S - illuminate single well, R - illuminate entire row, C - illuminate entire column."));  
+//  Serial.println(); 
 
   
   illuminationTest();
   clearDisplay();
-  
-  // set up the LCD's number of rows and columns: 
-  // Print a message to the LCD.
-  lcd.begin(16, 2);  
-  lcd.print(F("Barcode:"));
-  lcd.setBacklight(HIGH);
-  
+
+  if (HAVE_LCD){
+    // set up the LCD's number of rows and columns: 
+    // Print a message to the LCD.
+    lcd.begin(16, 2);  
+    lcd.print(F("Barcode:"));
+    lcd.setBacklight(HIGH);
+  }
 }
 
 
 void loop() {
 
   delay(100); // delay for 1/10 of a second
-// 
-  recvWithStartEndMarkers();
   
-  if (newData == true) {
+  while (recvWithStartEndMarkers()) {
     /* Parse the data received over the serial port into its constituent parts [row, column, illumination command] */ 
     parseData();
     /* Return the parsed data back to the serial port - useful for debugging & confirmation to user */ 
@@ -73,18 +73,17 @@ void loop() {
     //clearDisplay();
     /* Execute the new command */ 
     parseIlluminationCommand(String(illuminationCommand));
-    /* Set newData to false to indicate that we have processed this command */ 
-    newData = false;
   }  
 }
 
 /* Receive incoming serial data and store in receivedCharArray array */ 
-void recvWithStartEndMarkers() {
+bool recvWithStartEndMarkers() {
   static boolean recvInProgress = false;
   static byte indexListCounter = 0;
   char startMarker = '<';
   char endMarker = '>';
   char receivedCharacter;
+  boolean newData = false;  //stores whether the program is presently receiving new data/input.
 
   while (Serial.available() > 0 && newData == false) {
     receivedCharacter = Serial.read();
@@ -107,6 +106,8 @@ void recvWithStartEndMarkers() {
       recvInProgress = true;
     }
   }
+
+  return newData;
 }
 
 /* Parse incoming serial data */ 
@@ -126,26 +127,26 @@ void parseData() {
 /* Displays the parsed information to the serial terminal; useful for debugging communication issues */ 
 void displayParsedCommand() {
     Serial.print(F("Column:"));
-    Serial.println(columnNumber);
-    Serial.print(F("Row:"));
-    Serial.println(rowLetter);
-    Serial.print(F("Command:"));
-    Serial.println(illuminationCommand);    
-    lcd.setCursor(0, 1);
-    lcd.print(String(plateBarcode));
+    Serial.print(columnNumber);
+    Serial.print(F(", Row:"));
+    Serial.print(rowLetter);
+    Serial.print(F(", Command:"));
+    Serial.println(illuminationCommand);
+    if (HAVE_LCD){
+      lcd.setCursor(0, 1);
+      lcd.print(String(plateBarcode));
+    }
 }
 
 /* Turns off all LEDs */ 
 void clearDisplay(){     
   FastLED.clear();
   FastLED.show();
-  Serial.println(F("Display cleared."));    
+//  Serial.println(F("Display cleared."));    
 } 
 
 /* Turns on all LEDs for a given row */ 
-void illuminateRow(int row){   
-  Serial.print(F("Row:"));
-  Serial.println(row);           
+void illuminateRow(int row){  
   for (int column=1;column<=NUM_COLUMNS;column++){
     setLED(row, column, onColor);
   }           
@@ -153,9 +154,7 @@ void illuminateRow(int row){
 }
 
 /* Turns on all LEDs for a given column */ 
-void illuminateColumn(int column){       
-  Serial.print(F("Column:"));
-  Serial.println(column);
+void illuminateColumn(int column){
   for(int row=0;row<NUM_ROWS;row++) {
     setLED(row, column, onColor);
   }           
@@ -183,19 +182,19 @@ void parseIlluminationCommand(String illuminationCommand){
     illuminateRow(rowNumber);
   }
   /* Light up a single LED */ 
-  else if(illuminationCommand == "S"){    
+  else if(illuminationCommand == "S"){
     illuminateWell(rowNumber, columnNumber);
   }
   /* Turn off a single row */ 
-  else if(illuminationCommand == "CR"){    
+  else if(illuminationCommand == "CR"){
     clearRow(rowNumber);
   }  
   /* Turn off a single column */
-  else if(illuminationCommand == "CC"){    
+  else if(illuminationCommand == "CC"){
     clearColumn(columnNumber);
   }    
   /* Update display */ 
-  else if(illuminationCommand == "U"){    
+  else if(illuminationCommand == "U"){
     updateDisplay();
   }    
   else{
@@ -217,19 +216,16 @@ void illuminationTest() {
 //    delay(5);
     FastLED.show();
   }
-//  FastLED.show();
 }
 
 
 
 /* Turns off all LEDs for a given row */ 
-void clearRow(int row){       
-  Serial.print(F("Clearing row:"));
-  Serial.println(row);   
+void clearRow(int row){
   for(int column=1;column<=NUM_COLUMNS;column++) {
     setLED(row, column, offColor);
   }
-  FastLED.show();
+//  FastLED.show();
 }
 
 /* Command for updating the display */ 
@@ -239,9 +235,7 @@ void updateDisplay() {
 
 
 /* Turns off all LEDs for a given column */ 
-void clearColumn(int column){       
-  Serial.print(F("Clearing column:"));
-  Serial.println(column);
+void clearColumn(int column){
   for(int row=0;row<NUM_ROWS;row++) {
     setLED(row, column, offColor);
   }           
