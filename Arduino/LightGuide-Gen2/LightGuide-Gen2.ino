@@ -17,17 +17,21 @@
 
 #define HAVE_LCD false
 
-CRGB onColor = CRGB(0,0,10);
+CRGB onColor = CRGB(30,30,30);
 CRGB offColor = CRGB::Black;
 CRGB testGreen = CRGB(0,10,0);
 CRGB testRed = CRGB(10,0,0);
+CRGB highlightColor = CRGB(10, 10, 0);
 
 int receivedByteArray[NUM_CHARS]; // Stores the byte input received from the user
 
 /* Components of command received over serial port - row, column and illumination command */ 
 int rowNumber;  //used to store the usable-index-number-value obtained with targetIndex, so that targetIndex can be reset to -1 so the convertRowLetterToNumber() keeps working
 int columnNumber; //Stores a single number, that is later used to determine the target column that the user wants to light-up
-int illuminationCommand; //Stores a number, that is later used to determine whether the user wants to light-up a row, a column, or a single bulb 
+int illuminationCommand; //Stores a number, that is later used to determine whether the user wants to light-up a row, a column, or a single bulb
+
+//Used in setLED, defined globally to avoid GC
+int index = 0;
 
 //Debugging
 int loops = 0;
@@ -133,7 +137,19 @@ void setColumn(int column, CRGB color){
 /* Sets an individual LED for a given row and column to a given color */ 
 void setWell(int row, int column, CRGB color){
   setLED(row, column, color);
-  updateDisplay(false);         
+  updateDisplay(false);
+}
+
+void setWellFancy(int row, int column, CRGB wellColor, CRGB lineColor) {
+  setColumn(column, lineColor);
+  setRow(row, lineColor);
+//  for (int i = -1; i <= 1; i++){
+//    for (int j = -1; j <= 1; j++){
+//      setLED(row+i,column+j,highlightColor); 
+//    }
+//  }
+  setLED(row, column, wellColor);
+  updateDisplay(false);
 }
 
 /* Determine which illumination command has been received and call the corresponding illumination function */ 
@@ -145,7 +161,8 @@ void parseIlluminationCommand(int illuminationCommand){
       break;
     /* Light up a single LED */ 
     case 1:
-      setWell(rowNumber, columnNumber, onColor);
+      setWellFancy(rowNumber, columnNumber, onColor, highlightColor);
+//      setWell(rowNumber, columnNumber, onColor);
       break;
     /* Turn off a single LED */
     case 2:
@@ -201,5 +218,7 @@ void updateDisplay(bool force) {
 
 /*Row is zero-indexed, column is zero-indexed*/
 void setLED(int row, int column, CRGB color){
-  leds[row*NUM_COLUMNS + column] = color;
+  if (row < NUM_ROWS && column < NUM_COLUMNS && row >= 0 && column >= 0){
+    leds[row*NUM_COLUMNS + column] = color;
+  }
 }
